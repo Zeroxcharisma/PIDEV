@@ -5,13 +5,18 @@
  */
 package edu.db3a3.gui;
 
+import edu.db3a3.entities.Session;
+import edu.db3a3.entities.Utilisateur;
+import edu.db3a3.services.UtilisateurCRUD;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Window;
 
 /**
  * FXML Controller class
@@ -34,17 +39,32 @@ public class ProfileController implements Initializable {
     private TextField tfAdresse;
     @FXML
     private Button btRetour;
-
+     
+     int id= Session.id_utilisateur;
     /**
      * Initializes the controller class.
      */
+     
+     UtilisateurCRUD c=new UtilisateurCRUD();
+     Utilisateur u=new Utilisateur();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+         u= c.getUtilisaeur(id);
+       tfNom.setText(u.getNom());
+       tfPrenom.setText(u.getPrenom());
+       tfusername.setText(u.getUsername());
+       tfPassword.setText(u.getPassword());
+     
+       tfAdresse.setText(u.getAdresse());
+       tfTelephone.setText(String.valueOf(u.getTel()));
     }    
-
+    
+  
     @FXML
     private void Retourbtn(ActionEvent event) {
     }
+    
     
 }

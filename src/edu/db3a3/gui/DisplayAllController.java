@@ -27,6 +27,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -79,6 +80,8 @@ public class DisplayAllController implements Initializable {
     private Button block;
     @FXML
     private Button btnstat;
+    @FXML
+    private Hyperlink profile;
  
 
     /**
@@ -320,5 +323,18 @@ alert.showAndWait();
             System.out.println(ex.getMessage());
         }
     }
-    
+
+    @FXML
+    private void linkprofile(ActionEvent event) {
+         try {
+            FXMLLoader loader=new FXMLLoader(getClass().getResource("Profile.fxml"));
+            Parent root =loader.load();
+            profile.getScene().setRoot(root);
+        } catch (IOException ex) {
+            Logger.getLogger(DisplayAllController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+   
+   
 }

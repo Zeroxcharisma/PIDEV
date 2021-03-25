@@ -398,5 +398,30 @@ public ObservableList<Utilisateur> afficherUtilisateur3()
          }
          return m;
   }
+               
+                 public void modifierUtilisateurProfile (Integer id_utilisateur ,Utilisateur u ){
+       try {
+           String requete="update utilisateur set  username =?,nom =?,prenom=?,password=?,tel=?,adresse=?, email=? where id_utilisateur=?";
+            PreparedStatement pt = MyConnection.getInstance().getCnx()
+                    .prepareStatement(requete);
+          pt.setString(1, u.getUsername());
+           pt.setString(2, u.getNom());
+             pt.setString(3, u.getPrenom());
+               pt.setString(4, md5(u.getPassword()));
+              
+               
+            pt.setInt(5, u.getTel());
+            pt.setString(6, u.getAdresse());
+            
+               pt.setInt(8,id_utilisateur );
+                pt.setString(7, u.getEmail());
+             
+            pt.executeUpdate();
+       } catch (SQLException ex) {
+           Logger.getLogger(UtilisateurCRUD.class.getName()).log(Level.SEVERE, null, ex);
+       }
+    
+    
+    }
  
 }

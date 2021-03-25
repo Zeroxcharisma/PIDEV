@@ -3,19 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/DisplayAllController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/Utilisateur.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/Session.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/AllUserNewController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/MyConstants.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/StatistiquesController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/InscrireController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/LoginController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/InscriptionController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ModifyUserController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/services/UtilisateurCRUD.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/FirstWindow.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/HelloGeoIP2.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/AutoClose.java</file>
         </group>
     </open-files>
 </project-private>
