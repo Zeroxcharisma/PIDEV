@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="tfID" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.panier.gui.AjouterController">
+   <children>
+      <Label layoutX="91.0" layoutY="65.0" text="ID" />
+      <Label layoutX="91.0" layoutY="161.0" text="Nom" />
+      <Label layoutX="91.0" layoutY="230.0" text="Prix" />
+     
+      <TextField fx:id="tfNom" layoutX="188.0" layoutY="149.0" />
+      <TextField fx:id="tfPrix" layoutX="188.0" layoutY="226.0" />
+      <Button fx:id="btnvalider" layoutX="212.0" layoutY="297.0" mnemonicParsing="false" onAction="#savePanier" prefHeight="25.0" prefWidth="101.0" text="valider" />
+   </children>
+</AnchorPane>
