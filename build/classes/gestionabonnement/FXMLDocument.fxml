@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionabonnement.FXMLDocumentController">
+   <children>
+      <TableView fx:id="affichage" layoutX="205.0" layoutY="85.0" prefHeight="219.0" prefWidth="381.0">
+        <columns>
+          <TableColumn fx:id="idaff" prefWidth="69.0" text="id" />
+          <TableColumn fx:id="dureeaff" prefWidth="82.0" text="duree" />
+            <TableColumn fx:id="prixaff" prefWidth="78.0" text="prix" />
+            <TableColumn fx:id="typeaff" minWidth="7.0" prefWidth="115.0" text="type" />
+        </columns>
+      </TableView>
+      <CheckBox fx:id="tri" layoutX="510.0" layoutY="320.0" mnemonicParsing="false" onAction="#trid" prefHeight="17.0" prefWidth="76.0" text="duree" />
+      <Label layoutX="464.0" layoutY="320.0" text="trier" />
+      <Button layoutX="205.0" layoutY="378.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+      <TextField fx:id="idd" layoutX="205.0" layoutY="325.0" promptText="id abonnement" />
+      <CheckBox fx:id="tri1" layoutX="510.0" layoutY="361.0" mnemonicParsing="false" onAction="#trid1" text="prix" />
+      <TextField fx:id="idabo" layoutX="70.0" layoutY="131.0" prefHeight="25.0" prefWidth="128.0" promptText="id abonnement" />
+      <TextField fx:id="dureeabo" layoutX="70.0" layoutY="170.0" prefHeight="25.0" prefWidth="128.0" promptText="duree ab" />
+      <TextField fx:id="prixabo" layoutX="70.0" layoutY="220.0" prefHeight="25.0" prefWidth="128.0" promptText="prix abonnement" />
+      <TextField fx:id="typeabo" layoutX="70.0" layoutY="265.0" prefHeight="25.0" prefWidth="128.0" promptText="type abonnement" />
+      <Label layoutX="19.0" layoutY="135.0" text="id" />
+      <Label layoutX="19.0" layoutY="174.0" text="duree" />
+      <Label layoutX="19.0" layoutY="224.0" text="prix" />
+      <Label layoutX="19.0" layoutY="269.0" text="type" />
+      <Button fx:id="ajouterabo" layoutX="24.0" layoutY="316.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+      <Button fx:id="modifier" layoutX="127.0" layoutY="313.0" mnemonicParsing="false" onAction="#modifieraboo" text="modifier" />
+      <Button fx:id="recherche" layoutX="25.0" layoutY="487.0" mnemonicParsing="false" onAction="#chercher" text="recherche" />
+      <TextField fx:id="rch" layoutX="146.0" layoutY="487.0" promptText="type abonnement" />
+      <PieChart fx:id="statype" layoutX="389.0" layoutY="378.0" prefHeight="191.0" prefWidth="307.0" />
+   </children>
+</AnchorPane>
