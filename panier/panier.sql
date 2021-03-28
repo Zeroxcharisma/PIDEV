@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 26 mars 2021 à 19:51
+-- Généré le : Dim 28 mars 2021 à 20:46
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.1
 
@@ -30,22 +30,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `panier` (
   `id` int(11) NOT NULL,
   `nom` varchar(30) NOT NULL,
-  `prix` varchar(30) NOT NULL
+  `prix` varchar(30) NOT NULL,
+  `qte` int(30) NOT NULL,
+  `total` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `panier`
 --
 
-INSERT INTO `panier` (`id`, `nom`, `prix`) VALUES
-(9, 'EXTENSEUR FITNESS', '33'),
-(10, 'CORDE À SAUTER ', '35'),
-(21, 'KETTLEBELL 4KG', '54'),
-(23, 'HALTERE 5KG HEX DUMBBELL', '60'),
-(24, 'DISQUE MUSCULATION', '201'),
-(25, 'BARRES À DIPS', '200'),
-(28, 'BANC DE MUSCULATION ', '300'),
-(32, 'boll', '100');
+INSERT INTO `panier` (`id`, `nom`, `prix`, `qte`, `total`) VALUES
+(9, 'EXTENSEUR FITNESS', '33', 10, 330),
+(10, 'CORDE À SAUTER ', '5', 3, 15),
+(21, 'KETTLEBELL 4KG', '54', 2, 108),
+(28, 'BANC DE MUSCULATION ', '300', 2, 300),
+(46, 'BALLON', '80', 2, 160);
 
 --
 -- Index pour les tables déchargées
@@ -65,7 +64,7 @@ ALTER TABLE `panier`
 -- AUTO_INCREMENT pour la table `panier`
 --
 ALTER TABLE `panier`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

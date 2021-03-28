@@ -8,13 +8,16 @@
 <AnchorPane id="AnchorPane" fx:id="tfID" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.panier.gui.AjouterController">
    <children>
       <Label layoutX="91.0" layoutY="65.0" text="ID" />
-      <Label layoutX="88.0" layoutY="119.0" text="Nom" />
-      <Label layoutX="93.0" layoutY="171.0" text="Prix" />
+      <Label layoutX="91.0" layoutY="161.0" text="Nom" />
+      <Label layoutX="91.0" layoutY="230.0" text="Prix" />
+      <Label layoutX="91.0" layoutY="299.0" text="qte" />
      
-      <TextField fx:id="tfNom" layoutX="188.0" layoutY="115.0" />
-      <TextField fx:id="tfPrix" layoutX="188.0" layoutY="167.0" />
-      <Button fx:id="btnvalider" layoutX="212.0" layoutY="347.0" mnemonicParsing="false" onAction="#savePanier" prefHeight="25.0" prefWidth="101.0" text="valider" />
-      <Label layoutX="94.0" layoutY="223.0" text="qte" />
-      <TextField fx:id="tfqte" layoutX="188.0" layoutY="219.0" />
+     
+      <TextField fx:id="tfNom" layoutX="188.0" layoutY="149.0" />
+      <TextField fx:id="tfPrix" layoutX="188.0" layoutY="226.0" />
+      <TextField fx:id="tfqte" layoutX="188.0" layoutY="303.0" />
+      
+      
+      <Button fx:id="btnvalider" layoutX="212.0" layoutY="361.0" mnemonicParsing="false" onAction="#savePanier" prefHeight="25.0" prefWidth="101.0" text="valider" />
    </children>
 </AnchorPane>

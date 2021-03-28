@@ -24,7 +24,7 @@ public class panierCRUD implements IPanier<Panier> {
  @Override
     public void ajouterPanier(Panier p) {
         try {
-            String requete = "INSERT INTO panier (nom,prix)" + "VALUES ('"+p.getNom()+"','"+p.getPrix()+"')";
+            String requete = "INSERT INTO panier (nom,prix,qte,total)" + "VALUES ('"+p.getNom()+"','"+p.getPrix()+"','"+p.getQte()+"','"+p.getTotal()+"')";
             Statement st = MyConnection.getInstance().getCnx().createStatement();
             st.executeUpdate(requete);
             System.out.println("Produit ajoutée");
@@ -36,10 +36,12 @@ public class panierCRUD implements IPanier<Panier> {
     }
      public void ajouterPanier2(Panier p){
         try {
-            String requete= "INSERT INTO panier (nom, prix)" + "VALUES (?,?)";
+            String requete= "INSERT INTO panier (nom, prix, qte,total)" + "VALUES (?,?,?,?)";
             PreparedStatement pst = MyConnection.getInstance().getCnx().prepareStatement(requete);
             pst.setString(1, p.getNom());
-            pst.setString(2, p.getPrix());
+            pst.setInt(2, p.getPrix());
+            pst.setInt(3, p.getQte());
+            pst.setInt(4, p.getTotal());
             pst.executeUpdate();
             System.out.println("Produit inserée");
             
@@ -87,7 +89,7 @@ try {
                 Panier p = new Panier();
                 p.setId(rs.getInt("id"));
                 p.setNom(rs.getString(2));
-                p.setPrix(rs.getString("prix"));
+                p.setPrix(rs.getInt("prix"));
                 PanierList.add(p);
             }
         } catch (SQLException ex) {

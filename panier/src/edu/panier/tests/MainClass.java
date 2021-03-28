@@ -25,8 +25,8 @@ public class MainClass {
         
         panierCRUD rcr= new panierCRUD();
         
-        Panier p = new Panier(5, "ballon", "50");
-        Panier c = new Panier(6, "esprit", "96");
+        Panier p = new Panier(5, "ballon", 50, 3, 150);
+        Panier c = new Panier(6, "esprit", 25, 2, 50);
        //rcr.ajouterPanier(c);
        
         

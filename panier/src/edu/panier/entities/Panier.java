@@ -13,15 +13,38 @@ public class Panier {
 
     private int id;
     private String nom;
-    private String prix;
+    private int prix;
+    private int qte;
+    private int total;
 
     public Panier() {
     }
 
-    public Panier(int id, String nom, String prix) {
+    public Panier(int id, String nom, int prix, int qte , int total) {
         this.id = id;
         this.nom = nom;
         this.prix = prix;
+        this.qte = qte;
+        this.total = total;
+    }
+    
+    
+
+  
+    public void setQte(int qte) {
+        this.qte = qte;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getQte() {
+        return qte;
+    }
+
+    public int getTotal() {
+        return total;
     }
 
     public int getId() {
@@ -40,18 +63,20 @@ public class Panier {
         this.nom = nom;
     }
 
-    public String getPrix() {
+    public int getPrix() {
         return prix;
     }
 
-    public void setPrix(String prix) {
+    public void setPrix(int prix) {
         this.prix = prix;
     }
 
     @Override
     public String toString() {
-        return "Panier{" + "id=" + id + ", nom=" + nom + ", prix=" + prix + '}';
+        return "Panier{" + "id=" + id + ", nom=" + nom + ", prix=" + prix + ", qte=" + qte + ", total=" + total + '}';
     }
+
+  
 
     
     
