@@ -145,11 +145,21 @@ public class InscrireController implements Initializable {
             String password =tfPassword.getText();
             int tel = Integer.parseInt(tfTel.getText());
             String adresse=tfAdresse.getText();
-            int id_role=0;
+             int id_role=0;
+             if(listeRole.getSelectionModel().getSelectedItem()=="Coach"){
+                  id_role=2;
+             }
+             if(listeRole.getSelectionModel().getSelectedItem()=="nutritionniste"){
+                  id_role=3;
+             }
+             if(listeRole.getSelectionModel().getSelectedItem()=="Client"){
+                  id_role=1;
+             }
+            
             int etat=0;
             String email=tfEmail.getText();
             
-            Utilisateur u = new Utilisateur(username,nom,prenom,password,tel,adresse,0,0,email);
+            Utilisateur u = new Utilisateur(username,nom,prenom,password,tel,adresse,id_role,0,email);
             UtilisateurCRUD UC = new UtilisateurCRUD();
             
             

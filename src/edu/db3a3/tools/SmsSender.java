@@ -17,7 +17,7 @@ public class SmsSender {
     public static final String ACCOUNT_SID =
             "AC83e8c38aae2902d96d769a9e997fe0c8";
     public static final String AUTH_TOKEN =
-            "578fd48348b19fb621af8fcc99c027c9";
+            "6f29ca0ee94c06f517f158f45c327535";
 
 
     public void send(String s,String x){
