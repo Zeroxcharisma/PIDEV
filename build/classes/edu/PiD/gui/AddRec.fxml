@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.PiD.gui.AddRecController">
+   <children>
+      <Label layoutX="115.0" layoutY="82.0" text="Email" textFill="#930685">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font></Label>
+      <Label layoutX="116.0" layoutY="139.0" text="Sujet" textFill="#930685">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font></Label>
+      <Label layoutX="93.0" layoutY="239.0" text="Description" textFill="#930685">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font></Label>
+      <Button fx:id="btnAdd" alignment="CENTER" layoutX="267.0" layoutY="353.0" mnemonicParsing="false" onAction="#ajouterReclamation" prefHeight="25.0" prefWidth="98.0" text="Ajouter" textAlignment="CENTER" textFill="#0d0783" textOverrun="CENTER_ELLIPSIS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#18f5cc" />
+         </effect></Button>
+      <TextField fx:id="tfEmail" editable="false" layoutX="174.0" layoutY="78.0" prefHeight="25.0" prefWidth="225.0" />
+      <TextField fx:id="tfDescription" layoutX="174.0" layoutY="181.0" prefHeight="149.0" prefWidth="312.0" />
+      <VBox layoutX="565.0" layoutY="-4.0" prefHeight="410.0" prefWidth="14.0" style="-fx-background-color: #00ff00;" />
+      <VBox layoutX="24.0" layoutY="-2.0" prefHeight="410.0" prefWidth="14.0" style="-fx-background-color: #00ff00;" />
+      <Separator layoutX="6.0" layoutY="111.0" prefHeight="0.0" prefWidth="591.0" />
+      <Separator layoutX="6.0" layoutY="168.0" prefHeight="3.0" prefWidth="591.0" />
+      <Separator layoutX="2.0" layoutY="338.0" prefHeight="3.0" prefWidth="600.0" />
+      <Label layoutX="51.0" layoutY="21.0" prefHeight="39.0" prefWidth="501.0" text="Systéme de Gestion de reclamation" textFill="#2910cd">
+         <font>
+            <Font name="Algerian" size="27.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="tfSujet" layoutX="166.0" layoutY="136.0" onAction="#comoboxdis" onInputMethodTextChanged="#comoboxdis" prefWidth="150.0" />
+      <ComboBox fx:id="como2" layoutX="375.0" layoutY="136.0" prefWidth="150.0" />
+      <Label fx:id="liste" layoutX="330.0" layoutY="140.0" text="Coachs" textFill="#930685">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
