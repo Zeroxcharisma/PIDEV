@@ -4,33 +4,32 @@
  * and open the template in the editor.
  */
 package edu.db3a3.tools;
+
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 /**
  *
- * @author sofie
+ * @author Asus
  */
-public class SmsSender {
-  
-    // Find your Account Sid and Auth Token at twilio.com/console
-   /* public static final String ACCOUNT_SID =
-            "AC83e8c38aae2902d96d769a9e997fe0c8";
-    public static final String AUTH_TOKEN =
-            "437a3334cb37ed691e67b83546a2e3b0";*/
+public class Sms {
+      // Find your Account Sid and Auth Token at twilio.com/console
 
+  /*  public static final String ACCOUNT_SID =
+            "AC17b545efea0ed27b2e2d3653e5a2aa9e";
+    public static final String AUTH_TOKEN =
+            "f72e80921fb8bd562393d4afc5658111";
+*/
 
     public void send(String s,String x){
      /*    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
       String y="+216"+x;
         Message message = Message 
                 .creator(new PhoneNumber(y), // to
-                        new PhoneNumber("+12014742109"), // from
+                        new PhoneNumber("+16504584051"), // from
                        ""+s)
                 .create();
   System.out.println("aaslema");
         System.out.println(message.getSid());*/
     }
 }
-    
-

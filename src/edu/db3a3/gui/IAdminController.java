@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,15 +28,26 @@ public class IAdminController implements Initializable {
     private Button Gcours;
     @FXML
     private Button GExamen;
-    @FXML
     private Button retour;
+    @FXML
+    private Button event;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button Reclamation;
+    @FXML
+    private Button Panier;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button planning;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         Gcours.setOnAction(e->{
+      /*   Gcours.setOnAction(e->{
             try {
                 Parent root;
                 root = FXMLLoader.load(getClass().getResource("GestionCours.fxml"));
@@ -64,8 +76,54 @@ public class IAdminController implements Initializable {
              Logger.getLogger(AjouterTestFitnessController.class.getName()).log(Level.SEVERE, null, ex);
          }
             
-             }); 
+             }); */
     }    
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void Reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void Panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void cours(ActionEvent event) {
+        try {
+                Parent root;
+                root = FXMLLoader.load(getClass().getResource("GestionCours.fxml"));
+                Gcours.getScene().setRoot(root);
+            } catch (IOException ex) {
+                Logger.getLogger(IAdminController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
+
+    @FXML
+    private void test(ActionEvent event) {
+         try {
+                Parent root;
+                root = FXMLLoader.load(getClass().getResource("GestionTestFitness.fxml"));
+                GExamen.getScene().setRoot(root);
+            } catch (IOException ex) {
+                Logger.getLogger(IAdminController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }
     
 }
 

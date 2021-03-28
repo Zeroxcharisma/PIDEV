@@ -489,6 +489,18 @@ private void Excel(File file) throws FileNotFoundException, IOException {
 
     @FXML
     private void abonnement(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -505,6 +517,19 @@ private void Excel(File file) throws FileNotFoundException, IOException {
 
     @FXML
     private void planning(ActionEvent event) {
+        
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("IAdmin.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
     
 

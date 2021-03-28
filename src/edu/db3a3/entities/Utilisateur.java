@@ -83,6 +83,12 @@ public class Utilisateur {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public Utilisateur(int id_utilisateur, String nom,Integer tel) {
+        this.id_utilisateur = id_utilisateur;
+        this.nom = nom;
+        this.tel=tel;
+    }
+
     public Integer getId_utilisateur() {
         return id_utilisateur;
     }
@@ -167,6 +173,8 @@ public class Utilisateur {
     public String toString() {
         return "Utilisateur{" + "id_utilisateur=" + id_utilisateur + ", username=" + username + ", nom=" + nom + ", prenom=" + prenom + ", password=" + password + ", tel=" + tel + ", adresse=" + adresse + ", id_role=" + id_role + ", etat=" + etat + ", email=" + email + '}';
     }
+    
+ 
 
     public Utilisateur(Integer id_utilisateur, String username, String nom, String prenom, String password, Integer tel, String adresse, int id_role, int etat, String email, Button update, Button delete) {
         this.id_utilisateur = id_utilisateur;
