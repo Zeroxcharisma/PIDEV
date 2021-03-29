@@ -117,13 +117,13 @@ public class EvenementController implements Initializable {
     @FXML
     private Button abonnement;
     @FXML
-    private Button Reclamation;
-    @FXML
-    private Button Panier;
-    @FXML
     private Button produit;
     @FXML
     private Button planning;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button panier;
 
     /**
      * Initializes the controller class.
@@ -503,13 +503,6 @@ private void Excel(File file) throws FileNotFoundException, IOException {
        }
     }
 
-    @FXML
-    private void Reclamation(ActionEvent event) {
-    }
-
-    @FXML
-    private void Panier(ActionEvent event) {
-    }
 
     @FXML
     private void produit(ActionEvent event) {
@@ -530,6 +523,42 @@ private void Excel(File file) throws FileNotFoundException, IOException {
                    } catch (IOException ex) {
          
        }
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+        
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("DelRec.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+        
+        
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("GestionPanier.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+        
     }
     
 

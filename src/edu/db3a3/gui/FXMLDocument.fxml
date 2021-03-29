@@ -7,56 +7,122 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="1138.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.db3a3.gui.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.FXMLDocumentController">
 <children>
-      <TableView fx:id="affichage" layoutX="488.0" layoutY="163.0" prefHeight="219.0" prefWidth="381.0">
-        <columns>
-          <TableColumn fx:id="idaff" prefWidth="69.0" text="id" />
-          <TableColumn fx:id="dureeaff" prefWidth="82.0" text="duree" />
-            <TableColumn fx:id="prixaff" prefWidth="78.0" text="prix" />
-            <TableColumn fx:id="typeaff" minWidth="7.0" prefWidth="115.0" text="type" />
-        </columns>
-      </TableView>
-      <CheckBox fx:id="tri" layoutX="750.0" layoutY="514.0" mnemonicParsing="false" onAction="#trid" prefHeight="17.0" prefWidth="76.0" text="duree" />
-      <Label layoutX="684.0" layoutY="514.0" text="trier" />
-      <Button layoutX="722.0" layoutY="394.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
-      <TextField fx:id="idd" layoutX="510.0" layoutY="394.0" promptText="id abonnement" />
-      <CheckBox fx:id="tri1" layoutX="762.0" layoutY="553.0" mnemonicParsing="false" onAction="#trid1" text="prix" />
-      <TextField fx:id="idabo" layoutX="325.0" layoutY="165.0" prefHeight="25.0" prefWidth="128.0" promptText="id abonnement" />
-      <TextField fx:id="dureeabo" layoutX="325.0" layoutY="204.0" prefHeight="25.0" prefWidth="128.0" promptText="duree ab" />
-      <TextField fx:id="prixabo" layoutX="325.0" layoutY="246.0" prefHeight="25.0" prefWidth="128.0" promptText="prix abonnement" />
-      <TextField fx:id="typeabo" layoutX="325.0" layoutY="286.0" prefHeight="25.0" prefWidth="128.0" promptText="type abonnement" />
-      <Label layoutX="273.0" layoutY="170.0" text="id" />
-      <Label layoutX="267.0" layoutY="209.0" text="duree" />
-      <Label layoutX="274.0" layoutY="251.0" text="prix" />
-      <Label layoutX="272.0" layoutY="291.0" text="type" />
-      <Button fx:id="ajouterabo" layoutX="266.0" layoutY="367.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
-      <Button fx:id="modifier" layoutX="377.0" layoutY="374.0" mnemonicParsing="false" onAction="#modifieraboo" text="modifier" />
-      <Button fx:id="recherche" layoutX="561.0" layoutY="457.0" mnemonicParsing="false" onAction="#chercher" text="recherche" />
-      <TextField fx:id="rch" layoutX="679.0" layoutY="457.0" promptText="type abonnement" />
-      <PieChart fx:id="statype" layoutX="217.0" layoutY="439.0" prefHeight="191.0" prefWidth="307.0" />
-      <Pane layoutX="10.0" layoutY="151.0" prefHeight="499.0" prefWidth="190.0" style="-fx-background-color: #696969;">
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
          <children>
-            <Button fx:id="event" mnemonicParsing="false" onAction="#event" prefHeight="59.0" prefWidth="190.0" text="Evennement" />
-            <Button fx:id="abonnement" layoutY="59.0" mnemonicParsing="false" onAction="#abonnement" prefHeight="59.0" prefWidth="190.0" text="Abonnement" />
-            <Button fx:id="Reclamation" layoutY="118.0" mnemonicParsing="false" onAction="#Reclamation" prefHeight="51.0" prefWidth="190.0" text="Reclamation" />
-            <Button fx:id="Panier" layoutX="-3.0" layoutY="167.0" mnemonicParsing="false" onAction="#Panier" prefHeight="51.0" prefWidth="197.0" text="Panier" />
-            <Button fx:id="produit" layoutX="1.0" layoutY="218.0" mnemonicParsing="false" onAction="#produit" prefHeight="51.0" prefWidth="190.0" text="Produit" />
-            <Button fx:id="planning" layoutX="-4.0" layoutY="269.0" mnemonicParsing="false" onAction="#planning" prefHeight="51.0" prefWidth="197.0" text="Planning" />
-         </children>
-      </Pane>
-      <Pane layoutX="5.0" prefHeight="142.0" prefWidth="1133.0" style="-fx-background-color: #808080;">
-         <children>
-            <Label layoutX="435.0" layoutY="-13.0" text="Accueil">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+            <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
                <font>
-                  <Font size="96.0" />
+                  <Font name="Caveat Regular" size="39.0" />
                </font>
             </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="42.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Button fx:id="event" layoutX="-1.0" layoutY="165.0" mnemonicParsing="false" onAction="#event" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Evènement" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="produit" layoutX="-1.0" layoutY="449.0" mnemonicParsing="false" onAction="#produit" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Produit" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="reclamation" layoutX="-1.0" layoutY="307.0" mnemonicParsing="false" onAction="#reclamation" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Réclamation" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="abonnement" layoutX="-1.0" layoutY="236.0" mnemonicParsing="false" onAction="#abonnement" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Abonnement" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="panier" layoutX="-1.0" layoutY="378.0" mnemonicParsing="false" onAction="#panier" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Panier" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="planning" layoutX="-1.0" layoutY="520.0" mnemonicParsing="false" onAction="#planning" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Planning" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/un-evenement.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/abonnement.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/exclamation.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/shopping-basket.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/box.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/planning.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="686.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/copyright.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
+            <Label layoutX="587.0" layoutY="144.0" text="Gestion D'Abonnement" textFill="WHITE">
+               <font>
+                  <Font name="Caveat Regular" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="374.0" layoutY="259.0" text="id" />
+            <Label layoutX="367.0" layoutY="308.0" text="duree" />
+            <Label layoutX="382.0" layoutY="351.0" text="prix" />
+            <Label layoutX="384.0" layoutY="406.0" text="type" />
+            <TextField fx:id="idabo" layoutX="427.0" layoutY="255.0" prefHeight="25.0" prefWidth="128.0" promptText="id abonnement" />
+            <TextField fx:id="dureeabo" layoutX="427.0" layoutY="303.0" prefHeight="25.0" prefWidth="128.0" promptText="duree ab" />
+            <TextField fx:id="prixabo" layoutX="428.0" layoutY="352.0" prefHeight="25.0" prefWidth="128.0" promptText="prix abonnement" />
+            <TextField fx:id="typeabo" layoutX="401.0" layoutY="401.0" prefHeight="25.0" prefWidth="128.0" promptText="type abonnement" />
+            <TableView fx:id="affichage" layoutX="696.0" layoutY="242.0" prefHeight="219.0" prefWidth="381.0">
+              <columns>
+                <TableColumn fx:id="idaff" prefWidth="69.0" text="id" />
+                <TableColumn fx:id="dureeaff" prefWidth="82.0" text="duree" />
+                  <TableColumn fx:id="prixaff" prefWidth="78.0" text="prix" />
+                  <TableColumn fx:id="typeaff" minWidth="7.0" prefWidth="115.0" text="type" />
+              </columns>
+            </TableView>
+            <Button fx:id="ajouterabo" layoutX="443.0" layoutY="475.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+            <Button fx:id="modifier" layoutX="530.0" layoutY="471.0" mnemonicParsing="false" onAction="#modifieraboo" text="modifier" />
+            <TextField fx:id="idd" layoutX="709.0" layoutY="484.0" promptText="id abonnement" />
+            <Button layoutX="985.0" layoutY="482.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+            <Button fx:id="recherche" layoutX="772.0" layoutY="541.0" mnemonicParsing="false" onAction="#chercher" text="recherche" />
+            <TextField fx:id="rch" layoutX="896.0" layoutY="541.0" promptText="type abonnement" />
+            <Label layoutX="942.0" layoutY="594.0" text="trier" />
+            <CheckBox fx:id="tri" layoutX="1020.0" layoutY="596.0" mnemonicParsing="false" onAction="#trid" prefHeight="17.0" prefWidth="76.0" text="duree" />
+            <CheckBox fx:id="tri1" layoutX="1042.0" layoutY="632.0" mnemonicParsing="false" onAction="#trid1" text="prix" />
+            <PieChart fx:id="statype" layoutX="391.0" layoutY="501.0" prefHeight="191.0" prefWidth="307.0" />
          </children>
-      </Pane>
+      </AnchorPane>
    </children>
 </AnchorPane>

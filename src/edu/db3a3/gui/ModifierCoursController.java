@@ -55,6 +55,18 @@ public class ModifierCoursController implements Initializable {
     @FXML
     private ImageView ImageField;
     public String ImageComp;
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
 
     /**
      * Initializes the controller class.
@@ -178,5 +190,29 @@ public class ModifierCoursController implements Initializable {
             //Commentaire.setText("Erreur chargement de l'image");
             System.out.println("Erreur !");
         }
+    }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
     }
 }

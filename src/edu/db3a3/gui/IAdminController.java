@@ -34,13 +34,13 @@ public class IAdminController implements Initializable {
     @FXML
     private Button abonnement;
     @FXML
-    private Button Reclamation;
-    @FXML
-    private Button Panier;
-    @FXML
     private Button produit;
     @FXML
     private Button planning;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button panier;
 
     /**
      * Initializes the controller class.
@@ -87,13 +87,6 @@ public class IAdminController implements Initializable {
     private void abonnement(ActionEvent event) {
     }
 
-    @FXML
-    private void Reclamation(ActionEvent event) {
-    }
-
-    @FXML
-    private void Panier(ActionEvent event) {
-    }
 
     @FXML
     private void produit(ActionEvent event) {
@@ -123,6 +116,14 @@ public class IAdminController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(IAdminController.class.getName()).log(Level.SEVERE, null, ex);
             }
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
     }
     
 }

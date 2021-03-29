@@ -19,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -69,9 +70,24 @@ public class AfficheController implements Initializable {
     
  
      int index = -1;
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
+    @FXML
+    private Label imagePath;
+    @FXML
+    private Button export;
  
     //methode select //
-    @FXML
     void getSelected(MouseEvent event){
         index = table.getSelectionModel().getSelectedIndex();
         if(index <= -1){
@@ -83,6 +99,7 @@ public class AfficheController implements Initializable {
         txt_prix.setText(qte.getCellData(index).toString());
     }
     
+    @FXML
      public void edit(ActionEvent event){
        try {
            Connection mc = MyConnection.getInstance().getCnx();
@@ -116,6 +133,7 @@ public class AfficheController implements Initializable {
         }    
     }
      
+    @FXML
      public void delete(){
          
          Connection mc = MyConnection.getInstance().getCnx();
@@ -307,6 +325,30 @@ rs.close();
     else
     {}
     
+    }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
     }
     
     

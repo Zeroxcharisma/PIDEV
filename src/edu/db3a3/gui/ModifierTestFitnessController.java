@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -21,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 /**
@@ -43,6 +45,20 @@ public class ModifierTestFitnessController implements Initializable {
     @FXML
     private Button r;
     private static TestFitness ex;
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
+    @FXML
+    private Label imagePath;
 
 
     /**
@@ -122,5 +138,29 @@ public class ModifierTestFitnessController implements Initializable {
     }    
     public TestFitness getE() {
         return ex;
+    }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
     }
 }

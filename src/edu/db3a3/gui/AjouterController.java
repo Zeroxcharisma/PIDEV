@@ -18,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -32,8 +33,6 @@ import tray.notification.TrayNotification;
 public class AjouterController implements Initializable {
 
     @FXML
-    private AnchorPane tfID;
-    @FXML
     private TextField tfNom;
     @FXML
     private TextField tfPrix;
@@ -41,6 +40,20 @@ public class AjouterController implements Initializable {
     private TextField tfqte;
     @FXML
     private Button btnvalider;
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
+    @FXML
+    private Label imagePath;
 
     /**
      * Initializes the controller class.
@@ -98,6 +111,30 @@ public class AjouterController implements Initializable {
        
         tray.showAndDismiss(javafx.util.Duration.seconds(5));
 }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
+    }
     
  
     

@@ -7,6 +7,7 @@ package edu.db3a3.gui;
 
 import edu.db3a3.entities.abonnement;
 import edu.db3a3.services.abonnementCRUD;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,7 +23,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -31,6 +36,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -86,13 +92,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button abonnement;
     @FXML
-    private Button Reclamation;
-    @FXML
-    private Button Panier;
-    @FXML
     private Button produit;
     @FXML
     private Button planning;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button panier;
     
    
     
@@ -297,19 +303,36 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void event(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
     private void abonnement(ActionEvent event) {
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
-    @FXML
-    private void Reclamation(ActionEvent event) {
-    }
-
-    @FXML
-    private void Panier(ActionEvent event) {
-    }
 
     @FXML
     private void produit(ActionEvent event) {
@@ -317,6 +340,26 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("DelRec.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
     }
 
    

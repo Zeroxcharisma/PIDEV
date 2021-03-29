@@ -1,31 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.AfficheController">
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.db3a3.gui.AfficheController">
    <children>
-      <TableView fx:id="table" layoutX="14.0" layoutY="100.0" prefHeight="200.0" prefWidth="379.0">
-        <columns>
-          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
-          <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
-            <TableColumn fx:id="prix" prefWidth="78.0" text="prix" />
-            <TableColumn fx:id="qte" prefWidth="72.0" text="qte" />
-            <TableColumn fx:id="total" prefWidth="78.0" text="total" />
-        </columns>
-      </TableView>
-      <Button fx:id="tfModifier" layoutX="318.0" layoutY="342.0" mnemonicParsing="false" onAction="#edit" text="modifier" />
-      <Button fx:id="tfSupprimer" layoutX="397.0" layoutY="342.0" mnemonicParsing="false" onAction="#delete" text="supprimer" />
-      <TextField fx:id="txt_id" layoutX="432.0" layoutY="124.0" promptText="ID" />
-      <TextField fx:id="txt_nom" layoutX="432.0" layoutY="177.0" promptText="Nom" />
-      <TextField fx:id="txt_prix" layoutX="432.0" layoutY="227.0" promptText="Prix" />
-      <Button fx:id="export" layoutX="487.0" layoutY="342.0" mnemonicParsing="false" text="export" />
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+            <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
+               <font>
+                  <Font name="Caveat Regular" size="39.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="5.0" layoutX="42.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Button fx:id="event" layoutX="-1.0" layoutY="165.0" mnemonicParsing="false" onAction="#event" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Evènement" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="produit" layoutX="-1.0" layoutY="449.0" mnemonicParsing="false" onAction="#produit" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Produit" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="reclamation" layoutX="-1.0" layoutY="307.0" mnemonicParsing="false" onAction="#reclamation" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Réclamation" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="abonnement" layoutX="-1.0" layoutY="236.0" mnemonicParsing="false" onAction="#abonnement" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Abonnement" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="panier" layoutX="-1.0" layoutY="378.0" mnemonicParsing="false" onAction="#panier" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Panier" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="planning" layoutX="-1.0" layoutY="520.0" mnemonicParsing="false" onAction="#planning" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Planning" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/un-evenement.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/abonnement.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/exclamation.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="389.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/shopping-basket.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/box.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/planning.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="686.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/copyright.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
+            <Label layoutX="639.0" layoutY="147.0" text="Gestion Produit " textFill="WHITE">
+               <font>
+                  <Font name="Caveat Regular" size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="imagePath" layoutX="275.0" layoutY="300.0" prefHeight="21.0" prefWidth="91.0" text="Label" />
+            <TableView fx:id="table" layoutX="315.0" layoutY="272.0" prefHeight="200.0" prefWidth="379.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+                  <TableColumn fx:id="prix" prefWidth="78.0" text="prix" />
+                  <TableColumn fx:id="qte" prefWidth="72.0" text="qte" />
+                  <TableColumn fx:id="total" prefWidth="78.0" text="total" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txt_id" layoutX="744.0" layoutY="278.0" promptText="ID" />
+            <TextField fx:id="txt_nom" layoutX="747.0" layoutY="322.0" promptText="Nom" />
+            <TextField fx:id="txt_prix" layoutX="744.0" layoutY="363.0" promptText="Prix" />
+            <Button fx:id="tfModifier" layoutX="763.0" layoutY="433.0" mnemonicParsing="false" onAction="#edit" text="modifier" />
+            <Button fx:id="tfSupprimer" layoutX="863.0" layoutY="433.0" mnemonicParsing="false" onAction="#delete" text="supprimer" />
+            <Button fx:id="export" layoutX="989.0" layoutY="430.0" mnemonicParsing="false" text="export" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
-
