@@ -36,10 +36,12 @@ public class MainClass {
       //r.updateReclamation(reclamation);
       //r.suppReclamation(27);
    //   System.out.println(r.recherche();
-    // System.out.println(r.FindReclamationById(13));
+     System.out.println(r.getNumberOfReclamation(4));
 //System.out.println(r.recherche("reclamation du temps"));
 //r.getAllCoachs().forEach(p->System.out.print(p));
 System.out.print(r.getNumberOfReclamation(2));
+
+
     }
 }
 

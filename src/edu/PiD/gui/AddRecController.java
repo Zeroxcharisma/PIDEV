@@ -20,15 +20,18 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
+import org.controlsfx.control.Notifications;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
 
@@ -75,6 +78,21 @@ public  static String numTelephone ;
 
     @FXML
     private void ajouterReclamation(ActionEvent event) {
+        
+            if (tfEmail.getText().isEmpty()|tfDescription.getText().isEmpty()|(tfSujet.getSelectionModel().isEmpty() && como2.getSelectionModel().isEmpty())){
+         
+        Notifications notificationBuilder = Notifications.create()
+ 
+                    .title("ERREUR")
+                    .text("Veuillez remplir les champs")
+                
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.TOP_RIGHT);
+
+            notificationBuilder.show();   
+     }else{
+        
+        
 if(como2.isVisible()){
     
 
@@ -126,12 +144,12 @@ sendMail();
 
             
         TrayNotification tray = null;
-        tray = new TrayNotification("Reclamation ajoutee", "Votre abonnement a ete ajoutee avec succes ,Merci ", NotificationType.SUCCESS);
+        tray = new TrayNotification("Reclamation envoyée", "Cher client votre réclamation a été prise en compte et sera traitée dès que possible,Cordialement  ", NotificationType.SUCCESS);
        
         tray.showAndDismiss(javafx.util.Duration.seconds(5));
     
 
-}
+}}
     @FXML
     public void comoboxdis(){
     ReclamationCRUD r = new ReclamationCRUD();
@@ -166,8 +184,8 @@ como2.setVisible(false);
             String pass = "203JFT2277";
             String to =tfEmail.getText();
             String from ="yasmine.chaieb@esprit.tn";
-            String subject = "Compte crée";
-            String messageText = "Bonjour cher nouveau membre , votre reclamation a été bien envoyé. Cordialemment";
+            String subject = "Réclamation bien reçu";
+            String messageText = "Bonjour cher client  , votre reclamation a été bien reçu et en cours de traitement. Cordialemment";
             boolean sessionDebug = false;
 
             Properties props = System.getProperties();

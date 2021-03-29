@@ -231,7 +231,7 @@ public class ReclamationCRUD implements IReclamation<Reclamation>{
                 ArrayList<Utilisateur> listuser=new ArrayList<>();
 
       try {
-          String requete="select id_utilisateur,nom,tel from utilisateur where id_role=2";
+          String requete="select id_utilisateur,nom,tel from utilisateur where id_role=2 and etat=1";
           Statement st = MyConnection.getInstance().getCnx()
                   .createStatement();
           ResultSet rs= st.executeQuery(requete);

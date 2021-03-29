@@ -21,6 +21,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -31,7 +32,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Window;
+import javafx.util.Duration;
 import javax.swing.JOptionPane;
+import org.controlsfx.control.Notifications;
 
 /**
  * FXML Controller class
@@ -82,7 +85,21 @@ public class DelRecController implements Initializable {
 
     @FXML
     private void supprimerReclamation(ActionEvent event) {
-    
+                   if (tableRec.getSelectionModel().isEmpty() ){
+         
+        Notifications notificationBuilder = Notifications.create()
+ 
+                    .title("ERREUR")
+                    .text("Veuillez choisir un champ")
+                
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.TOP_RIGHT);
+
+            notificationBuilder.show();   
+     }else{
+        
+        
+        
    int responce=    JOptionPane.showConfirmDialog(null, "voulez-vous supprimer la reclamation sélectionné ?","vérification",JOptionPane.YES_NO_OPTION);
             if (responce==JOptionPane.YES_OPTION){
                      Reclamation r =tableRec.getSelectionModel().getSelectedItem();
@@ -97,10 +114,26 @@ public class DelRecController implements Initializable {
             }
           
     }
-
+    }
     @FXML
     private void updateReclamation(ActionEvent event) {
-             try {
+            
+                   if (tfEtat.getSelectionModel().isEmpty()|tfId.getText().isEmpty()|tfEmail.getText().isEmpty()|tfSujet.getText().isEmpty()|tfDescription.getText().isEmpty() ){
+         
+        Notifications notificationBuilder = Notifications.create()
+ 
+                    .title("ERREUR")
+                    .text("Veuillez remplir les champs")
+                
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.TOP_RIGHT);
+
+            notificationBuilder.show();   
+     }else{
+        
+        
+        
+        try {
             Connection cnx = MyConnection.getInstance().getCnx();
             
             int value1 = Integer.parseInt(tfId.getText());
@@ -133,7 +166,7 @@ public class DelRecController implements Initializable {
             Logger.getLogger(DelRecController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    }
     @FXML
     private void click(MouseEvent event) {
       Reclamation reclamation=tableRec.getSelectionModel().getSelectedItem();
@@ -191,6 +224,20 @@ public class DelRecController implements Initializable {
     else
     {}
     }
+    @FXML
+    private void imprimerevenement(ActionEvent event) {
   
-  
+    System.out.println("To Printer!");
+      System.out.println("To Printer!");
+         PrinterJob job = PrinterJob.createPrinterJob();
+           if(job != null){
+    Window primaryStage = null;
+           job.showPrintDialog(primaryStage); 
+            
+    Node root = this.tableRec;
+           job.printPage(root);
+           job.endJob(); }
+    
+}
+    
 }
