@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cours.gui.FXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="468.0" prefWidth="677.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="20.0" prefHeight="454.0" prefWidth="664.0" style="-fx-background-color: #a3a9b2;">
+               <children>
+                  <TabPane layoutX="24.0" layoutY="49.0" prefHeight="392.0" prefWidth="626.0" style="-fx-background-color: #cfd8dc;" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab style="-fx-background-color: #b0bec5;" text="evenement">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="679.0" style="-fx-background-color: #cfd8dc;">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="190.0" text="description" textFill="#24348d">
+                                       <font>
+                                          <Font name="Bodoni MT Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="84.0" text="lieu" textFill="#140c80">
+                                       <font>
+                                          <Font name="Bodoni MT Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="142.0" text="type" textFill="#140c80">
+                                       <font>
+                                          <Font name="Bodoni MT Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tflieu" accessibleRole="IMAGE_VIEW" layoutX="22.0" layoutY="109.0" promptText="lieu evenement" />
+                                    <Button fx:id="btnajouterExA" layoutX="24.0" layoutY="325.0" mnemonicParsing="false" onAction="#ajouterevenement" style="-fx-background-color: #64ffda;" text="Ajouter" textAlignment="JUSTIFY" />
+                                    <Button fx:id="btnmodifierExA" layoutX="176.0" layoutY="325.0" mnemonicParsing="false" onAction="#modifierevenement" style="-fx-background-color: #64ffda;" text="Modifier" />
+                                    <Button fx:id="btnsupprimerExA" layoutX="270.0" layoutY="325.0" mnemonicParsing="false" onAction="#supprimerevenement" style="-fx-background-color: #64ffda;" text="Supprimer" />
+                                    <Button fx:id="btnafficherExA" layoutX="110.0" layoutY="325.0" mnemonicParsing="false" onAction="#afficherevenement" style="-fx-background-color: #64ffda;" text="afficher" />
+                                    <TableView fx:id="tableExA" layoutX="206.0" layoutY="22.0" prefHeight="212.0" prefWidth="327.0" style="-fx-background-color: #f7f7f6;">
+                                       <columns>
+                                          <TableColumn fx:id="colidprofile" prefWidth="61.0" text="Id " />
+                                          <TableColumn fx:id="collieu" prefWidth="66.0" text=" lieu" />
+                                          <TableColumn fx:id="coltype" prefWidth="61.0" text=" type" />
+                                          <TableColumn fx:id="coldcr" prefWidth="90.0" text="description" />
+                                          <TableColumn fx:id="coldate" prefWidth="48.0" text="date" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="tfdcr" layoutX="26.0" layoutY="209.0" promptText="description" />
+                                    <Label layoutX="15.0" layoutY="31.0" text="identifiant" textFill="#140c80">
+                                       <font>
+                                          <Font name="Bodoni MT Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfid" layoutX="25.0" layoutY="53.0" promptText="id evenement" />
+                                    <Label layoutX="13.0" layoutY="246.0" text="date" textFill="#24348d">
+                                       <font>
+                                          <Font name="Bodoni MT Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnchercherExA" layoutX="244.0" layoutY="267.0" mnemonicParsing="false" onAction="#chercherevenement" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #64ffda;" text="chercher" />
+                                    <Button fx:id="btntrierExA" layoutX="361.0" layoutY="325.0" mnemonicParsing="false" onAction="#trierevenement" prefHeight="18.0" prefWidth="71.0" style="-fx-background-color: #64ffda;" text="trier le lieu" />
+                                    <Button fx:id="btnyoga" layoutX="549.0" layoutY="35.0" mnemonicParsing="false" onAction="#ajouterv1" text="ex : yoga" />
+                                    <Button fx:id="btnnatation" layoutX="549.0" layoutY="97.0" mnemonicParsing="false" onAction="#ajouterv2" text="ex : natation" />
+                                    <Button fx:id="btnimprimer" layoutX="454.0" layoutY="325.0" mnemonicParsing="false" onAction="#imprimerevenement" prefHeight="18.0" prefWidth="71.0" style="-fx-background-color: #64ffda;" text="imprimer" />
+                                    <TextField fx:id="tfatrouver" layoutX="361.0" layoutY="267.0" promptText="chercher par type" />
+                                    <TextField fx:id="tftype" layoutX="25.0" layoutY="158.0" />
+                                    <TextField fx:id="tfdate" layoutX="25.0" layoutY="267.0" promptText="description" />
+                                    <Button fx:id="btnstat" layoutX="525.0" layoutY="267.0" mnemonicParsing="false" onAction="#statevenement" style="-fx-background-color: #64ffda;" text="stat" />
+                                    <Button fx:id="btnexcel" layoutX="563.0" layoutY="178.0" mnemonicParsing="false" onAction="#excel" style="-fx-background-color: #64ffda;" text="excel" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <Label layoutX="33.0" text="GESTION DES EVENEMENTS" textAlignment="CENTER" textFill="#232740">
+                     <font>
+                        <Font name="Algerian" size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

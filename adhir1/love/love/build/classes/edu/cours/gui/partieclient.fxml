@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cours.gui.PartieclientController">
+   <children>
+      <TabPane prefHeight="392.0" prefWidth="626.0" style="-fx-background-color: #cfd8dc;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab style="-fx-background-color: #b0bec5;" text="evenement">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="461.0" prefWidth="679.0" style="-fx-background-color: #cfd8dc;">
+                     <children>
+                        <TableView fx:id="tableExA" layoutX="206.0" layoutY="22.0" prefHeight="212.0" prefWidth="327.0" style="-fx-background-color: #f7f7f6;">
+                           <columns>
+                              <TableColumn fx:id="colidprofile" prefWidth="61.0" text="Id " />
+                              <TableColumn fx:id="collieu" prefWidth="66.0" text=" lieu" />
+                              <TableColumn fx:id="coltype" prefWidth="61.0" text=" type" />
+                              <TableColumn fx:id="coldcr" prefWidth="90.0" text="description" />
+                              <TableColumn fx:id="coldate" prefWidth="48.0" text="date" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnchercherc" layoutX="245.0" layoutY="267.0" mnemonicParsing="false" onAction="#chercherevenementc" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #64ffda;" text="chercher" />
+                        <Button fx:id="btnyogac" layoutX="22.0" layoutY="169.0" mnemonicParsing="false" onAction="#ajouterv1" text="ex : yoga" />
+                        <Button fx:id="btnnatationc" layoutX="13.0" layoutY="222.0" mnemonicParsing="false" onAction="#ajouterv2" text="ex : natation" />
+                        <Button fx:id="btnimprimerc" layoutX="18.0" layoutY="110.0" mnemonicParsing="false" onAction="#imprimerevenementc" prefHeight="18.0" prefWidth="71.0" style="-fx-background-color: #64ffda;" text="imprimer" />
+                        <TextField fx:id="tfatrouverc" layoutX="361.0" layoutY="267.0" promptText="chercher par type" />
+                        <Button fx:id="map" layoutX="18.0" layoutY="41.0" mnemonicParsing="false" onAction="#gotomap" prefHeight="18.0" prefWidth="71.0" style="-fx-background-color: #64ffda;" text="map" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
