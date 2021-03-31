@@ -124,6 +124,8 @@ public class EvenementController implements Initializable {
     private Button reclamation;
     @FXML
     private Button panier;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -548,6 +550,23 @@ private void Excel(File file) throws FileNotFoundException, IOException {
     private void panier(ActionEvent event) {
          try {
            Parent exercices_parent = FXMLLoader.load(getClass().getResource("GestionPanier.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+        
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("DisplayAll.fxml"));
            Scene ex_section_scene = new Scene(exercices_parent);
            Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
            

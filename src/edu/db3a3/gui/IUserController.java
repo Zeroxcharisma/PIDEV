@@ -52,6 +52,22 @@ public class IUserController implements Initializable {
 
     @FXML
     private FlowPane FlowPaneCour;
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
+    @FXML
+    private Label imagePath;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -218,6 +234,34 @@ public class IUserController implements Initializable {
 
             }
         }
+    }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
     
 }

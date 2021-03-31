@@ -58,6 +58,8 @@ public class AjouterTestFitnessController implements Initializable {
     private Button planning;
     @FXML
     private Label imagePath;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -144,6 +146,10 @@ retour.setOnAction(e->{
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
     
         }    

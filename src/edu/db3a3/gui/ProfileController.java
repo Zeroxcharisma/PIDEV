@@ -8,14 +8,21 @@ package edu.db3a3.gui;
 import edu.db3a3.entities.Session;
 import edu.db3a3.entities.Utilisateur;
 import edu.db3a3.services.UtilisateurCRUD;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 
 /**
@@ -47,6 +54,8 @@ public class ProfileController implements Initializable {
      
      UtilisateurCRUD c=new UtilisateurCRUD();
      Utilisateur u=new Utilisateur();
+    @FXML
+    private Hyperlink disconnect;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -64,6 +73,34 @@ public class ProfileController implements Initializable {
   
     @FXML
     private void Retourbtn(ActionEvent event) {
+          try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("EvenementClient.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+    }
+
+    @FXML
+    private void disconnect(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Login.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
     
     

@@ -67,6 +67,8 @@ public class ModifierCoursController implements Initializable {
     private Button panier;
     @FXML
     private Button planning;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -214,5 +216,9 @@ public class ModifierCoursController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
 }

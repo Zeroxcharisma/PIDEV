@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.db3a3.gui.DelRecController">
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.DelRecController">
 <children>
       <AnchorPane id="AnchorPane" layoutY="-2.0" prefHeight="725.0" prefWidth="1175.0">
          <children>
@@ -98,6 +98,16 @@
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
+            <Button fx:id="user" layoutX="-1.0" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/utilisateur.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <TableView fx:id="tableRec" layoutX="656.0" layoutY="267.0" onMouseClicked="#click" prefHeight="274.0" prefWidth="448.0">
@@ -153,7 +163,7 @@
             <Font name="Arial Black" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="427.0" layoutY="439.0" text="Etat" textFill="#9009c6">
+      <Label fx:id="letat" layoutX="427.0" layoutY="439.0" prefHeight="17.0" prefWidth="37.0" text="Etat" textFill="#9009c6">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>

@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.db3a3.gui.AfficheController">
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.AfficheController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
          <children>
@@ -110,6 +110,17 @@
             <Button fx:id="tfModifier" layoutX="763.0" layoutY="433.0" mnemonicParsing="false" onAction="#edit" text="modifier" />
             <Button fx:id="tfSupprimer" layoutX="863.0" layoutY="433.0" mnemonicParsing="false" onAction="#delete" text="supprimer" />
             <Button fx:id="export" layoutX="989.0" layoutY="430.0" mnemonicParsing="false" text="export" />
+            <Button fx:id="user" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/utilisateur.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Retour" layoutX="321.0" layoutY="232.0" mnemonicParsing="false" onAction="#Retour" text="Retour" />
          </children>
       </AnchorPane>
    </children>

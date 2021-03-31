@@ -169,11 +169,15 @@ public class Utilisateur {
         this.email = email;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "Utilisateur{" + "id_utilisateur=" + id_utilisateur + ", username=" + username + ", nom=" + nom + ", prenom=" + prenom + ", password=" + password + ", tel=" + tel + ", adresse=" + adresse + ", id_role=" + id_role + ", etat=" + etat + ", email=" + email + '}';
-    }
+    }*/
     
+       @Override
+    public String toString() {
+        return  nom;
+    }
  
 
     public Utilisateur(Integer id_utilisateur, String username, String nom, String prenom, String password, Integer tel, String adresse, int id_role, int etat, String email, Button update, Button delete) {

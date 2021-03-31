@@ -23,11 +23,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -80,8 +82,25 @@ public class DisplayAllController implements Initializable {
     private Button block;
     @FXML
     private Button btnstat;
-    @FXML
     private Hyperlink profile;
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
+    @FXML
+    private Label imagePath;
+    @FXML
+    private Button user;
+    @FXML
+    private Hyperlink disconnect;
  
 
     /**
@@ -324,7 +343,6 @@ alert.showAndWait();
         }
     }
 
-    @FXML
     private void linkprofile(ActionEvent event) {
          try {
             FXMLLoader loader=new FXMLLoader(getClass().getResource("Profile.fxml"));
@@ -334,6 +352,50 @@ alert.showAndWait();
             Logger.getLogger(DisplayAllController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+    }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
+    }
+
+    @FXML
+    private void disconnect(ActionEvent event) {
+          try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Login.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
    
    

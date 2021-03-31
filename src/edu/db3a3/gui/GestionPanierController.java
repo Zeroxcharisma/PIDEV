@@ -44,6 +44,8 @@ public class GestionPanierController implements Initializable {
     private Button GExamen;
     @FXML
     private Label ajout;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -55,6 +57,14 @@ public class GestionPanierController implements Initializable {
 
     @FXML
     private void event(ActionEvent event) {
+         try {
+                Parent root;
+                root = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
+                Gcours.getScene().setRoot(root);
+            } catch (IOException ex) {
+                Logger.getLogger(IAdminController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
     }
 
     @FXML
@@ -104,6 +114,10 @@ public class GestionPanierController implements Initializable {
 
     @FXML
     private void ajout(MouseEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
     
 }

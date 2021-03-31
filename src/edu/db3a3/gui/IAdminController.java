@@ -41,6 +41,8 @@ public class IAdminController implements Initializable {
     private Button reclamation;
     @FXML
     private Button panier;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -81,6 +83,14 @@ public class IAdminController implements Initializable {
 
     @FXML
     private void event(ActionEvent event) {
+        
+        try {
+                Parent root;
+                root = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
+                GExamen.getScene().setRoot(root);
+            } catch (IOException ex) {
+                Logger.getLogger(IAdminController.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
 
     @FXML
@@ -124,6 +134,10 @@ public class IAdminController implements Initializable {
 
     @FXML
     private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
     
 }

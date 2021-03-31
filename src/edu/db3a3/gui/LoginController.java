@@ -84,7 +84,7 @@ public class LoginController implements Initializable {
                 //Admin
                 if (p==0){
                     try {
-                    FXMLLoader loader=new FXMLLoader(getClass().getResource("DisplayAll.fxml"));
+                    FXMLLoader loader=new FXMLLoader(getClass().getResource("Evenement.fxml"));
                     Parent root =loader.load();
                     Password.getScene().setRoot(root);
                     } catch (IOException ex) {
@@ -95,7 +95,7 @@ public class LoginController implements Initializable {
                 //Client
                 if (p==1){
                      try {
-                    FXMLLoader loader2=new FXMLLoader(getClass().getResource("Test2.fxml"));
+                    FXMLLoader loader2=new FXMLLoader(getClass().getResource("Partieclient.fxml"));
                     Parent root =loader2.load();
                     Password.getScene().setRoot(root);
                      } catch (IOException ex) {
@@ -106,7 +106,7 @@ public class LoginController implements Initializable {
                  //Coach
                 if (p==2){
                      try {
-                    FXMLLoader loader2=new FXMLLoader(getClass().getResource("Test3.fxml"));
+                    FXMLLoader loader2=new FXMLLoader(getClass().getResource("Partieclient.fxml"));
                     Parent root =loader2.load();
                     Password.getScene().setRoot(root);
                     } catch (IOException ex) {
@@ -118,7 +118,7 @@ public class LoginController implements Initializable {
                 //neutreutioniste
                  if (p==3){
                      try {
-                    FXMLLoader loader2=new FXMLLoader(getClass().getResource("Test1.fxml"));
+                    FXMLLoader loader2=new FXMLLoader(getClass().getResource("Partieclient.fxml"));
                     Parent root =loader2.load();
                     Password.getScene().setRoot(root);
                     } catch (IOException ex) {

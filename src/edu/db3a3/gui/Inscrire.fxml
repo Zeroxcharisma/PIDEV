@@ -20,7 +20,6 @@
       <TextField fx:id="tfNom" layoutX="214.0" layoutY="95.0" />
       <TextField fx:id="tfPrenom" layoutX="214.0" layoutY="144.0" />
       <TextField fx:id="tfTel" layoutX="214.0" layoutY="237.0" />
-      <TextField fx:id="tfAdresse" layoutX="214.0" layoutY="286.0" />
       <TextField fx:id="tfEmail" layoutX="214.0" layoutY="331.0" />
       <Button fx:id="btnInscription" layoutX="165.0" layoutY="428.0" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="177.0" text="Inscription" />
       <TextField fx:id="tfRole" layoutX="436.0" layoutY="95.0" prefHeight="31.0" prefWidth="70.0" visible="false" />
@@ -28,5 +27,6 @@
       <Label layoutX="98.0" layoutY="384.0" text="Role :" />
       <ComboBox fx:id="listeRole" layoutX="214.0" layoutY="379.0" prefWidth="150.0" />
       <PasswordField fx:id="tfPassword" layoutX="214.0" layoutY="190.0" />
+      <ComboBox fx:id="listAdresse" layoutX="214.0" layoutY="276.0" prefHeight="31.0" prefWidth="187.0" promptText="Adresse" />
    </children>
 </AnchorPane>

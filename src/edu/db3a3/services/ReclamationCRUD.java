@@ -13,7 +13,7 @@ package edu.db3a3.services;
 
 import edu.db3a3.entities.Reclamation;
 import edu.db3a3.entities.Utilisateur;
-import edu.db3a3.entities.Utilisateur1;
+
 import edu.db3a3.interfaces.IReclamation;
 import edu.db3a3.tools.MyConnection;
 import java.sql.PreparedStatement;
@@ -46,11 +46,11 @@ public class ReclamationCRUD implements IReclamation<Reclamation>{
             System.out.println(ex.getMessage());
         }    }
   
-    public void ajouterReclamation2(Reclamation t) {
+   public void ajouterReclamation2(Reclamation t) {
            try {
             String requete= "INSERT INTO reclamation(email,sujet,description,id_user,etat)"
             + "VALUES ('"+t.getEmail()+"','"+t.getSujet()+"','"+t.getDescription()
-                    +"','"+t.getId_user()+"','"+t.getEtat()+"')";
+                    +"','"+t.getId_user()+"','"+"non traitée"+"')";
             Statement pst = MyConnection.getInstance().getCnx()
                     .createStatement();
          
@@ -228,21 +228,21 @@ public class ReclamationCRUD implements IReclamation<Reclamation>{
 }
         
         
- public List<Utilisateur1> getAllCoachs(){
+ public List<Utilisateur> getAllCoachs(){
  
-                ArrayList<Utilisateur1> listuser=new ArrayList<>();
+                ArrayList<Utilisateur> listuser=new ArrayList<>();
 
       try {
-          String requete="select id_utilisateur,nom,tel from utilisateur where id_role=2";
+          String requete="select id_utilisateur,nom,tel from utilisateur where id_role=2 and etat=0";
           Statement st = MyConnection.getInstance().getCnx()
                   .createStatement();
           ResultSet rs= st.executeQuery(requete);
           while(rs.next()){
-                        Utilisateur1 coach= new Utilisateur1();
+                        Utilisateur coach= new Utilisateur();
 
               coach.setId_utilisateur(rs.getInt("id_utilisateur"));
               coach.setNom(rs.getString("nom"));
-              coach.setTel(rs.getString("tel"));
+              coach.setTel(rs.getInt("tel"));
               listuser.add(coach);
           }
       } catch (SQLException ex) {
@@ -274,7 +274,7 @@ public int getNumberOfReclamation(int id_coach){
 }
 public void coachBanner(int id){
       try {
-          String requete="UPDATE utilisateur SET etat=0 where id_utilisateur="+id;
+          String requete="UPDATE utilisateur SET etat=2 where id_utilisateur="+id;
           Statement st= MyConnection.getInstance().getCnx()
                   .createStatement();
           st.executeUpdate(requete);

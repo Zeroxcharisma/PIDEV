@@ -3,15 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/GestionPanier.fxml</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/GestionPanierController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/IAdminController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/EvenementController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/AfficheController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/GestionTestFitnessController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ModifierTestFitnessController.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/services/ParticipationCrud.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ShowparticpationController.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/services/ReclamationCRUD.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/showparticpation.fxml</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/AllUserNewController.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/evenement.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/EvenementClientController.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/StatistiquesController.java</file>
             <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/FirstWindow.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/AjouterController.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/PartieclientController.java</file>
+            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/Participation.java</file>
         </group>
     </open-files>
 </project-private>

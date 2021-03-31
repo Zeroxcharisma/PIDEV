@@ -99,6 +99,8 @@ public class FXMLDocumentController implements Initializable {
     private Button reclamation;
     @FXML
     private Button panier;
+    @FXML
+    private Button user;
     
    
     
@@ -360,6 +362,10 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
 
    

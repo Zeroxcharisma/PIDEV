@@ -65,6 +65,8 @@ public class GestionCoursController implements Initializable {
     private Button panier;
     @FXML
     private Button planning;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -181,5 +183,9 @@ public class GestionCoursController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
 }

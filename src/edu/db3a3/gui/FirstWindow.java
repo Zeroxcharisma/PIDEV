@@ -32,8 +32,8 @@ public class FirstWindow extends Application {
         //  Parent root = FXMLLoader.load(getClass().getResource("AllUserNewController.fxml"));
           // Parent root = FXMLLoader.load(getClass().getResource("DisplayAll.fxml"));
          // Parent root = FXMLLoader.load(getClass().getResource("Inscrire.fxml"));
-          Parent root = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
-         // Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+         // Parent root = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
+          Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
           //Parent root = FXMLLoader.load(getClass().getResource("map.fxml"));
          //  Parent root = FXMLLoader.load(getClass().getResource("Profile.fxml"));
          // Parent root = FXMLLoader.load(getClass().getResource("IAdmin.fxml"));
@@ -41,6 +41,7 @@ public class FirstWindow extends Application {
           // Parent root = FXMLLoader.load(getClass().getResource("Affiche.fxml"));
           // Parent root = FXMLLoader.load(getClass().getResource("DelRec.fxml"));
         //  Parent root = FXMLLoader.load(getClass().getResource("AddRec.fxml"));
+         // Parent root = FXMLLoader.load(getClass().getResource("Partieclient.fxml"));
            
            
             Scene scene = new Scene(root);

@@ -54,6 +54,10 @@ public class AjouterController implements Initializable {
     private Button planning;
     @FXML
     private Label imagePath;
+    @FXML
+    private Button user;
+    @FXML
+    private Button retour;
 
     /**
      * Initializes the controller class.
@@ -134,6 +138,27 @@ public class AjouterController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
+    }
+
+    @FXML
+    private void retour(ActionEvent event) {
+        
+          try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("GestionPanier.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
     
  

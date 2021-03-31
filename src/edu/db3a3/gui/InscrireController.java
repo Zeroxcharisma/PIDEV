@@ -76,7 +76,6 @@ public class InscrireController implements Initializable {
     private TextField tfPassword;
     @FXML
     private TextField tfTel;
-    @FXML
     private TextField tfAdresse;
     @FXML
     private TextField tfEmail;
@@ -88,6 +87,9 @@ public class InscrireController implements Initializable {
     private TextField tfEtat;
     @FXML
     private ComboBox<String> listeRole;
+    @FXML
+    private ComboBox<String> listAdresse;
+ 
 
     
     
@@ -97,6 +99,8 @@ public class InscrireController implements Initializable {
      static int i;
      
      public static  ObservableList<String>list=FXCollections.observableArrayList();
+     public static  ObservableList<String>list2=FXCollections.observableArrayList();
+   
     /**
      * Initializes the controller class.
      */
@@ -107,6 +111,33 @@ public class InscrireController implements Initializable {
            list.add("Client");
            listeRole.setItems(list);
        
+           
+           
+           list2.add("Ariana");
+           list2.add("Béja");
+           list2.add("Ben Arous");
+           list2.add("Bizerte");
+           list2.add("Gabes ");
+           list2.add("Gafsa");
+           list2.add("Jendouba");
+           list2.add("Kairouan");
+           list2.add("Kasserine");
+           list2.add("Kebili");
+           list2.add("La Mannouba");
+           list2.add("Le Kef");
+           list2.add("Mahdia");
+           list2.add("Medenine");
+           list2.add("Monastir");
+           list2.add("Nabeul");
+           list2.add("Sfax");
+           list2.add("Sidi Bouzid");
+           list2.add("Siliana");
+           list2.add("Sousse");
+           list2.add("Tataouine");
+           list2.add("Tozeur");
+           list2.add("Tunis");
+           list2.add("Zaghouan");
+           listAdresse.setItems(list2);
        
         // TODO
     } 
@@ -133,7 +164,7 @@ public class InscrireController implements Initializable {
     @FXML
     private void addUser(ActionEvent event) throws SQLException {
         
-            if (tfUsername.getText().isEmpty()||tfNom.getText().isEmpty()||tfPrenom.getText().isEmpty()||tfPassword.getText().isEmpty()||tfTel.getText().isEmpty()||tfEmail.getText().isEmpty()||tfAdresse.getText().isEmpty()){
+            if (tfUsername.getText().isEmpty()||tfNom.getText().isEmpty()||tfPrenom.getText().isEmpty()||tfPassword.getText().isEmpty()||tfTel.getText().isEmpty()||tfEmail.getText().isEmpty()){
                 showAlert(Alert.AlertType.ERROR, tfNom.getScene().getWindow(),
                         "Form Error!", "Veuillez remplir tous les champs!");}
             
@@ -144,7 +175,7 @@ public class InscrireController implements Initializable {
             String prenom = tfPrenom.getText();
             String password =tfPassword.getText();
             int tel = Integer.parseInt(tfTel.getText());
-            String adresse=tfAdresse.getText();
+            String adresse= listAdresse.getSelectionModel().getSelectedItem();
              int id_role=0;
              if(listeRole.getSelectionModel().getSelectedItem()=="Coach"){
                   id_role=2;
@@ -175,7 +206,7 @@ public class InscrireController implements Initializable {
             
             System.out.println(i);
             
-            if (tfUsername.getText().isEmpty()||tfNom.getText().isEmpty()||tfPrenom.getText().isEmpty()||tfPassword.getText().isEmpty()||tfTel.getText().isEmpty()||tfEmail.getText().isEmpty()||tfAdresse.getText().isEmpty())
+            if (tfUsername.getText().isEmpty()||tfNom.getText().isEmpty()||tfPrenom.getText().isEmpty()||tfPassword.getText().isEmpty()||tfTel.getText().isEmpty()||tfEmail.getText().isEmpty())
             {
                 showAlert(Alert.AlertType.ERROR, tfUsername.getScene().getWindow(),
                         "Form Error!", "Please enter your name");}

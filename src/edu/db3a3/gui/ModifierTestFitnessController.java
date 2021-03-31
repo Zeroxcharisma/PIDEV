@@ -59,6 +59,8 @@ public class ModifierTestFitnessController implements Initializable {
     private Button planning;
     @FXML
     private Label imagePath;
+    @FXML
+    private Button user;
 
 
     /**
@@ -162,5 +164,9 @@ public class ModifierTestFitnessController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
 }

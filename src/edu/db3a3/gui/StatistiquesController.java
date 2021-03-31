@@ -34,7 +34,6 @@ public class StatistiquesController implements Initializable {
     private PieChart pc;
     @FXML
     private PieChart pc1;
-    @FXML
     private PieChart pc2;
     
     ObservableList <PieChart.Data> ol = FXCollections.observableArrayList();
@@ -122,42 +121,9 @@ public class StatistiquesController implements Initializable {
                      }
                      
                      
-                     
-                     try {
-           
+             
         
-        String requete = "SELECT utilisateur.adresse, Count(*) AS Nombre_de_Fois FROM utilisateur GROUP BY utilisateur.adresse";
-        PreparedStatement pst = MyConnection.getInstance().getCnx()
-                    .prepareStatement(requete);
-        ResultSet rs =  pst.executeQuery(requete);
-        
-        
-     
-        while(rs.next()){
-            
-            o3.addAll(new PieChart.Data(rs.getString(1),rs.getInt(2)));
-                    pc2.setData(o3);
-                    
-                    pc2.setLegendSide(Side.LEFT);
-                    
-                    FadeTransition f = new FadeTransition(Duration.seconds(4),pc2);
-                    f.setFromValue(0);
-                    f.setToValue(1);
-                    f.play();
-        }
-            } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-                     for (PieChart.Data data : pc2.getData())
-                     {
-                         data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED,  new EventHandler<MouseEvent>() {
-                             @Override
-                             public void handle(MouseEvent event) {
-                               JOptionPane.showMessageDialog(null,"adresse   -- "+ data.getName()+ "nombre d'utilisateur --" +(int)data.getPieValue());   
-                             }
-                         });
-                     }
-                     
+       
                      
                      
                      

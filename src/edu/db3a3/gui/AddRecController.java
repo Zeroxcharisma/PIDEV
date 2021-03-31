@@ -7,11 +7,14 @@ package edu.db3a3.gui;
 
 import com.twilio.rest.wireless.v1.Command.Transport;
 import edu.db3a3.entities.Reclamation;
-import edu.db3a3.entities.Utilisateur1;
+import edu.db3a3.entities.Utilisateur;
+
 import static edu.db3a3.gui.ResetPasswordController.numTelephone;
 import edu.db3a3.services.ReclamationCRUD;
+import edu.db3a3.services.UtilisateurCRUD;
 import edu.db3a3.tools.Sms;
 import edu.db3a3.tools.SmsSender;
+import java.io.IOException;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,16 +25,24 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
+import org.controlsfx.control.Notifications;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
 
@@ -57,15 +68,37 @@ public class AddRecController implements Initializable {
     private Label liste;
     
 public  static String numTelephone ;
-
+    @FXML
+    private Button event;
+    @FXML
+    private Button produit;
+    @FXML
+    private Button reclamation;
+    @FXML
+    private Button abonnement;
+    @FXML
+    private Button panier;
+    @FXML
+    private Button planning;
+    @FXML
+    private Label imagePath;
+    @FXML
+    private Button user;
+    int id= edu.db3a3.entities.Session.id_utilisateur;
+    
+    
+     UtilisateurCRUD s=new UtilisateurCRUD();
+     Utilisateur u=new Utilisateur();
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-      
-        tfEmail.setText("jessymina.jc@gmail.com");
+      u= s.getUtilisaeur(id);
+      tfEmail.setText(u.getEmail());
+       // tfEmail.setText("jessymina.jc@gmail.com");
         
         ObservableList<String> list = FXCollections.observableArrayList("Reclamtion sur coach","Autre");
           como2.setVisible(false);
@@ -78,10 +111,22 @@ public  static String numTelephone ;
 
     @FXML
     private void ajouterReclamation(ActionEvent event) {
+        if (tfEmail.getText().isEmpty()|tfDescription.getText().isEmpty()|(tfSujet.getSelectionModel().isEmpty() && como2.getSelectionModel().isEmpty())){
+         
+        Notifications notificationBuilder = Notifications.create()
+ 
+                    .title("ERREUR")
+                    .text("Veuillez remplir les champs")
+                
+                    .hideAfter(Duration.seconds(5))
+                    .position(Pos.TOP_RIGHT);
+
+            notificationBuilder.show();   
+     }else{
 if(como2.isVisible()){
     
 
-        Utilisateur1 user = (Utilisateur1) como2.getSelectionModel().getSelectedItem();   
+        Utilisateur user = (Utilisateur) como2.getSelectionModel().getSelectedItem();   
         int id_utilisateur= user.getId_utilisateur();
          if ( id_utilisateur>0){
              
@@ -122,7 +167,7 @@ if(como2.isVisible()){
             JOptionPane.showMessageDialog(null, "Reclamation ajouté");
          
          }
-            
+        
           
 sendMail();
 
@@ -132,25 +177,25 @@ sendMail();
 
             
         TrayNotification tray = null;
-        tray = new TrayNotification("Reclamation ajoutee", "Votre abonnement a ete ajoutee avec succes ,Merci ", NotificationType.SUCCESS);
+        tray = new TrayNotification("Reclamation envoyée", "Cher client votre réclamation a été prise en compte et sera traitée dès que possible,Cordialement ", NotificationType.SUCCESS);
        
         tray.showAndDismiss(javafx.util.Duration.seconds(5));
     
-
+        }
 }
     @FXML
     public void comoboxdis(){
     ReclamationCRUD r = new ReclamationCRUD();
- List<Utilisateur1> user=  user= r.getAllCoachs();
- ObservableList<Utilisateur1> utili = FXCollections.observableArrayList();
+ List<Utilisateur> user=  user= r.getAllCoachs();
+ ObservableList<Utilisateur> utili = FXCollections.observableArrayList();
  
 if(tfSujet.getSelectionModel().getSelectedItem().equals(c)){
 liste.setVisible(true);
 como2.setVisible(true);
-for(Utilisateur1 e : user)
+for(Utilisateur e : user)
    
 {
-    utili.add(new Utilisateur1(e.getId_utilisateur(),e.getNom(),e.getTel()));
+    utili.add(new Utilisateur(e.getId_utilisateur(),e.getNom(),e.getTel()));
     
     como2.setItems(utili);
     
@@ -173,8 +218,8 @@ como2.setVisible(false);
             String pass = "203JFT2277";
             String to =tfEmail.getText();
             String from ="yasmine.chaieb@esprit.tn";
-            String subject = "Compte crée";
-            String messageText = "Bonjour cher nouveau membre , votre reclamation a été bien envoyé. Cordialemment";
+            String subject = "Réclamation bien reçu";
+            String messageText = "Bonjour cher client  , votre reclamation a été bien reçu et en cours de traitement. Cordialemment";
             boolean sessionDebug = false;
 
             Properties props = System.getProperties();
@@ -208,4 +253,57 @@ como2.setVisible(false);
         
     }
   }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void produit(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("IUser.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+    }
+
+    @FXML
+    private void abonnement(ActionEvent event) {
+    }
+
+    @FXML
+    private void panier(ActionEvent event) {
+    }
+
+    @FXML
+    private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
+         
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
+    }
 }

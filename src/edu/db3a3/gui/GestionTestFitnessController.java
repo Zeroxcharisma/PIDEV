@@ -70,6 +70,8 @@ public class GestionTestFitnessController implements Initializable {
     private Button planning;
     @FXML
     private Label imagePath;
+    @FXML
+    private Button user;
     /**
      * Initializes the controller class.
      */
@@ -195,5 +197,9 @@ public class GestionTestFitnessController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
 }
