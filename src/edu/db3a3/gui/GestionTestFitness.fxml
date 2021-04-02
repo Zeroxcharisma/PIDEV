@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.GestionTestFitnessController">
   <children>
-      <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -88,41 +88,48 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Gestion des tests" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="436.0" />
+            <Label layoutX="354.0" layoutY="57.0" text="Gestion des tests" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
             <Label fx:id="imagePath" layoutX="275.0" layoutY="300.0" prefHeight="21.0" prefWidth="91.0" text="Label" />
-            <Pane layoutX="341.0" layoutY="249.0" prefHeight="400.0" prefWidth="225.0">
+            <Pane layoutX="341.0" layoutY="18.0" prefHeight="632.0" prefWidth="820.0">
                <children>
-                  <Button fx:id="affecterE" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@login1.css" text="Affecter un test a un cours" textFill="WHITE">
+                  <Button fx:id="affecterE" layoutX="529.0" layoutY="146.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Affecter un test" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="supprimerE" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@login1.css" text="Supprimer un test" textFill="WHITE">
+                  <Button fx:id="supprimerE" layoutX="529.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Supprimer" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="actualiserE" layoutX="-1.0" layoutY="309.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@login1.css" text="Actualiser" textFill="WHITE">
+                  <Button fx:id="actualiserE" layoutX="528.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Actualiser" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="AjouterE" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@login1.css" text="Ajouter un test" textFill="WHITE">
+                  <Button fx:id="AjouterE" layoutX="529.0" layoutY="19.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Ajouter" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="ModifierE" layoutX="-1.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@login1.css" text="Modifier les données d'un test" textFill="WHITE">
+                  <Button fx:id="ModifierE" layoutX="528.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Modifier" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="retour" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" styleClass="button4" stylesheets="@login1.css" text="Menu précedent" textFill="WHITE" />
+                  <Button fx:id="retour" layoutY="128.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="118.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Retour" textFill="WHITE" />
+                  <TableView fx:id="table" layoutX="3.0" layoutY="336.0" prefHeight="349.0" prefWidth="791.0" stylesheets="@../resources/dark-theme.css">
+                     <columns>
+                        <TableColumn fx:id="dureeE" prefWidth="206.0" text="Durée du test" />
+                        <TableColumn fx:id="coursE" prefWidth="322.0" text="Cours du test" />
+                        <TableColumn fx:id="dateE" prefWidth="260.0" text="Date du test" />
+                     </columns>
+                  </TableView>
                </children>
             </Pane>
             <Button fx:id="user" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
@@ -137,12 +144,5 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <TableView fx:id="table" layoutX="693.0" layoutY="356.0" prefHeight="282.0" prefWidth="412.0" stylesheets="@login1.css">
-         <columns>
-            <TableColumn fx:id="dureeE" prefWidth="149.60003662109375" text="Durée du test" />
-            <TableColumn fx:id="coursE" prefWidth="126.39996337890625" text="Cours du test" />
-            <TableColumn fx:id="dateE" prefWidth="135.2000732421875" text="Date du test" />
-         </columns>
-      </TableView>
    </children>
 </AnchorPane>

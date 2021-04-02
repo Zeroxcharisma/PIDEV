@@ -26,10 +26,12 @@
 .button{
     -fx-text-fill: -fx-primarytext;
     -fx-background-color: -fx-primary;
-    
+    -fx-font-family : Caveat;
+
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
-    -fx-font-size: 12pt;
+    -fx-font-size: 18pt;
+    -fx-text-alignement : center;
 }
 
 .button:hover, .button:focused{
@@ -40,10 +42,31 @@
 
 .text-field
 {
-    -fx-text-fill: -fx-primarytext;
+   
     -fx-font-size : 12pt;
     -jfx-focus-color: -fx-secondary;
-    -fx-text-fill: derive(-fx-secondary, 20%);
+    
+        -fx-font-family : Caveat;
+
+}
+.hyperlink
+{
+    -fx-font-family : Caveat;
+    -fx-text-fill: gray;
+    -fx-font-size: 18pt;
+    
+}
+
+.label
+{
+    -fx-font-family : Caveat;
+    -fx-text-fill: black;
+    -fx-font-size: 18pt;
+}
+.combo-box
+{
+        -fx-font-family : Caveat;
+
 }
 
 /*Login Screen Specific*/

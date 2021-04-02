@@ -33,6 +33,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -151,7 +152,7 @@ if(como2.isVisible()){
               s.send("votre compte a été bloqué à cause d'un nombre de reclamation",numTelephone);
           
             }
-            pcd.ajouterReclamation(r);
+            pcd.ajouterReclamation2(r);
             JOptionPane.showMessageDialog(null, "Reclamation ajouté");
          
                     }
@@ -256,6 +257,18 @@ como2.setVisible(false);
 
     @FXML
     private void event(ActionEvent event) {
+            try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Partieclient.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -280,6 +293,18 @@ como2.setVisible(false);
 
     @FXML
     private void abonnement(ActionEvent event) {
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Client.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -288,6 +313,19 @@ como2.setVisible(false);
 
     @FXML
     private void planning(ActionEvent event) {
+         
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("IUser.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -306,4 +344,6 @@ como2.setVisible(false);
          
        }
     }
+
+   
 }

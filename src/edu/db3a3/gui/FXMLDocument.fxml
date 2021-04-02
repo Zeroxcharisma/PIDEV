@@ -3,6 +3,7 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -15,7 +16,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.FXMLDocumentController">
 <children>
-      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -90,38 +91,39 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="587.0" layoutY="144.0" text="Gestion D'Abonnement" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="526.0" />
+            <Label layoutX="336.0" layoutY="52.0" text="Gestion d'abonnement" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
-            <Label layoutX="374.0" layoutY="259.0" text="id" />
-            <Label layoutX="367.0" layoutY="308.0" text="duree" />
-            <Label layoutX="382.0" layoutY="351.0" text="prix" />
-            <Label layoutX="384.0" layoutY="406.0" text="type" />
-            <TextField fx:id="idabo" layoutX="427.0" layoutY="255.0" prefHeight="25.0" prefWidth="128.0" promptText="id abonnement" />
-            <TextField fx:id="dureeabo" layoutX="427.0" layoutY="303.0" prefHeight="25.0" prefWidth="128.0" promptText="duree ab" />
-            <TextField fx:id="prixabo" layoutX="428.0" layoutY="352.0" prefHeight="25.0" prefWidth="128.0" promptText="prix abonnement" />
-            <TextField fx:id="typeabo" layoutX="401.0" layoutY="401.0" prefHeight="25.0" prefWidth="128.0" promptText="type abonnement" />
-            <TableView fx:id="affichage" layoutX="696.0" layoutY="242.0" prefHeight="219.0" prefWidth="381.0">
+            <Label layoutX="855.0" layoutY="33.0" stylesheets="@../resources/dark-theme.css" text="ID" />
+            <Label layoutX="844.0" layoutY="95.0" stylesheets="@../resources/dark-theme.css" text="duree" />
+            <Label layoutX="852.0" layoutY="160.0" stylesheets="@../resources/dark-theme.css" text="prix" />
+            <Label layoutX="846.0" layoutY="227.0" stylesheets="@../resources/dark-theme.css" text="type" />
+            <TextField fx:id="idabo" layoutX="904.0" layoutY="30.0" prefHeight="42.0" prefWidth="225.0" promptText="id abonnement" stylesheets="@../resources/dark-theme.css" />
+            <TextField fx:id="dureeabo" layoutX="902.0" layoutY="93.0" prefHeight="42.0" prefWidth="225.0" promptText="duree ab" stylesheets="@../resources/dark-theme.css" />
+            <TextField fx:id="prixabo" layoutX="902.0" layoutY="159.0" prefHeight="42.0" prefWidth="225.0" promptText="prix abonnement" stylesheets="@../resources/dark-theme.css" />
+            <TextField fx:id="typeabo" layoutX="902.0" layoutY="224.0" prefHeight="42.0" prefWidth="225.0" promptText="type abonnement" stylesheets="@../resources/dark-theme.css" />
+            <TableView fx:id="affichage" layoutX="572.0" layoutY="458.0" prefHeight="252.0" prefWidth="587.0" stylesheets="@../resources/dark-theme.css">
               <columns>
-                <TableColumn fx:id="idaff" prefWidth="69.0" text="id" />
-                <TableColumn fx:id="dureeaff" prefWidth="82.0" text="duree" />
-                  <TableColumn fx:id="prixaff" prefWidth="78.0" text="prix" />
-                  <TableColumn fx:id="typeaff" minWidth="7.0" prefWidth="115.0" text="type" />
+                <TableColumn fx:id="idaff" prefWidth="68.0" text="id" />
+                <TableColumn fx:id="dureeaff" prefWidth="123.0" text="duree" />
+                  <TableColumn fx:id="prixaff" prefWidth="117.0" text="prix" />
+                  <TableColumn fx:id="typeaff" minWidth="0.0" prefWidth="121.0" text="type" />
+                  <TableColumn fx:id="mail" minWidth="7.0" prefWidth="152.0" text="Id_user" />
               </columns>
             </TableView>
-            <Button fx:id="ajouterabo" layoutX="443.0" layoutY="475.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
-            <Button fx:id="modifier" layoutX="530.0" layoutY="471.0" mnemonicParsing="false" onAction="#modifieraboo" text="modifier" />
-            <TextField fx:id="idd" layoutX="709.0" layoutY="484.0" promptText="id abonnement" />
-            <Button layoutX="985.0" layoutY="482.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
-            <Button fx:id="recherche" layoutX="772.0" layoutY="541.0" mnemonicParsing="false" onAction="#chercher" text="recherche" />
-            <TextField fx:id="rch" layoutX="896.0" layoutY="541.0" promptText="type abonnement" />
-            <Label layoutX="942.0" layoutY="594.0" text="trier" />
-            <CheckBox fx:id="tri" layoutX="1020.0" layoutY="596.0" mnemonicParsing="false" onAction="#trid" prefHeight="17.0" prefWidth="76.0" text="duree" />
-            <CheckBox fx:id="tri1" layoutX="1042.0" layoutY="632.0" mnemonicParsing="false" onAction="#trid1" text="prix" />
-            <PieChart fx:id="statype" layoutX="391.0" layoutY="501.0" prefHeight="191.0" prefWidth="307.0" />
+            <Button fx:id="ajouterabo" layoutX="934.0" layoutY="368.0" mnemonicParsing="false" onAction="#ajouter" stylesheets="@../resources/dark-theme.css" text="ajouter" />
+            <Button fx:id="modifier" layoutX="1043.0" layoutY="365.0" mnemonicParsing="false" onAction="#modifieraboo" stylesheets="@../resources/dark-theme.css" text="modifier" />
+            <TextField fx:id="idd" layoutX="718.0" layoutY="290.0" prefHeight="35.0" prefWidth="67.0" promptText="ID" stylesheets="@../resources/dark-theme.css" />
+            <Button layoutX="807.0" layoutY="368.0" mnemonicParsing="false" onAction="#supprimer" stylesheets="@../resources/dark-theme.css" text="supprimer" />
+            <Button fx:id="recherche" layoutX="586.0" layoutY="202.0" mnemonicParsing="false" onAction="#chercher" stylesheets="@../resources/dark-theme.css" text="chercher" />
+            <TextField fx:id="rch" layoutX="353.0" layoutY="202.0" prefHeight="49.0" prefWidth="195.0" promptText="type abonnement" stylesheets="@../resources/dark-theme.css" />
+            <Label layoutX="368.0" layoutY="142.0" stylesheets="@../resources/dark-theme.css" text="trier" />
+            <CheckBox fx:id="tri" layoutX="450.0" layoutY="150.0" mnemonicParsing="false" onAction="#trid" prefHeight="17.0" prefWidth="76.0" stylesheets="@../resources/dark-theme.css" text="duree" />
+            <CheckBox fx:id="tri1" layoutX="571.0" layoutY="149.0" mnemonicParsing="false" onAction="#trid1" stylesheets="@../resources/dark-theme.css" text="prix" />
+            <PieChart fx:id="statype" layoutX="324.0" layoutY="360.0" prefHeight="321.0" prefWidth="238.0" />
             <Button fx:id="user" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="15.0" />
@@ -132,6 +134,8 @@
                   <Image url="@../resources/utilisateur.png" />
                </image>
             </ImageView>
+            <Label layoutX="848.0" layoutY="308.0" stylesheets="@../resources/dark-theme.css" text="Client" />
+            <ComboBox fx:id="listclient" layoutX="904.0" layoutY="303.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </children>

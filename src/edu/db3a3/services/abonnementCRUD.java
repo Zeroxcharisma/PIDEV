@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  */
 public class abonnementCRUD {
      public void ajouterAbonnement(abonnement a){
-        String requete="INSERT INTO abonnement (id,duree,prix,type)" + "VALUES (?,?,?,?)";
+        String requete="INSERT INTO abonnement (id,duree,prix,type,id_user)" + "VALUES (?,?,?,?,?)";
     
         try {
           
@@ -36,6 +36,33 @@ public class abonnementCRUD {
             pst.setInt(2, a.getDuree());
             pst.setInt(3, a.getPrix());
             pst.setString(4, a.getType());
+            pst.setInt(5, a.getId_user());
+            
+            
+            pst.executeUpdate();
+            System.out.println("abonnement ajouté");
+        
+        
+        
+        } catch (SQLException ex) {
+            Logger.getLogger(abonnementCRUD.class.getName()).log(Level.SEVERE, null, ex);  
+        }
+    } 
+       public void ajouterAbonnement2(abonnement a){
+        String requete="INSERT INTO abonnement (id,duree,prix,type,id_user)" + "VALUES (?,?,?,?,?)";
+    
+        try {
+          
+          PreparedStatement pst = MyConnection.getInstance().getCnx()
+                    .prepareStatement(requete);
+             
+        
+           
+            pst.setInt(1, a.getId());
+            pst.setInt(2, a.getDuree());
+            pst.setInt(3, a.getPrix());
+            pst.setString(4, a.getType());
+            pst.setInt(5, a.getId_user());
             
             
             pst.executeUpdate();
@@ -52,6 +79,7 @@ public class abonnementCRUD {
             String requete = "UPDATE abonnement SET id='"+a.getId()
                     + "',duree='"+a.getDuree()+ "',prix='"+a.getPrix()
                     +"',type='"+a.getType()
+                    +"',id_user='"+a.getId_user()
                     + "' WHERE Id=" + a.getId();
    PreparedStatement pst = MyConnection.getInstance().getCnx()
                     .prepareStatement(requete);     
@@ -88,6 +116,8 @@ public class abonnementCRUD {
                 p.setDuree(rs.getInt(2));
                 p.setPrix(rs.getInt(3));
                 p.setType(rs.getString(4));
+                p.setId_user(rs.getInt(5));
+                
 
                 abonnementList.add(p);
             }
@@ -134,7 +164,8 @@ public class abonnementCRUD {
                       rs.getInt(1),
                       rs.getInt(2),
                       rs.getInt(3),
-                      rs.getString(4)));
+                      rs.getString(4),
+                      rs.getInt(5)  ));
                                                                             
             }
         pst.close();
@@ -157,7 +188,8 @@ public class abonnementCRUD {
                       rs.getInt(1),
                       rs.getInt(2),
                       rs.getInt(3),
-                      rs.getString(4)));
+                      rs.getString(4),
+                       rs.getInt(5)  ));
                                                                             
             }
         pst.close();

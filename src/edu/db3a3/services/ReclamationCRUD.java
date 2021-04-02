@@ -48,9 +48,9 @@ public class ReclamationCRUD implements IReclamation<Reclamation>{
   
    public void ajouterReclamation2(Reclamation t) {
            try {
-            String requete= "INSERT INTO reclamation(email,sujet,description,id_user,etat)"
+            String requete= "INSERT INTO reclamation(email,sujet,description,id_user,etat,id_coach)"
             + "VALUES ('"+t.getEmail()+"','"+t.getSujet()+"','"+t.getDescription()
-                    +"','"+t.getId_user()+"','"+"non traitée"+"')";
+                    +"','"+t.getId_user()+"','"+"non traitée"+"','"+t.getId_coach()+"')";
             Statement pst = MyConnection.getInstance().getCnx()
                     .createStatement();
          

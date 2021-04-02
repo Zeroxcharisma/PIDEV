@@ -5,7 +5,9 @@
  */
 package edu.db3a3.gui;
 
+import edu.db3a3.entities.Utilisateur;
 import edu.db3a3.entities.abonnement;
+import edu.db3a3.services.UtilisateurCRUD;
 import edu.db3a3.services.abonnementCRUD;
 import java.io.IOException;
 import java.net.URL;
@@ -32,6 +34,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -100,12 +103,17 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button panier;
     @FXML
-    private Button user;
+    private Button user; 
+    @FXML
+    private TableColumn<?, ?> mail;
+    @FXML
+    private ComboBox<Utilisateur> listclient;
     
-   
-    
-    @Override
+   public static  ObservableList<Utilisateur>listclientt=FXCollections.observableArrayList();
     public void initialize(URL url, ResourceBundle rb) {
+           UtilisateurCRUD u = new UtilisateurCRUD();
+           listclientt = u.afficherUtilisateur3();
+           listclient.setItems(listclientt);
         affichage ();
         try {
             loadDataPie();
@@ -124,6 +132,7 @@ public class FXMLDocumentController implements Initializable {
          dureeaff.setCellValueFactory(new PropertyValueFactory<>("duree"));
           prixaff.setCellValueFactory(new PropertyValueFactory<>("prix"));
            typeaff.setCellValueFactory(new PropertyValueFactory<>("type"));
+            mail.setCellValueFactory(new PropertyValueFactory<>("id_user"));
         affichage.setItems(liste);
     
 }
@@ -137,6 +146,7 @@ public class FXMLDocumentController implements Initializable {
          dureeaff.setCellValueFactory(new PropertyValueFactory<>("duree"));
           prixaff.setCellValueFactory(new PropertyValueFactory<>("prix"));
            typeaff.setCellValueFactory(new PropertyValueFactory<>("type"));
+           mail.setCellValueFactory(new PropertyValueFactory<>("id_user"));
         affichage.setItems(liste);
         
     }
@@ -160,6 +170,7 @@ public class FXMLDocumentController implements Initializable {
          dureeaff.setCellValueFactory(new PropertyValueFactory<>("duree"));
           prixaff.setCellValueFactory(new PropertyValueFactory<>("prix"));
            typeaff.setCellValueFactory(new PropertyValueFactory<>("type"));
+           mail.setCellValueFactory(new PropertyValueFactory<>("id_user"));
         affichage.setItems(liste);
     }
     
@@ -176,8 +187,10 @@ public class FXMLDocumentController implements Initializable {
             
         
         }else{
+          Utilisateur client= listclient.getSelectionModel().getSelectedItem(); 
+          
          abonnementCRUD a = new abonnementCRUD();
-        abonnement a1 = new  abonnement ( Integer.parseInt(idabo.getText()),Integer.parseInt(dureeabo.getText()),Integer.parseInt(prixabo.getText()),typeabo.getText());
+        abonnement a1 = new  abonnement ( Integer.parseInt(idabo.getText()),Integer.parseInt(dureeabo.getText()),Integer.parseInt(prixabo.getText()),typeabo.getText(),client.getId_utilisateur());
        JOptionPane.showMessageDialog(null, "abonnement ajouté");
         a.ajouterAbonnement(a1); 
          affichage();

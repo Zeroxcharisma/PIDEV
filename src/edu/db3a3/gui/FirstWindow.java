@@ -23,33 +23,31 @@ import javafx.stage.Stage;
  * @author sofie
  */
 public class FirstWindow extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-       
-        
+
         try {
-        //  Parent root = FXMLLoader.load(getClass().getResource("AllUserNewController.fxml"));
-          // Parent root = FXMLLoader.load(getClass().getResource("DisplayAll.fxml"));
-         // Parent root = FXMLLoader.load(getClass().getResource("Inscrire.fxml"));
-         // Parent root = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
-          Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-          //Parent root = FXMLLoader.load(getClass().getResource("map.fxml"));
-         //  Parent root = FXMLLoader.load(getClass().getResource("Profile.fxml"));
-         // Parent root = FXMLLoader.load(getClass().getResource("IAdmin.fxml"));
-           //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-          // Parent root = FXMLLoader.load(getClass().getResource("Affiche.fxml"));
-          // Parent root = FXMLLoader.load(getClass().getResource("DelRec.fxml"));
-        //  Parent root = FXMLLoader.load(getClass().getResource("AddRec.fxml"));
-         // Parent root = FXMLLoader.load(getClass().getResource("Partieclient.fxml"));
-           
-           
+            //  Parent root = FXMLLoader.load(getClass().getResource("AllUserNewController.fxml"));
+            // Parent root = FXMLLoader.load(getClass().getResource("DisplayAll.fxml"));
+            // Parent root = FXMLLoader.load(getClass().getResource("Inscrire.fxml"));
+                // Parent root = FXMLLoader.load(getClass().getResource("Evenement.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            //Parent root = FXMLLoader.load(getClass().getResource("map.fxml"));
+            //  Parent root = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+            // Parent root = FXMLLoader.load(getClass().getResource("IAdmin.fxml"));
+            //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+            // Parent root = FXMLLoader.load(getClass().getResource("Affiche.fxml"));
+            // Parent root = FXMLLoader.load(getClass().getResource("DelRec.fxml"));
+            //  Parent root = FXMLLoader.load(getClass().getResource("AddRec.fxml"));
+            // Parent root = FXMLLoader.load(getClass().getResource("Partieclient.fxml"));
+
             Scene scene = new Scene(root);
-            
-            primaryStage.setTitle("Login");
+
+            primaryStage.setTitle("VClub");
             primaryStage.setScene(scene);
             primaryStage.show();
-          
+
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
@@ -61,5 +59,5 @@ public class FirstWindow extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.PartieclientController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -90,12 +90,6 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="632.0" layoutY="119.0" text="Evenement Client" textFill="WHITE">
-               <font>
-                  <Font name="Caveat Regular" size="41.0" />
-               </font>
-            </Label>
             <Label fx:id="imagePath" layoutX="275.0" layoutY="300.0" prefHeight="21.0" prefWidth="91.0" text="Label" />
             <Button fx:id="user" layoutX="-1.0" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
                <font>
@@ -107,35 +101,41 @@
                   <Image url="@../resources/utilisateur.png" />
                </image>
             </ImageView>
-            <TabPane layoutX="377.0" layoutY="212.0" prefHeight="496.0" prefWidth="731.0" style="-fx-background-color: #cfd8dc;" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutX="329.0" layoutY="-39.0" prefHeight="747.0" prefWidth="835.0" style="-fx-background-color: #F3ECE8;" tabClosingPolicy="UNAVAILABLE">
                <tabs>
                   <Tab style="-fx-background-color: #b0bec5;" text="evenement">
                      <content>
-                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cfd8dc;">
+                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="833.0" style="-fx-background-color: #F3ECE8;">
                            <children>
-                              <TableView fx:id="tableExA" layoutX="206.0" layoutY="22.0" prefHeight="212.0" prefWidth="327.0" style="-fx-background-color: #f7f7f6;">
+                              <TableView fx:id="tableExA" layoutX="-47.0" layoutY="413.0" prefHeight="282.0" prefWidth="864.0" stylesheets="@../resources/dark-theme.css">
                                  <columns>
-                                    <TableColumn fx:id="colidprofile" prefWidth="61.0" text="Id " />
-                                    <TableColumn fx:id="collieu" prefWidth="66.0" text=" lieu" />
-                                    <TableColumn fx:id="coltype" prefWidth="61.0" text=" type" />
-                                    <TableColumn fx:id="coldcr" prefWidth="90.0" text="description" />
-                                    <TableColumn fx:id="coldate" prefWidth="48.0" text="date" />
+                                    <TableColumn fx:id="colidprofile" prefWidth="157.0" text="Id " />
+                                    <TableColumn fx:id="collieu" prefWidth="141.0" text=" lieu" />
+                                    <TableColumn fx:id="coltype" minWidth="3.0" prefWidth="3.0" text=" type" />
+                                    <TableColumn fx:id="coldcr" prefWidth="327.0" text="description" />
+                                    <TableColumn fx:id="coldate" prefWidth="175.0" text="date" />
                                  </columns>
                               </TableView>
-                              <Button fx:id="btnchercherc" layoutX="245.0" layoutY="267.0" mnemonicParsing="false" onAction="#chercherevenementc" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #64ffda;" text="chercher" />
-                              <Button fx:id="btnyogac" layoutX="22.0" layoutY="169.0" mnemonicParsing="false" onAction="#ajouterv1" text="ex : yoga" />
-                              <Button fx:id="btnnatationc" layoutX="13.0" layoutY="222.0" mnemonicParsing="false" onAction="#ajouterv2" text="ex : natation" />
-                              <Button fx:id="btnimprimerc" layoutX="18.0" layoutY="110.0" mnemonicParsing="false" onAction="#imprimerevenementc" prefHeight="18.0" prefWidth="71.0" style="-fx-background-color: #64ffda;" text="imprimer" />
-                              <TextField fx:id="tfatrouverc" layoutX="361.0" layoutY="267.0" promptText="chercher par type" />
-                              <Button fx:id="map" layoutX="18.0" layoutY="41.0" mnemonicParsing="false" onAction="#gotomap" prefHeight="18.0" prefWidth="71.0" style="-fx-background-color: #64ffda;" text="map" />
-                              <Button fx:id="join" layoutX="107.0" layoutY="267.0" mnemonicParsing="false" onAction="#join" text="Participer" />
-                              <Button fx:id="showpart" layoutX="107.0" layoutY="312.0" mnemonicParsing="false" onAction="#showpart" prefHeight="31.0" prefWidth="160.0" text="show Particaption" />
+                              <Button fx:id="btnchercherc" layoutX="683.0" layoutY="337.0" mnemonicParsing="false" onAction="#chercherevenementc" prefHeight="49.0" prefWidth="116.0" stylesheets="@../resources/dark-theme.css" text="chercher" />
+                              <Button fx:id="btnyogac" layoutX="5.0" layoutY="291.0" mnemonicParsing="false" onAction="#ajouterv1" stylesheets="@../resources/dark-theme.css" text="ex : yoga" />
+                              <Button fx:id="btnnatationc" layoutX="3.0" layoutY="348.0" mnemonicParsing="false" onAction="#ajouterv2" stylesheets="@../resources/dark-theme.css" text="ex : natation" />
+                              <Button fx:id="btnimprimerc" layoutX="2.0" layoutY="228.0" mnemonicParsing="false" onAction="#imprimerevenementc" prefHeight="49.0" prefWidth="120.0" stylesheets="@../resources/dark-theme.css" text="imprimer" />
+                              <TextField fx:id="tfatrouverc" layoutX="489.0" layoutY="337.0" prefHeight="50.0" prefWidth="178.0" promptText="chercher par type" stylesheets="@../resources/dark-theme.css" />
+                              <Button fx:id="map" layoutX="5.0" layoutY="163.0" mnemonicParsing="false" onAction="#gotomap" prefHeight="18.0" prefWidth="71.0" stylesheets="@../resources/dark-theme.css" text="map" />
+                              <Button fx:id="join" layoutX="603.0" layoutY="45.0" mnemonicParsing="false" onAction="#join" stylesheets="@../resources/dark-theme.css" text="Participer" />
+                              <Button fx:id="showpart" layoutX="596.0" layoutY="115.0" mnemonicParsing="false" onAction="#showpart" prefHeight="49.0" prefWidth="225.0" stylesheets="@../resources/dark-theme.css" text="afficher particaption" />
                            </children>
                         </AnchorPane>
                      </content>
                   </Tab>
                </tabs>
             </TabPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="542.0" />
+            <Label layoutX="350.0" layoutY="52.0" text="Evenement Client" textFill="WHITE">
+               <font>
+                  <Font name="Caveat Regular" size="41.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

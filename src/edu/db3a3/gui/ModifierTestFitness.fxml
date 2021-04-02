@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.ModifierTestFitnessController">
  <children>
-      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -88,16 +88,16 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Modifier Un test" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="587.0" />
+            <Label layoutX="350.0" layoutY="52.0" text="Modifier Un test" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
-            <Label fx:id="imagePath" layoutX="275.0" layoutY="300.0" prefHeight="21.0" prefWidth="91.0" text="Label" />
-            <Button fx:id="v" layoutX="885.0" layoutY="470.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" styleClass="linear-grad2" stylesheets="@login1.css" text="Validez!" />
-            <Button fx:id="r" layoutX="669.0" layoutY="469.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="148.0" styleClass="linear-grad2" stylesheets="@login1.css" text="Videz les champs" />
-            <Button fx:id="ajouter" alignment="BASELINE_LEFT" graphicTextGap="20.0" layoutX="639.0" layoutY="642.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="408.0" styleClass="button4" stylesheets="@login1.css" text="Affecter un test à un cours" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="imagePath" layoutX="733.0" layoutY="71.0" prefHeight="21.0" prefWidth="91.0" text="Label" />
+            <Button fx:id="v" layoutX="1027.0" layoutY="638.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" styleClass="linear-grad2" stylesheets="@../resources/dark-theme.css" text="Validez!" />
+            <Button fx:id="r" layoutX="486.0" layoutY="492.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="176.0" styleClass="linear-grad2" stylesheets="@../resources/dark-theme.css" text="Videz les champs" />
+            <Button fx:id="ajouter" alignment="BASELINE_LEFT" graphicTextGap="20.0" layoutX="714.0" layoutY="492.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="256.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Affecter un test " textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -108,9 +108,9 @@
                   <Insets left="65.0" />
                </padding>
             </Button>
-            <TextField fx:id="dureeE" layoutX="708.0" layoutY="301.0" prefHeight="35.0" prefWidth="293.0" promptText="Durée du test" stylesheets="@../../../../../../Downloads/JavaPidev-radhwen/JavaPidev-radhwen/src/gesenfant/Views/login1.css" />
-            <DatePicker fx:id="dateE" layoutX="708.0" layoutY="374.0" prefHeight="26.0" prefWidth="303.0" />
-            <Button fx:id="retour" layoutX="321.0" layoutY="247.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="191.0" styleClass="button4" stylesheets="@login1.css" text="Menu précedent" textFill="WHITE" />
+            <TextField fx:id="dureeE" layoutX="541.0" layoutY="255.0" prefHeight="58.0" prefWidth="346.0" promptText="Durée du test" stylesheets="@../resources/dark-theme.css" />
+            <DatePicker fx:id="dateE" layoutX="541.0" layoutY="372.0" prefHeight="55.0" prefWidth="346.0" stylesheets="@../resources/dark-theme.css" />
+            <Button fx:id="retour" layoutX="321.0" layoutY="159.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="161.0" styleClass="button4" stylesheets="@../resources/dark-theme.css" text="Retour" textFill="WHITE" />
             <Button fx:id="user" layoutX="-1.0" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="15.0" />

@@ -10,9 +10,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.db3a3.gui.IUserController">
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.IUserController">
  <children>
-      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -87,8 +87,8 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Liste des Cours " textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="383.0" />
+            <Label layoutX="348.0" layoutY="52.0" text="Liste des Cours " textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>

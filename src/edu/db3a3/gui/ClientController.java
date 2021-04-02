@@ -6,8 +6,11 @@
 package edu.db3a3.gui;
 
 
+import edu.db3a3.entities.Utilisateur;
 import edu.db3a3.entities.abonnement;
+import edu.db3a3.services.UtilisateurCRUD;
 import edu.db3a3.services.abonnementCRUD;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Properties;
@@ -16,15 +19,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -41,15 +50,10 @@ import tray.notification.TrayNotification;
  */
 public class ClientController implements Initializable {
 
-    @FXML
     private TableView<abonnement> affichage;
-    @FXML
     private TableColumn<?, ?> idaff;
-    @FXML
     private TableColumn<?, ?> dureeaff;
-    @FXML
     private TableColumn<?, ?> prixaff;
-    @FXML
     private TableColumn<?, ?> typeaff;
     @FXML
     private TextField idabo;
@@ -77,38 +81,21 @@ public class ClientController implements Initializable {
     private Label imagePath;
     @FXML
     private Button user;
+     int id= edu.db3a3.entities.Session.id_utilisateur;
+  
+     UtilisateurCRUD s=new UtilisateurCRUD();
+     Utilisateur u=new Utilisateur();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       affichage (); 
+       
     }   
-     private void affichage (){
-  abonnementCRUD a= new abonnementCRUD();
-        List<abonnement> list = a.displayabonnement();
-        ObservableList<abonnement> liste = FXCollections.observableArrayList(list);
-        idaff.setCellValueFactory(new PropertyValueFactory<>("id"));
-         dureeaff.setCellValueFactory(new PropertyValueFactory<>("duree"));
-          prixaff.setCellValueFactory(new PropertyValueFactory<>("prix"));
-           typeaff.setCellValueFactory(new PropertyValueFactory<>("type"));
-        affichage.setItems(liste);
+    
 
-}
-
-    @FXML
-    private void choix(MouseEvent event) {
-        if (affichage.getSelectionModel().getSelectedItem()!=null){
-            int id = affichage.getSelectionModel().getSelectedItem().getId();
-            System.out.println("id="+id);
-        }
-        else {
-            System.out.println("aucun element n est selectee");
-
-        }
-
-    }
+   
 
     @FXML
     private void ajouter(ActionEvent event) {
@@ -123,10 +110,10 @@ public class ClientController implements Initializable {
 
         }else{
          abonnementCRUD a = new abonnementCRUD();
-        abonnement a1 = new  abonnement ( Integer.parseInt(idabo.getText()),Integer.parseInt(dureeabo.getText()),Integer.parseInt(prixabo.getText()),typeabo.getText());
+        abonnement a1 = new  abonnement ( Integer.parseInt(idabo.getText()),Integer.parseInt(dureeabo.getText()),Integer.parseInt(prixabo.getText()),typeabo.getText(),id);
        JOptionPane.showMessageDialog(null, "abonnement ajouté");
-        a.ajouterAbonnement(a1); 
-         affichage();
+        a.ajouterAbonnement2(a1); 
+         
 
 
 
@@ -182,6 +169,18 @@ public class ClientController implements Initializable {
 
     @FXML
     private void event(ActionEvent event) {
+            try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Partieclient.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -190,6 +189,18 @@ public class ClientController implements Initializable {
 
     @FXML
     private void reclamation(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("AddRec.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -202,9 +213,36 @@ public class ClientController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+         try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("IUser.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
     private void user(ActionEvent event) {
+        
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
+
+   
 }

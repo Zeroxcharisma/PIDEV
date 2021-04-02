@@ -16,17 +16,17 @@
             <Image url="@../resources/wp2639533.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="loginId" layoutX="245.0" layoutY="173.0" opacity="0.8" prefHeight="31.0" prefWidth="224.0" promptText="login" />
-      <Button fx:id="btnLogin" layoutX="282.0" layoutY="344.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="146.0" text="Connectez-vous" />
-      <Hyperlink fx:id="inscriptionLink" layoutX="992.0" layoutY="637.0" onAction="#Inscriptionlink" text="Créer un compte" textFill="WHITE">
+      <TextField fx:id="loginId" layoutX="245.0" layoutY="173.0" opacity="0.8" prefHeight="31.0" prefWidth="224.0" promptText="login" stylesheets="@../resources/dark-theme.css" />
+      <Button fx:id="btnLogin" layoutX="242.0" layoutY="339.0" mnemonicParsing="false" onAction="#login" prefHeight="49.0" prefWidth="198.0" style="-fx-background-color: white;" stylesheets="@../resources/dark-theme.css" text="Connectez-vous" />
+      <Hyperlink fx:id="inscriptionLink" layoutX="1069.0" layoutY="631.0" onAction="#Inscriptionlink" stylesheets="@../resources/dark-theme.css" text="Créer un compte" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font></Hyperlink>
       <Hyperlink fx:id="ForgetPasswordLink" layoutX="242.0" layoutY="282.0" onAction="#forgetpassword" text="Mot de passe oublié?" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font name="Caveat Regular" size="20.0" />
          </font></Hyperlink>
-      <PasswordField fx:id="Password" layoutX="245.0" layoutY="247.0" opacity="0.8" prefHeight="31.0" prefWidth="224.0" promptText="mot de passe" />
+      <PasswordField fx:id="Password" layoutX="245.0" layoutY="247.0" opacity="0.8" prefHeight="31.0" prefWidth="224.0" promptText="mot de passe" stylesheets="@../resources/dark-theme.css" />
       <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="194.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/user%20(1).png" />
@@ -37,7 +37,7 @@
             <Image url="@../resources/padlock.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="951.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="1028.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/enter.png" />
          </image>

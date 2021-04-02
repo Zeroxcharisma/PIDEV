@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,15 +8,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.GestionCoursController">
 <children>
-      <AnchorPane id="AnchorPane" layoutX="-1.0" layoutY="1.0" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" layoutX="-1.0" layoutY="1.0" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="732.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="39.0" />
@@ -90,46 +88,12 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Gestion Cours" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="587.0" />
+            <Label layoutX="368.0" layoutY="57.0" text="Gestion du Cours" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="333.0" layoutY="260.0" prefHeight="400.0" prefWidth="240.0" styleClass="linear-grad" stylesheets="@login1.css">
-               <children>
-                  <Pane layoutX="7.0" layoutY="72.0" prefHeight="67.0" prefWidth="240.0" styleClass="linear-grad" stylesheets="@login1.css">
-                     <children>
-                        <Label layoutX="27.0" layoutY="17.0" prefHeight="21.0" prefWidth="259.0" styleClass="linear-grad" stylesheets="@login1.css" text="Gestion Cours" textFill="#3e3e3e">
-                           <font>
-                              <Font name="System Bold" size="23.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </Pane>
-                  <Button fx:id="AjouterC" layoutX="1.0" layoutY="147.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="240.0" styleClass="linear-grad" stylesheets="@login1.css" text="Ajouter cours" textFill="#3e3e3e">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="AfficherC" layoutY="313.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="240.0" styleClass="linear-grad" stylesheets="@login1.css" text="Afficher cours" textFill="#3e3e3e">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="retour" layoutX="19.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="205.0" styleClass="linear-grad" stylesheets="@login1.css" text="Retour au menu précédent" />
-                  <Button fx:id="ModifierC" layoutX="-4.0" layoutY="206.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="240.0" styleClass="linear-grad" stylesheets="@login1.css" text="Modifier cours" textFill="#3e3e3e">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="SupprimerC" layoutX="-2.0" layoutY="258.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="240.0" styleClass="linear-grad" stylesheets="@login1.css" text="Supprimer cours" textFill="#3e3e3e">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
             <Button fx:id="user" layoutX="-1.0" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="15.0" />
@@ -140,9 +104,34 @@
                   <Image url="@../resources/utilisateur.png" />
                </image>
             </ImageView>
+            <AnchorPane layoutX="333.0" layoutY="23.0" prefHeight="665.0" prefWidth="0.0" styleClass="linear-grad" stylesheets="@login1.css">
+               <children>
+                  <Button fx:id="AjouterC" layoutX="689.0" layoutY="14.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" styleClass="linear-grad" stylesheets="@../resources/dark-theme.css" text="Ajouter" textFill="#3e3e3e">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AfficherC" layoutX="688.0" layoutY="196.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" styleClass="linear-grad" stylesheets="@../resources/dark-theme.css" text="Afficher" textFill="#3e3e3e">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="retour" layoutX="4.0" layoutY="128.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" styleClass="linear-grad" stylesheets="@../resources/dark-theme.css" text="Retour" />
+                  <Button fx:id="ModifierC" layoutX="689.0" layoutY="74.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" styleClass="linear-grad" stylesheets="@../resources/dark-theme.css" text="Modifier" textFill="#3e3e3e">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SupprimerC" layoutX="688.0" layoutY="136.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" styleClass="linear-grad" stylesheets="@../resources/dark-theme.css" text="Supprimer" textFill="#3e3e3e">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
-      <TableView fx:id="table" layoutX="700.0" layoutY="400.0" prefHeight="267.0" prefWidth="362.0">
+      <TableView fx:id="table" layoutX="322.0" layoutY="304.0" prefHeight="395.0" prefWidth="843.0" stylesheets="@../resources/dark-theme.css">
         <columns>
           <TableColumn fx:id="nom" prefWidth="95.20001220703125" text="Nom" />
           <TableColumn fx:id="nomE" prefWidth="144.0" text="Nom du coach" />
@@ -153,10 +142,6 @@
             <String fx:value="linear-grad" />
             <String fx:value="column-header-background" />
          </styleClass>
-         <stylesheets>
-            <URL value="@login1.css" />
-            <URL value="@login1.css" />
-         </stylesheets>
       </TableView>
    </children>
 </AnchorPane>

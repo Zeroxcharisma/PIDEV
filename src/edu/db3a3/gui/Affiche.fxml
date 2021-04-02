@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.AfficheController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -88,28 +88,28 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Gestion Produit " textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="307.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="505.0" />
+            <Label layoutX="354.0" layoutY="52.0" text="Gestion des produits" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
             <Label fx:id="imagePath" layoutX="275.0" layoutY="300.0" prefHeight="21.0" prefWidth="91.0" text="Label" />
-            <TableView fx:id="table" layoutX="315.0" layoutY="272.0" prefHeight="200.0" prefWidth="379.0">
+            <TableView fx:id="table" layoutX="325.0" layoutY="349.0" prefHeight="357.0" prefWidth="834.0" stylesheets="@../resources/dark-theme.css">
               <columns>
                 <TableColumn fx:id="id" prefWidth="75.0" text="id" />
-                <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
-                  <TableColumn fx:id="prix" prefWidth="78.0" text="prix" />
-                  <TableColumn fx:id="qte" prefWidth="72.0" text="qte" />
-                  <TableColumn fx:id="total" prefWidth="78.0" text="total" />
+                <TableColumn fx:id="nom" prefWidth="246.0" text="nom" />
+                  <TableColumn fx:id="prix" prefWidth="155.0" text="prix" />
+                  <TableColumn fx:id="qte" prefWidth="206.0" text="qte" />
+                  <TableColumn fx:id="total" prefWidth="151.0" text="total" />
               </columns>
             </TableView>
-            <TextField fx:id="txt_id" layoutX="744.0" layoutY="278.0" promptText="ID" />
-            <TextField fx:id="txt_nom" layoutX="747.0" layoutY="322.0" promptText="Nom" />
-            <TextField fx:id="txt_prix" layoutX="744.0" layoutY="363.0" promptText="Prix" />
-            <Button fx:id="tfModifier" layoutX="763.0" layoutY="433.0" mnemonicParsing="false" onAction="#edit" text="modifier" />
-            <Button fx:id="tfSupprimer" layoutX="863.0" layoutY="433.0" mnemonicParsing="false" onAction="#delete" text="supprimer" />
-            <Button fx:id="export" layoutX="989.0" layoutY="430.0" mnemonicParsing="false" text="export" />
+            <TextField fx:id="txt_id" layoutX="905.0" layoutY="41.0" prefHeight="49.0" prefWidth="206.0" promptText="ID" stylesheets="@../resources/dark-theme.css" />
+            <TextField fx:id="txt_nom" layoutX="905.0" layoutY="113.0" prefHeight="49.0" prefWidth="206.0" promptText="Nom" stylesheets="@../resources/dark-theme.css" />
+            <TextField fx:id="txt_prix" layoutX="905.0" layoutY="188.0" prefHeight="49.0" prefWidth="206.0" promptText="Prix" stylesheets="@../resources/dark-theme.css" />
+            <Button fx:id="tfModifier" layoutX="846.0" layoutY="276.0" mnemonicParsing="false" onAction="#edit" stylesheets="@../resources/dark-theme.css" text="modifier" />
+            <Button fx:id="tfSupprimer" layoutX="987.0" layoutY="276.0" mnemonicParsing="false" onAction="#delete" stylesheets="@../resources/dark-theme.css" text="supprimer" />
+            <Button fx:id="export" layoutX="325.0" layoutY="283.0" mnemonicParsing="false" stylesheets="@../resources/dark-theme.css" text="export" />
             <Button fx:id="user" layoutY="591.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">
                <font>
                   <Font name="Marlett" size="15.0" />
@@ -120,7 +120,7 @@
                   <Image url="@../resources/utilisateur.png" />
                </image>
             </ImageView>
-            <Button fx:id="Retour" layoutX="321.0" layoutY="232.0" mnemonicParsing="false" onAction="#Retour" text="Retour" />
+            <Button fx:id="Retour" layoutX="323.0" layoutY="152.0" mnemonicParsing="false" onAction="#Retour" stylesheets="@../resources/dark-theme.css" text="Retour" />
          </children>
       </AnchorPane>
    </children>

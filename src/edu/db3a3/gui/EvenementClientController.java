@@ -90,6 +90,18 @@ public class EvenementClientController implements Initializable {
 
     @FXML
     private void abonnement(ActionEvent event) {
+        try {
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Client.fxml"));
+           Scene ex_section_scene = new Scene(exercices_parent);
+           Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
+           
+           second_stage.setScene(ex_section_scene);
+           second_stage.show();
+                   
+                   
+                   } catch (IOException ex) {
+         
+       }
     }
 
     @FXML
@@ -98,8 +110,7 @@ public class EvenementClientController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
-        
-         try {
+        try {
            Parent exercices_parent = FXMLLoader.load(getClass().getResource("IUser.fxml"));
            Scene ex_section_scene = new Scene(exercices_parent);
            Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -111,6 +122,7 @@ public class EvenementClientController implements Initializable {
                    } catch (IOException ex) {
          
        }
+        
     }
 
     @FXML

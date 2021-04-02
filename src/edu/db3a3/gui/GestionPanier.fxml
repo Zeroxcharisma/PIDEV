@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.GestionPanierController">
    <children>
-      <AnchorPane id="AnchorPane" layoutX="-2.0" layoutY="-9.0" prefHeight="726.0" prefWidth="1177.0">
+      <AnchorPane id="AnchorPane" layoutX="-2.0" layoutY="-9.0" prefHeight="726.0" prefWidth="1177.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -86,32 +86,32 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Gestion Panier" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="447.0" />
+            <Label layoutX="332.0" layoutY="52.0" text="Gestion Panier" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
             </Label>
-            <Button fx:id="Gcours" layoutX="556.0" layoutY="268.0" mnemonicParsing="false" onAction="#cours" opacity="0.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #ffff;" styleClass="button3">
+            <Button fx:id="Gcours" layoutX="556.0" layoutY="268.0" mnemonicParsing="false" onAction="#cours" opacity="0.0" prefHeight="117.0" prefWidth="400.0" style="-fx-background-color: #ffff;" styleClass="button3">
                <stylesheets>
                   <URL value="@../../../../../Downloads/JavaPidev-radhwen/JavaPidev-radhwen/src/gesenfant/Views/login1.css" />
                   <URL value="@login1.css" />
                </stylesheets>
             </Button>
-            <Button fx:id="GExamen" layoutX="556.0" layoutY="506.0" mnemonicParsing="false" onAction="#test" opacity="0.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #ffff;" styleClass="button3">
+            <Button fx:id="GExamen" layoutX="516.0" layoutY="431.0" mnemonicParsing="false" onAction="#test" opacity="0.0" prefHeight="135.0" prefWidth="437.0" style="-fx-background-color: #ffff;" styleClass="button3">
                <stylesheets>
                   <URL value="@../../../../../Downloads/JavaPidev-radhwen/JavaPidev-radhwen/src/gesenfant/Views/login1.css" />
                   <URL value="@login1.css" />
                </stylesheets>
             </Button>
-            <Label layoutX="649.0" layoutY="533.0" text="Gestion Panier" textFill="#6b6868">
+            <Label layoutX="618.0" layoutY="460.0" prefHeight="79.0" prefWidth="260.0" text="Gestion Produits" textFill="#6b6868">
                <font>
-                  <Font size="31.0" />
+                  <Font name="Caveat Regular" size="47.0" />
                </font>
             </Label>
-            <Label fx:id="ajout" layoutX="630.0" layoutY="284.0" onDragDetected="#ajout" text="Ajout Produit" textFill="#6b6868">
+            <Label fx:id="ajout" layoutX="631.0" layoutY="286.0" onDragDetected="#ajout" text="Ajout Produit" textFill="#6b6868">
                <font>
-                  <Font size="31.0" />
+                  <Font name="Caveat Regular" size="47.0" />
                </font>
             </Label>
             <Button fx:id="user" layoutY="606.0" mnemonicParsing="false" onAction="#user" prefHeight="71.0" prefWidth="308.0" style="-fx-background-color: #363130;" text="Utilisateur" textFill="WHITE">

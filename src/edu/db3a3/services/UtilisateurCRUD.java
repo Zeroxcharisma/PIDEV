@@ -366,7 +366,7 @@ public ObservableList<Utilisateur> afficherUtilisateur3()
   {
          
           String requete2 = "INSERT INTO utilisateur (username,nom,prenom,password,tel,adresse,id_role,etat,email)"
-                    + "VALUES ('"+t.getUsername()+"','"+t.getPrenom()+"','"+t.getNom()+"','"+t.getPassword()+"','"+t.getTel()+"','"+t.getAdresse()+"','"+t.getId_role()+"','"+t.getEtat()+"','"+t.getEmail()+"')";
+                    + "VALUES ('"+t.getUsername()+"','"+t.getPrenom()+"','"+t.getNom()+"','"+md5(t.getPassword())+"','"+t.getTel()+"','"+t.getAdresse()+"','"+t.getId_role()+"','"+t.getEtat()+"','"+t.getEmail()+"')";
             Statement st = MyConnection.getInstance().getCnx()
                     .createStatement();
             st.executeUpdate(requete2);

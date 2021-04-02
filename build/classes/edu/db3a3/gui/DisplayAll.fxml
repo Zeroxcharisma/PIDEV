@@ -13,12 +13,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="711.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.DisplayAllController">
    <children>
-      <ImageView fitHeight="680.0" fitWidth="1166.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../resources/meghan-holmes-buWcS7G1_28-unsplash.jpg" />
-         </image>
-      </ImageView>
-      <AnchorPane id="AnchorPane" layoutX="-11.0" layoutY="-1.0" prefHeight="725.0" prefWidth="1175.0">
+      <AnchorPane id="AnchorPane" layoutX="-11.0" layoutY="-1.0" prefHeight="725.0" prefWidth="1175.0" style="-fx-background-color: #F3ECE8;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="725.0" layoutX="7.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
             <Label layoutX="42.0" layoutY="41.0" text="Private Coaching" textFill="WHITE">
@@ -93,8 +88,8 @@
                </image>
             </ImageView>
             <Label layoutX="64.0" layoutY="688.0" text="THE CHANGERS" textFill="WHITE" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="308.0" layoutY="122.0" stroke="BLACK" strokeType="INSIDE" width="869.0" />
-            <Label layoutX="639.0" layoutY="147.0" text="Gestion Utilisateur" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363130" height="101.0" layoutX="314.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="587.0" />
+            <Label layoutX="342.0" layoutY="52.0" text="Gestion Utilisateur" textFill="WHITE">
                <font>
                   <Font name="Caveat Regular" size="41.0" />
                </font>
@@ -110,7 +105,7 @@
                   <Image url="@../resources/utilisateur.png" />
                </image>
             </ImageView>
-            <TableView fx:id="table" editable="true" layoutX="321.0" layoutY="224.0" opacity="0.9" prefHeight="330.0" prefWidth="855.0" stylesheets="@../resources/dark-theme.css">
+            <TableView fx:id="table" editable="true" layoutX="321.0" layoutY="178.0" opacity="0.9" prefHeight="330.0" prefWidth="844.0" stylesheets="@../resources/dark-theme.css">
                <columns>
                   <TableColumn fx:id="col_id" prefWidth="58.0" text="Id_utilisateur" />
                   <TableColumn fx:id="col_username" prefWidth="164.0" text="Username" />
@@ -123,12 +118,12 @@
                   <TableColumn fx:id="col_etat" prefWidth="76.0" text="Etat" />
                </columns>
             </TableView>
-            <Button fx:id="btnstat" layoutX="784.0" layoutY="557.0" mnemonicParsing="false" onAction="#stat" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Stats" />
-            <Button fx:id="block" layoutX="947.0" layoutY="557.0" mnemonicParsing="false" onAction="#blockuser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Block" />
-            <Button fx:id="update" layoutX="479.0" layoutY="557.0" mnemonicParsing="false" onAction="#UpdateUser" onMouseClicked="#ModifyUser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Modifier" />
-            <Button fx:id="delete" layoutX="629.0" layoutY="557.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Supprimer" />
+            <Button fx:id="btnstat" layoutX="822.0" layoutY="557.0" mnemonicParsing="false" onAction="#stat" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Stats" />
+            <Button fx:id="block" layoutX="1003.0" layoutY="557.0" mnemonicParsing="false" onAction="#blockuser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Block" />
+            <Button fx:id="update" layoutX="488.0" layoutY="557.0" mnemonicParsing="false" onAction="#UpdateUser" onMouseClicked="#ModifyUser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Modifier" />
+            <Button fx:id="delete" layoutX="653.0" layoutY="557.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Supprimer" />
             <Button fx:id="ajouter" layoutX="332.0" layoutY="557.0" mnemonicParsing="false" onMouseClicked="#AddUser" prefHeight="58.0" prefWidth="138.0" stylesheets="@../resources/dark-theme.css" text="Ajouter" />
-            <Hyperlink fx:id="disconnect" layoutX="954.0" layoutY="14.0" onAction="#disconnect" text="déconnecter" />
+            <Hyperlink fx:id="disconnect" layoutX="1044.0" layoutY="8.0" onAction="#disconnect" stylesheets="@../resources/dark-theme.css" text="Déconnecter" />
          </children>
       </AnchorPane>
    </children>

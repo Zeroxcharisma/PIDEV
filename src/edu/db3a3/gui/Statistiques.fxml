@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.StatistiquesController">
+<AnchorPane id="AnchorPane" prefHeight="803.0" prefWidth="1158.0" style="-fx-background-color: #F3ECE8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.db3a3.gui.StatistiquesController">
    <children>
-      <PieChart fx:id="pc" layoutX="57.0" layoutY="59.0" prefHeight="380.0" prefWidth="419.0" />
-      <PieChart fx:id="pc1" layoutX="580.0" layoutY="59.0" prefHeight="394.0" prefWidth="513.0" />
-      <Label layoutX="69.0" layoutY="14.0" prefHeight="35.0" prefWidth="177.0" text="Utilisateur : Top Adresses" />
-      <Label layoutX="674.0" layoutY="21.0" prefHeight="21.0" prefWidth="177.0" text="Utilisateur : Type " />
+      <PieChart fx:id="pc" layoutX="51.0" layoutY="132.0" prefHeight="394.0" prefWidth="513.0" />
+      <PieChart fx:id="pc1" layoutX="619.0" layoutY="132.0" prefHeight="394.0" prefWidth="513.0" />
+      <Label layoutX="69.0" layoutY="23.0" prefHeight="35.0" prefWidth="221.0" stylesheets="@../resources/dark-theme.css" text="Utilisateur : Top Adresses" />
+      <Label layoutX="674.0" layoutY="21.0" prefHeight="21.0" prefWidth="177.0" stylesheets="@../resources/dark-theme.css" text="Utilisateur : Type " />
    </children>
 </AnchorPane>

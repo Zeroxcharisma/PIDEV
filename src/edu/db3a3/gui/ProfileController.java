@@ -6,6 +6,7 @@
 package edu.db3a3.gui;
 
 import edu.db3a3.entities.Session;
+import static edu.db3a3.entities.Session.id_utilisateur;
 import edu.db3a3.entities.Utilisateur;
 import edu.db3a3.services.UtilisateurCRUD;
 import java.io.IOException;
@@ -74,7 +75,7 @@ public class ProfileController implements Initializable {
     @FXML
     private void Retourbtn(ActionEvent event) {
           try {
-           Parent exercices_parent = FXMLLoader.load(getClass().getResource("EvenementClient.fxml"));
+           Parent exercices_parent = FXMLLoader.load(getClass().getResource("Partieclient.fxml"));
            Scene ex_section_scene = new Scene(exercices_parent);
            Stage second_stage =(Stage) ((Node) event.getSource()).getScene().getWindow();
            
@@ -102,6 +103,21 @@ public class ProfileController implements Initializable {
          
        }
     }
-    
+
+   /* private void modifyprof(ActionEvent event) {
+       String nom = tfNom.getText();
+     String prenom=  tfPrenom.getText();
+      String username = tfusername.getText();
+     String password =  tfPassword.getText();
+     
+      String adresse = tfAdresse.getText();
+      String tel = tfTelephone.getText();
+      String email = tfAdresse.getText();  
+        
+        
+        UtilisateurCRUD pcd = new UtilisateurCRUD();
+            pcd.modifierUtilisateurProfile(id_utilisateur,u);
+    }
+    */
     
 }

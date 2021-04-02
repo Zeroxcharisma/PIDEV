@@ -69,6 +69,8 @@ public class AjouterCoursController implements Initializable {
     private Button panier;
     @FXML
     private Button planning;
+    @FXML
+    private Button user;
 
     /**
      * Initializes the controller class.
@@ -203,6 +205,10 @@ public class AjouterCoursController implements Initializable {
 
     @FXML
     private void planning(ActionEvent event) {
+    }
+
+    @FXML
+    private void user(ActionEvent event) {
     }
     
 }
