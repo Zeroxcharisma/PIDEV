@@ -14,14 +14,14 @@ import com.twilio.type.PhoneNumber;
 public class SmsSender {
   
     // Find your Account Sid and Auth Token at twilio.com/console
-   /* public static final String ACCOUNT_SID =
+  public static final String ACCOUNT_SID =
             "AC83e8c38aae2902d96d769a9e997fe0c8";
     public static final String AUTH_TOKEN =
-            "437a3334cb37ed691e67b83546a2e3b0";*/
+            "437a3334cb37ed691e67b83546a2e3b0";
 
 
     public void send(String s,String x){
-     /*    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
       String y="+216"+x;
         Message message = Message 
                 .creator(new PhoneNumber(y), // to
@@ -29,7 +29,7 @@ public class SmsSender {
                        ""+s)
                 .create();
   System.out.println("aaslema");
-        System.out.println(message.getSid());*/
+        System.out.println(message.getSid());
     }
 }
     
