@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur index{% endblock %}
+
+{% block body %}
+{% block content %}
+
+
+    <!-- datatable -->
+
+    <section id="column-selectors">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Liste des utilisateurs</h4>
+                                     &nbsp; <a class="btn btn-primary mt30 btn-black " href="{{ path('utilisateur_new') }}">Create new</a>
+
+                                </div>
+                                
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                        
+                                        <div class="table-responsive"> &nbsp;&nbsp; 
+                                            <br>
+                                            <table class="table table-striped dataex-html5-selectors">
+                                                <thead>
+                                                    <tr>
+                                                        
+                <th>IdUtilisateur</th>
+                <th>Username</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Password</th>
+                <th>Tel</th>
+                <th>Adresse</th>
+                <th>IdRole</th>
+                <th>Etat</th>
+                <th>Email</th>
+                <th>actions</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                   {% for utilisateur in utilisateurs %}
+            <tr>
+                <td>{{ utilisateur.idUtilisateur }}</td>
+                <td>{{ utilisateur.username }}</td>
+                <td>{{ utilisateur.nom }}</td>
+                <td>{{ utilisateur.prenom }}</td>
+                <td>{{ utilisateur.password }}</td>
+                <td>{{ utilisateur.tel }}</td>
+                <td>{{ utilisateur.adresse }}</td>
+                <td>{{ utilisateur.idRole }}</td>
+                <td>{{ utilisateur.etat }}</td>
+                <td>{{ utilisateur.email }}</td>
+                <td>
+                    <a href="{{ path('utilisateur_show', {'idUtilisateur': utilisateur.idUtilisateur}) }}">show</a>
+                    <a href="{{ path('utilisateur_edit', {'idUtilisateur': utilisateur.idUtilisateur}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+                                                </tbody>
+
+                                                <tfoot>
+                                                    <tr>
+                <th>IdUtilisateur</th>
+                <th>Username</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Password</th>
+                <th>Tel</th>
+                <th>Adresse</th>
+                <th>IdRole</th>
+                <th>Etat</th>
+                <th>Email</th>
+                <th>actions</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'baseFront.html.twig' %}
+
+{% block title %}Edit Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+    <h1>Edit Utilisateur</h1>
+
+    {{ include('utilisateur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('utilisateur_front',  {'idUtilisateur': utilisateur.idUtilisateur}) }}">back to list</a>
+
+    {{ include('utilisateur/_delete_form.html.twig') }}
+{% endblock %}
+{% endblock %}
+
