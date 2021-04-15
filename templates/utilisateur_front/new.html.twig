@@ -61,47 +61,60 @@
                                 <div class="card rounded-0 mb-0 p-2">
                                     <div class="card-header pt-50 pb-1">
                                         <div class="card-title">
-                                            <h4 class="mb-0">Create Account As a Candidat</h4>
+                                            <h4 class="mb-0">Créer un nouveau compte</h4>
                                         </div>
                                     </div>
-                                    <p class="px-2">Fill the below form to create a new account.</p>
+                                    <p class="px-2">Veuillez remplir ce formulaire.</p>
                                     <div class="card-content">
                                         <div class="card-body pt-0">
-
-                                            {{ form_start(form,{'attr':{'main-contact-form wow':'main-contact-form wow'}}) }}
+                                            {{ form_start(form,{'attr':{'main-contact-form wow':'main-contact-form wow','novalidate': 'novalidate'}}) }}
 
                                              <div class="form-label-group">
 
                                                 {{ form_widget(form.username,{ 'label':'','id' : 'user-company','attr':{'class':'form-control ','placeholder':'Username *'}}) }}
-                                                
+                                                {{ form_errors(form.username) }}
                                             </div>
                                             <div class="form-label-group">
 
                                             <div class="form-label-group">
 
+                                                
                                                 {{ form_widget(form.prenom,{ 'label':'','id' : 'user-company','attr':{'class':'form-control ','placeholder':'Prenom *'}}) }}
+                                            {{ form_errors(form.prenom) }}
+                                            
                                             </div>
                                             <div class="form-label-group">
 
                                                 {{ form_widget(form.nom,{ 'label':'','id' : 'user-company','attr':{'class':'form-control ','placeholder':'Nom *'}}) }}
+                                                {{ form_errors(form.nom) }}
+
+                                           
                                             </div>
                                             <div class="form-label-group">
-                                                {{ form_widget(form.password,{ 'label':'','id':'user-password','attr':{'class':'form-control ','placeholder':'Password *'}}) }}
+                                                
+                                                {{ form_widget(form.password,{'type':'password', 'label':'','id':'user-password','attr':{'class':'form-control ','placeholder':'Password *'}}) }}
+                                            {{ form_errors(form.password) }}
+
                                             </div>
                                             <div class="form-label-group">
                                                 {{ form_widget(form.tel,{ 'label':'','id':'user-phone','attr':{'class':'form-control ','placeholder':'Tel. *'}}) }}
+                                            {{ form_errors(form.tel) }}
                                             </div>
                                             <div class="form-label-group">
                                                 {{ form_widget(form.adresse,{ 'label':'','id':'user-address','attr':{'class':'form-control','placeholder':'Adresse *'}}) }}
+                                           {{ form_errors(form.adresse) }}
                                             </div>
                                             <div class="form-label-group">
                                                 {{ form_widget(form.email,{ 'label':'','id':'user-fb','attr':{'class':'form-control','placeholder':'Email *'}}) }}
+                                           {{ form_errors(form.email) }}
                                             </div>
                                             <div class="form-label-group">
                                                 {{ form_widget(form.idRole,{ 'label':'','id':'user-linkdin','attr':{'class':'form-control','placeholder':'ID Role *'}}) }}
+                                           {{ form_errors(form.idRole) }}
                                             </div>
                                             <div class="form-label-group">
                                                 {{ form_widget(form.etat,{ 'label':'','id':'user-town','attr':{'class':'form-control','placeholder':'Etat *'}}) }}
+                                            {{ form_errors(form.etat) }}
                                             </div>
                                            
                                             <div class="form-group row">

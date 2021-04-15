@@ -3,6 +3,9 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+
 
 /**
  * Utilisateur
@@ -25,6 +28,7 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Username est obligatoire")
      */
     private $username;
 
@@ -32,6 +36,7 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Nom est obligatoire")
      */
     private $nom;
 
@@ -39,6 +44,7 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Prenom est obligatoire")
      */
     private $prenom;
 
@@ -46,13 +52,20 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Mot de passe est obligatoire")
      */
     private $password;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="tel", type="string", length=100, nullable=false)
+     * @ORM\Column(name="tel", type="string", length=20, nullable=false)
+     * @Assert\NotBlank(message="Numero de tel. est obligatoire")
+     * @Assert\Length(
+     *      min = 8,
+     *      minMessage = "votre numéro de tel. doit avoir {{ limit }} chiffres.",
+     *      allowEmptyString = false
+     * )
      */
     private $tel;
 
@@ -60,6 +73,7 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="adresse", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="Adresse est obligatoire")
      */
     private $adresse;
 
@@ -67,6 +81,7 @@ class Utilisateur
      * @var int
      *
      * @ORM\Column(name="id_role", type="integer", nullable=false)
+     * @Assert\NotBlank(message="Role est obligatoire")
      */
     private $idRole;
 
@@ -74,6 +89,7 @@ class Utilisateur
      * @var int
      *
      * @ORM\Column(name="etat", type="integer", nullable=false)
+     * @Assert\NotBlank(message="Etat est obligatoire")
      */
     private $etat;
 
@@ -81,6 +97,8 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=100, nullable=false)
+     * @Assert\NotBlank(message="L'adresse mail est obligatoire")
+     * @Assert\Email(message = "Cette adresse mail n'est pas valide.")
      */
     private $email;
 
