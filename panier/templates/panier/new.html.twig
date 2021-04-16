@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Panier{% endblock %}
+
+{% block body %}
+{% block content %}
+    <h1>Create new Panier</h1>
+
+    {{ include('panier/_form.html.twig') }}
+
+    <a class="btn btn-outline-primary mr-1 mb-1 waves-effect waves-light" href="{{ path('panier_index') }}">back to list</a>
+{% endblock %}
+{% endblock %}
