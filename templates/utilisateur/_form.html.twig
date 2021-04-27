@@ -77,6 +77,12 @@
                                                         {{ form_errors(form.password) }}
                                                     </div>
                                                 </div>
+                                                 <div class="form-label-group">
+                                                
+                                                {{ form_widget(form.confirm_password,{'type':'password', 'label':'','id':'user-password','attr':{'class':'form-control ','placeholder':'confirm password *'}}) }}
+                                            {{ form_errors(form.confirm_password) }}
+
+                                            </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="controls">
@@ -359,7 +365,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                                <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
+                                                <button id="submitbtn" type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
                                                     Changes</button>
                                                 <button type="reset" class="btn btn-outline-warning">Reset</button>
                                             </div>
@@ -375,7 +381,17 @@
         
 
 
-
+<script>
+    function editUtilisateurusername()
+    {
+        const textarea = document.getElementById('UtilisateurType');
+        let badwords = /bashful|dopey|grumpy|happy|sleepy|doc/gi;
+        let userreview1 = textarea.value;
+        let userreview2 = userreview1.replace(badwords,'****');
+        document.getElementById('UtilisateurType').value = userreview2;
+    }
+    document.getElementById('submitbtn').addEventListener('click',editUtilisateurusername)
+</script>
 
 
 

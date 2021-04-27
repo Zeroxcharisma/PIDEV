@@ -25,6 +25,20 @@ class UtilisateurFrontController extends AbstractController
     }
 
 
+     /**
+     * @Route("/", name="utilisateur_front_index")
+     */
+    public function displayAll(): Response
+    {
+        $utilisateurs = $this->getDoctrine()
+        ->getRepository(Utilisateur::class)
+        ->findAll();
+
+    return $this->render('utilisateur_front/display.html.twig', [
+        'utilisateurs' => $utilisateurs,
+    ]);
+    }
+
 /**
      * @Route("/utilisateurFrontnew", name="utilisateur_front_new", methods={"GET","POST"})
      */

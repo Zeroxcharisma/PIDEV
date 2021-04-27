@@ -4,7 +4,9 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
@@ -12,8 +14,12 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  *
  * @ORM\Table(name="utilisateur", indexes={@ORM\Index(name="heyy", columns={"id_role"})})
  * @ORM\Entity
+ * @UniqueEntity(
+ * fields={"username"},
+ * message="le nom d'utilisateur que vous avez indiqué est deja utilisé" 
+ * )
  */
-class Utilisateur
+class Utilisateur implements UserInterface
 {
     /**
      * @var int
@@ -53,9 +59,16 @@ class Utilisateur
      *
      * @ORM\Column(name="password", type="string", length=100, nullable=false)
      * @Assert\NotBlank(message="Mot de passe est obligatoire")
+     * * @Assert\Length(
+     *      min = 8,
+     *      minMessage = "votre mot de passe doit faire minimum 8 caractere.",
+     *      allowEmptyString = false
+     * )
+     * @Assert\EqualTo(propertyPath="confirm_password", message="vous n'avez pas tapez le meme mot de passe")
      */
     private $password;
-
+    
+    
     /**
      * @var string
      *
@@ -101,6 +114,25 @@ class Utilisateur
      * @Assert\Email(message = "Cette adresse mail n'est pas valide.")
      */
     private $email;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password" , message="vous n'avez pas tapez le meme mot de passe")
+     */
+
+    public $confirm_password;
+
+
+    /**
+    * @ORM\Column(type="json")
+    */
+    private $roles = [];
+
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
+    }
 
     public function getIdUtilisateur(): ?int
     {
@@ -215,5 +247,14 @@ class Utilisateur
         return $this;
     }
 
+    public function eraseCredentials() {}
+    public function getSalt() {}
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+        return array_unique($this->roles);
+    }
 
 }
