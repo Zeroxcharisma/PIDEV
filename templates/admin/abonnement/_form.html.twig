@@ -1,0 +1,22 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+        <div class="card-content">
+            <div class="card-body">
+                {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+                <div class="form-body">
+                    <div class="row">
+
+
+
+
+                        {{ form_widget(form) }}
+
+                        <div class="col-md-8 offset-md-4">
+
+                            <button class="btn">{{ button_label|default('Save') }}</button>
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
