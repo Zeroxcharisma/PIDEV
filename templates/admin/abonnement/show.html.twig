@@ -1,0 +1,64 @@
+{% extends 'admin/baseBack.html.twig' %}
+
+{% block title %}Abonnements{% endblock %}
+{% block path %}
+    <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h2 class="content-header-title float-left mb-0"> Abonnements</h2>
+                <div class="breadcrumb-wrapper col-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="{{ path('abonnement_index') }}">Liste des Abonnements</a>
+                        </li>
+                        <li class="breadcrumb-item active"><a href="#">Détaille de l'abonnement</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Appercu</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-9 col-md-6 col-lg-5">
+                        <table>
+                            <tr>
+                                <td class="font-weight-bold">Id:</td>
+                                <td>{{ abonnement.id }}</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">Prix:</td>
+                                <td>{{ abonnement.prix }}</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">Type:</td>
+                                <td>{{ abonnement.type }}</td>
+                            </tr>
+                            <tr>
+                                <th>Duree</th>
+                                <td>{{ abonnement.duree }}</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-12">
+                        <a href="{{ path('abonnement_edit', {'id': abonnement.id}) }}" class="btn btn-primary mr-1"><i class="feather icon-edit-1"></i> Edit</a>
+                        <hr>
+                        {{ include('admin/abonnement/_delete_form.html.twig') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="{{ path('abonnement_index') }}">back to list</a>
+{% endblock %}

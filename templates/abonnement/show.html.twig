@@ -1,0 +1,213 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#commentaire_add').click(function () {
+                var nom =$('#commentaire_Description').val().toUpperCase();
+                var myarr = ["G1", "G2", "G3"];
+                var array = [];
+                var valid=0;
+                var array1 = [];
+                var valid1=0;
+                array = nom.split(" ");
+
+                var valid1=0;
+
+
+                $.each( array, function( index, value ,e){
+                    if (myarr.indexOf(value) > -1)
+                    { valid=1;
+                        return false;
+
+
+                    }
+
+                });
+                if (nom.length==0)
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'remplir champ Comment',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+
+                }
+                else if (nom.length >25)
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'remplir champ Comment > 25 caracters',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+
+                }
+
+                else if (valid==1)
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'eviter les gros mots dans le champ Comment',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+
+                }
+                else if((nom.indexOf('G1') != -1 ) || (nom.indexOf('G2') != -1 )||(nom.indexOf('G3') != -1 ))
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'eviter les gros mots dans le champ Comment',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+                }
+
+            });
+        });
+    </script>
+
+    <div class="grid__item wide--four-fifths post-large--three-quarters" style="margin-left: 20px;">
+        <div itemscope itemtype="http://schema.org/Product" class="single-product-layout-type-1">
+            <div class="product-single">
+
+                <div class="grid__item wide--one-half post-large--one-half large--one-half product-img-box">
+
+                    <div class="product-photo-container">
+
+                        <a href="../../cdn.shopify.com/s/files/1/0107/4973/9108/products/product160e0f.jpg?v=1545802934" >
+                            <img src="{{ asset('uploads/images/Abonnement.PNG') }}" style = "width:200px ; height:200px" class="users-avatar-shadow w-100 rounded mb-2 pr-2 ml-1" alt="avatar">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product_single_detail_section grid__item wide--one-half post-large--one-half large--one-half">
+                    <h2 class="product-single__title">Abonnement</h2>
+
+                    <div class="product_single_price">
+                        <div class="product_price">
+                            <div class="grid-link__org_price" id="ProductPrice">
+                                <span>Prix: {{ abonnement.prix }} DT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__item product_desc_section" style="position:relative;border-top:1px solid $colorBorder;">
+
+                    </div>
+
+
+                    <div class="product-infor">
+
+
+                        <p class="product-inventory" id="product-inventory">
+                            <label>Durée :  </label>
+                            <span>  {{ abonnement.duree }}   </span>
+                        </p>
+                        <p class="product-inventory" id="product-inventory">
+                            <label>Type :  </label>
+                            <span>   {{ abonnement.type }}    </span>
+                        </p>
+
+
+
+
+
+                        <a href="{{ path('abonnement_indexFront') }}">back to list</a>
+
+
+
+                    </div></div></div></div>
+    <div class="dt-sc-hr-invisible-large"></div>
+    <div class="dt-sc-tabs-container">
+        <ul class="dt-sc-tabs">
+            <li><a class="" href="#">commentaire</a></li>
+            <li><a class="" href="#"> Reviews  </a></li>
+        </ul>
+
+        <div class="dt-sc-tabs-content" id="desc_pro">
+            <div id="comments" style="margin-left: 45px;">
+                <h5>Leave a comment</h5>
+
+                <div class="grid" id="ajout-commentaire">
+
+                    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>  </div>
+
+
+        <div class="dt-sc-tabs-content">
+            <div class="commentlist">
+            {% for commentaire in abonnement.commentaires %}
+                {% if commentaire.parent == null %}
+                    <h3>commentaire {{ loop.index }}</h3>
+                <div class="grid__item product_desc_section" style="position:relative;border-top:1px solid $colorBorder;">
+                </div>
+                   <img src="{{ asset('uploads/images/use.PNG') }}" height="50px;" width="50px;">
+               <p>publié par:   {{ commentaire.Client }} le    {{ commentaire.createdAt|date("d/m/y H:i") }} </p>
+                <div> {{commentaire.Description|raw }}</div>
+                    {{ include('commentaire/_delete_form.html.twig') }}
+                    <a href="{{ path('commentaire_edit', {'id': commentaire.id}) }}">edit</a>
+                <p><a href="#ajout-commentaire" data-reply data-id="{{ commentaire.id }}">répondre</a></p>
+            {# on affiche les commentaires #}
+                    {% for reply in commentaire.replies %}
+                        <div style="margin: 50px; ">
+                            <hr>
+                        <img src="{{ asset('uploads/images/use.PNG') }}" height="50px;" width="50px;">
+                        <p>Réponse par:   {{ reply.Client }} le    {{ reply.createdAt|date("d/m/y H:i") }} </p>
+                        <div> {{reply.Description|raw }}</div>
+                        </div>
+                    {% endfor %}
+
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+
+        <hr class="hr--clear hr--small">
+
+    </div>
+
+
+<script>
+    //on met un couteur d'evenement sur le bouton répodre
+    window.onload = ()=>{
+    document.querySelectorAll("[data-reply]").forEach(element => {
+        element.addEventListener("click",function (){
+            document.querySelector("#commentaire_parentid").value = this.dataset.id;
+        });
+        });}
+    </script>
+{% endblock %}

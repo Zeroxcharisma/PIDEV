@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://mefit-demo.myshopify.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://mefit-demo.myshopify.com/collections/new-arrival.atom"/>
+  <title>MeFit</title>
+  <updated>2018-12-25T17:42:42-12:00</updated>
+  <author>
+    <name>MeFit</name>
+  </author>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961830383716</id>
+    <published>2018-12-25T17:42:42-12:00</published>
+    <updated>2018-12-25T17:42:42-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/on-ear-bluetooth-headphones"/>
+    <title>On-Ear Bluetooth Headphones</title>
+    <s:type>Headphone</s:type>
+    <s:vendor>Bluedio</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product4_b71884f1-9a8d-469d-8400-840daeb985e8.jpg?v=1545802963"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Bluedio<br>
+        <strong>Type: </strong>Headphone<br>
+        <strong>Price: </strong>
+            229.00 - 395.00
+            <a href="https://mefit-demo.myshopify.com/products/on-ear-bluetooth-headphones">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$200 - $300</s:tag>
+    <s:tag>Bluedio</s:tag>
+    <s:tag>Headphone</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961830383716</id>
+      <title>M / Red</title>
+      <s:price currency="USD">229.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961830383716</id>
+      <title>L / Yellow</title>
+      <s:price currency="USD">395.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961830383716</id>
+      <title>S / Pink</title>
+      <s:price currency="USD">279.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961828941924</id>
+    <published>2018-12-25T17:42:34-12:00</published>
+    <updated>2018-12-25T17:42:34-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/mini-rechargeable-speaker"/>
+    <title>Mini Rechargeable Speaker</title>
+    <s:type>Speaker</s:type>
+    <s:vendor>Sennheiser</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product5_78da1e1d-82d5-4828-8619-a0507b98e631.jpg?v=1545802958"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Sennheiser<br>
+        <strong>Type: </strong>Speaker<br>
+        <strong>Price: </strong>
+            329.00 - 489.00
+            <a href="https://mefit-demo.myshopify.com/products/mini-rechargeable-speaker">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$300 - $500</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Sennheiser</s:tag>
+    <s:tag>Speaker</s:tag>
+    <s:tag>Yellow</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961828941924</id>
+      <title>M / Yellow</title>
+      <s:price currency="USD">329.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961828941924</id>
+      <title>L / Red</title>
+      <s:price currency="USD">429.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961828941924</id>
+      <title>S / Black</title>
+      <s:price currency="USD">489.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961825566820</id>
+    <published>2018-12-25T17:42:24-12:00</published>
+    <updated>2018-12-25T17:42:24-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/portable-bluetooth-speaker"/>
+    <title>Portable Bluetooth Speaker</title>
+    <s:type>Speaker</s:type>
+    <s:vendor>Captcha</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product7_9bad38a5-d8f1-4ea1-acca-d45ec12cca78.jpg?v=1545802946"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Captcha<br>
+        <strong>Type: </strong>Speaker<br>
+        <strong>Price: </strong>
+            279.00 - 399.00
+            <a href="https://mefit-demo.myshopify.com/products/portable-bluetooth-speaker">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$200 - $300</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>Captcha</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Speaker</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961825566820</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">279.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961825566820</id>
+      <title>L / Violet</title>
+      <s:price currency="USD">379.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961825566820</id>
+      <title>S / Red</title>
+      <s:price currency="USD">399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961824485476</id>
+    <published>2018-12-25T17:42:21-12:00</published>
+    <updated>2018-12-25T17:42:21-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/outdoor-speakers-handfree"/>
+    <title>Outdoor Speakers Handfree</title>
+    <s:type>Speaker</s:type>
+    <s:vendor>Captcha</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product8.jpg?v=1545802943"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Captcha<br>
+        <strong>Type: </strong>Speaker<br>
+        <strong>Price: </strong>
+            279.00 - 399.00
+            <a href="https://mefit-demo.myshopify.com/products/outdoor-speakers-handfree">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$200 - $300</s:tag>
+    <s:tag>Captcha</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>Speaker</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961824485476</id>
+      <title>M / Red</title>
+      <s:price currency="USD">279.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961824485476</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">379.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961824485476</id>
+      <title>S / Violet</title>
+      <s:price currency="USD">399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961822945380</id>
+    <published>2018-12-25T17:42:09-12:00</published>
+    <updated>2018-12-25T17:42:09-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/multimedia-speakers-black"/>
+    <title>Multimedia Speakers (Black)</title>
+    <s:type>Speaker</s:type>
+    <s:vendor>Sennheiser</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product17_072ac50e-1fb8-4b3c-9f3b-ec5926d1063e.jpg?v=1545802931"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Sennheiser<br>
+        <strong>Type: </strong>Speaker<br>
+        <strong>Price: </strong>
+            329.00 - 489.00
+            <a href="https://mefit-demo.myshopify.com/products/multimedia-speakers-black">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$300 - $500</s:tag>
+    <s:tag>Black</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Sennheiser</s:tag>
+    <s:tag>Speaker</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961822945380</id>
+      <title>M / Black</title>
+      <s:price currency="USD">329.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961822945380</id>
+      <title>L / Red</title>
+      <s:price currency="USD">429.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961822945380</id>
+      <title>S / Yellow</title>
+      <s:price currency="USD">489.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961822552164</id>
+    <published>2018-12-25T17:42:06-12:00</published>
+    <updated>2018-12-25T17:42:06-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/max-wired-headphones"/>
+    <title>Max Wired Headphones</title>
+    <s:type>Headphone</s:type>
+    <s:vendor>Bluedio</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product23.jpg?v=1545802928"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Bluedio<br>
+        <strong>Type: </strong>Headphone<br>
+        <strong>Price: </strong>
+            229.00 - 395.00
+            <a href="https://mefit-demo.myshopify.com/products/max-wired-headphones">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$200 - $300</s:tag>
+    <s:tag>Bluedio</s:tag>
+    <s:tag>Headphone</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Yellow</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961822552164</id>
+      <title>M / Yellow</title>
+      <s:price currency="USD">229.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961822552164</id>
+      <title>L / Red</title>
+      <s:price currency="USD">395.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961822552164</id>
+      <title>S / Pink</title>
+      <s:price currency="USD">279.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/products/1961821864036</id>
+    <published>2018-12-25T17:42:01-12:00</published>
+    <updated>2018-12-25T17:42:01-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/products/on-ear-headphones-black"/>
+    <title>On-Ear Headphones (Black)</title>
+    <s:type>Headphone</s:type>
+    <s:vendor>Captcha</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0107/4973/9108/products/product27_a4ec34a1-639e-4d35-b0af-4ced95c43f74.jpg?v=1545802923"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Captcha<br>
+        <strong>Type: </strong>Headphone<br>
+        <strong>Price: </strong>
+            279.00 - 399.00
+            <a href="https://mefit-demo.myshopify.com/products/on-ear-headphones-black">(3 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$200 - $300</s:tag>
+    <s:tag>Black</s:tag>
+    <s:tag>Captcha</s:tag>
+    <s:tag>Headphone</s:tag>
+    <s:tag>M</s:tag>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961821864036</id>
+      <title>M / Black</title>
+      <s:price currency="USD">279.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961821864036</id>
+      <title>L / Black</title>
+      <s:price currency="USD">379.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://mefit-demo.myshopify.com/products/1961821864036</id>
+      <title>S / Black</title>
+      <s:price currency="USD">399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

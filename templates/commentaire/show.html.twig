@@ -1,0 +1,28 @@
+{% extends 'baseFront.html.twig' %}
+
+{% block body %}
+    <h1>Commentaire</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ commentaire.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ commentaire.Description }}</td>
+            </tr>
+            <tr>
+                <th>Client</th>
+                <td>{{ commentaire.client }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('commentaire_index') }}">back to list</a>
+
+    <a href="{{ path('commentaire_edit', {'id': commentaire.id}) }}">edit</a>
+
+    {{ include('commentaire/_delete_form.html.twig') }}
+{% endblock %}

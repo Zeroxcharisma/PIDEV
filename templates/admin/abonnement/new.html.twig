@@ -1,0 +1,80 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block title %}New Abonnement{% endblock %}
+
+{% block body %}
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#abonnement_add').click(function () {
+                var dure =$('#abonnement_duree').val();
+                var prix =$('#abonnement_prix').val();
+                var type =$('#abonnement_type').val();
+
+
+
+                if ((dure.length<1)||((dure.length>3)))
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'Durée en heures entre 1 et 999 ',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+
+                }
+
+                else if ((prix.length<1)||((prix.length>4)))
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'Les Prix entre 10 Dt et 999 dt',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+
+                }
+                else if (type.length==0)
+                {
+                    swal({
+                        title: 'Error!',
+                        text: 'remplir champ Type',
+                        icon: 'error',
+                        button: {
+                            text: "Continue",
+                            value: true,
+                            visible: true,
+                            className: "btn btn-primary"
+                        }
+                    });
+                    return false;
+
+                }
+
+
+            });
+
+
+        });
+    </script>
+
+    <h1>Create new Abonnement</h1>
+
+    {{ include('abonnement/_form.html.twig') }}
+
+    <a href="{{ path('abonnement_index') }}">back to list</a>
+{% endblock %}

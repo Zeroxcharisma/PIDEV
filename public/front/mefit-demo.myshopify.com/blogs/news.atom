@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://mefit-demo.myshopify.com/blogs/news.atom</id>
+  <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news"/>
+  <link rel="self" type="application/atom+xml" href="https://mefit-demo.myshopify.com/blogs/news.atom"/>
+  <title>MeFit - News</title>
+  <updated>2019-05-03T22:36:00-12:00</updated>
+  <author>
+    <name>MeFit</name>
+  </author>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/sport-model-smart-watch</id>
+    <published>2019-05-03T22:36:00-12:00</published>
+    <updated>2019-05-03T22:37:05-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/sport-model-smart-watch"/>
+    <title>Sport model smart watch</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/the-steps-count-tracker</id>
+    <published>2019-05-03T22:35:00-12:00</published>
+    <updated>2019-05-03T22:36:36-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/the-steps-count-tracker"/>
+    <title>The steps count tracker</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/sleep-monitor-with-alarm</id>
+    <published>2019-05-03T22:32:00-12:00</published>
+    <updated>2019-05-03T22:34:24-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/sleep-monitor-with-alarm"/>
+    <title>Sleep monitor with alarm</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/amazing-feature-tracker-watch</id>
+    <published>2019-05-03T22:31:00-12:00</published>
+    <updated>2019-05-03T22:32:40-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/amazing-feature-tracker-watch"/>
+    <title>Amazing feature tracker watch</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/smart-wristband-watch</id>
+    <published>2019-05-03T22:30:00-12:00</published>
+    <updated>2019-05-03T22:31:53-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/smart-wristband-watch"/>
+    <title>Smart wristband watch</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/the-best-heart-rates-calculate</id>
+    <published>2019-05-03T22:29:00-12:00</published>
+    <updated>2019-05-03T22:30:37-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/the-best-heart-rates-calculate"/>
+    <title>The best heart rates Calculate</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/the-pedometer-calculating-the-calories</id>
+    <published>2019-05-03T22:28:00-12:00</published>
+    <updated>2019-05-03T22:29:38-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/the-pedometer-calculating-the-calories"/>
+    <title>The pedometer calculating the calories</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/regular-gym-keeps-you-fit</id>
+    <published>2019-05-03T22:27:00-12:00</published>
+    <updated>2019-05-03T22:28:34-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/regular-gym-keeps-you-fit"/>
+    <title>Regular gym keeps you fit</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/the-blood-pressure-monitor</id>
+    <published>2019-05-03T22:26:00-12:00</published>
+    <updated>2019-05-03T22:27:13-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/the-blood-pressure-monitor"/>
+    <title>The blood pressure monitor</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/the-best-notification-tracker</id>
+    <published>2019-05-03T22:25:00-12:00</published>
+    <updated>2019-05-03T22:26:32-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/the-best-notification-tracker"/>
+    <title>The best notification tracker</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/burning-the-calories</id>
+    <published>2019-05-03T22:24:00-12:00</published>
+    <updated>2019-05-03T22:25:39-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/burning-the-calories"/>
+    <title>Burning the calories</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]]>
+    </content>
+  </entry>
+  <entry>
+    <id>https://mefit-demo.myshopify.com/blogs/news/pedometer-fitness-tracker</id>
+    <published>2019-05-03T22:22:00-12:00</published>
+    <updated>2019-05-03T22:24:26-12:00</updated>
+    <link rel="alternate" type="text/html" href="https://mefit-demo.myshopify.com/blogs/news/pedometer-fitness-tracker"/>
+    <title>Pedometer fitness tracker</title>
+    <author>
+      <name>Ram M</name>
+    </author>
+    <content type="html">
+      <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ]]>
+    </content>
+  </entry>
+</feed>
