@@ -276,7 +276,12 @@ public class GestionProduit {
 	}
 
 	@FXML
-	void produit(ActionEvent event) {
+	void produit(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("GestionProduit.fxml"));
+	Scene scene = new Scene(root);
+	Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	stage.setScene(scene);
+	stage.show();
 
 	}
 

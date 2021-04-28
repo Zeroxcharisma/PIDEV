@@ -3,25 +3,44 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/DisplayAllController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/services/ParticipationCrud.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/tools/SmsSender.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ValideInscriptionController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/Utilisateur.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/NewPasswordController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/AllUserNewController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/InscrireController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/tools/Sms.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/Participation.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ProfileController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/InscriptionController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ResetPasswordController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ModifyUserController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/ForgetpasswordController.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/entities/abonnement.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/services/UtilisateurCRUD.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/gui/FirstWindow.java</file>
-            <file>file:/C:/Users/sofie/OneDrive/Documents/NetBeansProjects/Pidev_Users/src/edu/db3a3/services/Mailing.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AjouterTestFitnessController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/IUserController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/GestionProduit.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AffecterTestFitnessController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/EvenementClientController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AjouterController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/InscrireController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/PartieclientController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/EvenementController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ValideInscriptionController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/InscriptionController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/PiechartController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/StatController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ModifyUserController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AjouterProduit.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/LoginController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AfficheController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AjouterCoursController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/DisplayAllController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ModifierTestFitnessController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ProfileController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/PDFManager.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/StatistiquesController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ModifierProduit.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ForgetpasswordController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/IAdminController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/AddRecController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ShowparticpationController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/MenuController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/GestionCoursController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/DelRecController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/GestionPanierController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/GestionTestFitnessController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ModifierCoursController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/FirstWindow.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/NewPasswordController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/FXMLDocumentController.java</file>
+            <file>file:/C:/PIDEV/PIDEV/src/edu/db3a3/gui/ClientController.java</file>
         </group>
     </open-files>
 </project-private>
