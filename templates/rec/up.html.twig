@@ -1,0 +1,90 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+<h1>{{ recs }}</h1>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'baseFront.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+<h1>{{ page_title }}</h1>
+{{ form(f) }}
+     <a class="btn btn-outline-primary mr-1 mb-1 waves-effect waves-light" href="{{ path('msg') }}">Accueil</a>
+
+{% endblock %}
+{% endblock %}
+
+
+
+
+
+  <div class="row">
+                                                <div class="col-12 col-sm-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Username</label>
+                                                            <input type="text" class="form-control" placeholder="Username" class.email required data-validation-required-message="This username field is required">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Name</label>
+                                                            <input type="text" class="form-control" placeholder="Name" value="Angelo Sashington" required data-validation-required-message="This name field is required">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>E-mail</label>
+                                                            <input type="email" class="form-control" placeholder="Email"  required data-validation-required-message="This email field is required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+
+                                                    <div class="form-group">
+                                                        <label>Status</label>
+                                                        <select class="form-control">
+                                                            <option>Active</option>
+                                                            <option>Blocked</option>
+                                                            <option>deactivated</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Role</label>
+                                                        <select class="form-control">
+                                                            <option>Admin</option>
+                                                            <option>User</option>
+                                                            <option>Staff</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Company</label>
+                                                        <input type="text" class="form-control" value="WinDon Technologies Pvt Ltd" placeholder="Company name">
+                                                    </div>
+                                                </div>
+
+ 
+{% endblock %}
+{% endblock %}

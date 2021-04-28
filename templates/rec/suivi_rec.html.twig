@@ -1,0 +1,43 @@
+{% extends 'baseFront.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+
+<div id="shopify-section-footer-model-15" class="shopify-section"><div data-section-id="footer-model-15"  data-section-type="Footer-model-15" class="footer-model-15">
+        <div class="footer-logo" style="background-image:url('/front/cdn.shopify.com/s/files/1/0107/4973/9108/files/footer-bg_196f2e55-1e44-4802-a061-88499990dfc2_1920X45b8.jpg?v=1556957780');background-attachment:fixed;background-repeat:no-repeat;background-position:bottom center; ;">
+
+            <a href="index.html">
+                <img class="normal-footer-logo" src="/front/cdn.shopify.com/s/files/1/0107/4973/9108/files/me-fit-logo_200x147c.png?v=1555919395" alt="MeFit" />
+            </a>
+
+       <div class="modal-body">
+                <div class="table-wrapper">
+               <table class="tt_timetable">
+					    	    <thead>
+					    	        <tr class="row_gray" style="background-color: #15541F !important;">
+
+   
+        <th> email   </th>
+        <th>   sujet  </th>
+            <th>  etat </th>
+                      
+
+    </tr>
+    {% for class in rec %}
+    <tr  style="background-color: #F0F0F0 !important;">   
+       
+        <td> {{ class.email }}</td>
+        <td>   {{ class.sujet }} </td>
+    
+        <td>     {{ class.etat }}   </td>     
+       
+
+    </tr>
+    
+    {% endfor %}
+
+
+  </table>  
+ 
+{% endblock %}

@@ -1,0 +1,20 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+mefit-demo.myshopify.com	TRUE	/10749739108/checkouts/7eaaa1a6e765b85827c5b5e80d12459c	FALSE	1999999999	checkout	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVU1Wm1NME5tWmpOekUwT0RneE9XRmhZbU5pTldKaU5UWXhOV1V5WWprME1nWTZCa1ZVIiwiZXhwIjoiMjAyMS0wNS0wMlQxNzoyMjo1MS4zMDhaIiwicHVyIjoiY29va2llLmNoZWNrb3V0In19--853595ba77c16a187a69ef3bf69f3ec207c3c248
+mefit-demo.myshopify.com	TRUE	/10749739108	FALSE	1999999999	checkout_token	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVUzWldGaFlURmhObVUzTmpWaU9EVTRNamRqTldJMVpUZ3daREV5TkRVNVl3WTZCa1ZVIiwiZXhwIjoiMjAyMi0wNC0xMVQxNzoyMjo1MS4zMDhaIiwicHVyIjoiY29va2llLmNoZWNrb3V0X3Rva2VuIn19--22dfdc7f62f3e129d66f40499061f2b541051f49
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_landing_page	%2F
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_secure_session_id	638cb9692443861a34e2df941ed710e6
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart	f7e620bad7b1c911b5d1d9fba8861fb3
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart_ts	1618161770
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart_currency	USD
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_checkout_queue_token	AWvikcZjV3vBkHwk-DLvzfziwxG8VqYGN0gICUuHL5JPc5jJ9yu-GbJl9gUKdT1UXWpRBGxjuXz9QdC3I6LkcuHeyiSeervg3MuxzXNoY7hpyWGhAqmxveLTmt9DgICKl8O1yTNPtLjBbLojyHHKG3n2BuA2Ppdc4h26KRlsOIaLcrHGADLiFA%3D%3D
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_checkout_queue_checkout_token	eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaVUzWldGaFlURmhObVUzTmpWaU9EVTRNamRqTldJMVpUZ3daREV5TkRVNVl3WTZCa1ZVIiwiZXhwIjoiMjAyMS0wNC0xMVQxODoyMjo1MC45NTVaIiwicHVyIjoiY29va2llLl9jaGVja291dF9xdWV1ZV9jaGVja291dF90b2tlbiJ9fQ%3D%3D--62b9744a25663775a00850aae7a2f8bc3f23f113
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart_ver	gcp-us-east1%3A1
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	cart_sig	f70f2a4e5371786f99a5aeb410bf6ded
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_y	8124465e-03f9-4c1a-808d-143e79a348e3
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_s	63fbe885-e9d8-442a-9606-c45b2681a344
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_y	8124465e-03f9-4c1a-808d-143e79a348e3
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_s	63fbe885-e9d8-442a-9606-c45b2681a344
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_fs	2021-04-11T17%3A39%3A40Z
+mefit-demo.myshopify.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+

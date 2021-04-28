@@ -1,0 +1,20 @@
+{% extends 'baseFront.html.twig' %}
+  {% form_theme f 'bootstrap_4_layout.html.twig' %}
+
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+<h1>{{ page_title }}</h1>
+<div id="shopify-section-footer-model-15" class="shopify-section"><div data-section-id="footer-model-15"  data-section-type="Footer-model-15" class="footer-model-15">
+        <div class="footer-logo" style="background-image:url('/front/cdn.shopify.com/s/files/1/0107/4973/9108/files/footer-bg_196f2e55-1e44-4802-a061-88499990dfc2_1920X45b8.jpg?v=1556957780');background-attachment:fixed;background-repeat:no-repeat;background-position:bottom center; ;">
+
+            <a href="index.html">
+                <img class="normal-footer-logo" src="/front/cdn.shopify.com/s/files/1/0107/4973/9108/files/me-fit-logo_200x147c.png?v=1555919395" alt="MeFit" />
+            </a>
+{{ form(f) }}
+  <a class="add-to-cart-btn btn" href="{{ path('msg') }}">Accueil</a>
+
+{% endblock %}
+{% endblock %}

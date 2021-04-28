@@ -1,0 +1,15 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+<h1>{{ recs }}</h1>
+ {% if f is defined and f is not empty%}
+   {{ form(f  )  }}
+   
+    {% endif %}
+ 
+{% endblock %}
+{% endblock %}

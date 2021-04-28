@@ -1,0 +1,46 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+<table border="1">
+    <tr>
+    
+        <th> email   </th>
+        <th>   sujet  </th>
+         <th> description </th>   <th>  Date </th>  
+            <th>  etat </th>
+                     
+                          <th>  Action </th>
+                          
+
+    </tr>
+    {% for class in recs %}
+    <tr>
+     
+        <td> {{ class.email }}</td>
+        <td>   {{ class.sujet }} </td>
+        <td>    {{ class.description }}  </td>
+         <td>    {{ class.date.format('d/m/Y') }}  </td>
+         
+        <td>    <div class="chip chip-success">
+                                            <div class="chip-body">
+                                                <div class="chip-text"> {{ class.etat }}   </td>  </div></div>   
+        <td> <a  class="btn btn-outline-primary mr-1 mb-1 waves-effect waves-light" {% if class.etat == "traitée" %} href="" {% else %} href="{{ path('rec_up', {'id': class.id}) }}"{% endif %}<><span class="action-edit"><i class="feather icon-edit"></i></span>modifier</a>
+
+    <a class="btn btn-outline-warning mr-1 mb-1 waves-effect waves-light"  href="{{ path('rec_del', {'id': class.id}) }}"<span class="action-delete"><i class="feather icon-trash"></i></span>supprimer</a>
+    <a class="btn btn-primary shadow"href="{{ path('msg_up', {'id': class.id}) }}"<span class="feather icon-mail"><i class="feather icon-mail"></i></span>repondre</a>
+
+</td>
+
+    </tr>
+    
+    {% endfor %}
+
+
+  </table>  
+ 
+{% endblock %}
+{% endblock %}

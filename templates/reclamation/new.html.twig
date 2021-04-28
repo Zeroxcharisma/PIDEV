@@ -1,0 +1,107 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+
+
+
+    <h1>Create new Reclamation</h1>
+
+
+          <div class="content-body">
+                <!-- Basic Horizontal form layout section start -->
+                <section id="basic-horizontal-layouts">
+                    <div class="row match-height">
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Horizontal Form</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form form-horizontal">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Email </span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                  {{ form_widget(form.email) }}
+                                                    <div class="alert alert-danger">
+                                                        {{ form_errors(form.email) }}
+                              
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>sujet</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                {{ form_widget(form.sujet) }}
+                                                    <div class="alert alert-danger">
+                                                        {{ form_errors(form.sujet) }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>Description</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                              {{ form_widget(form.description) }}
+                                                  <div class="alert alert-danger">
+                                                        {{ form_errors(form.description) }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>coach</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                  {{ form_widget(form.idCoach) }}
+                                                    <div class="alert alert-danger">
+                                                        {{ form_errors(form.idCoach) }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      <div class="col-12">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>user</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                {{ form_widget(form.idUser) }}
+                                                    <div class="alert alert-danger">
+                                                       
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 offset-md-4">
+                                                      
+       <div class="col-md-offset-5" > <button type="submit" href="{{path('reclamation_new')}}" class="btn btn-primary mt30 btn-black "/>click to save </button> </div>
+                                            {{ form_end(form) }}
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+
+{% endblock %}
+{% endblock %}
+

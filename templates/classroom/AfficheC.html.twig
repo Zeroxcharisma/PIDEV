@@ -1,0 +1,33 @@
+<h1>CLassrooms <a href="/classroom_add"><Button title="Add classroom">Add</Button></a></h1>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Name
+        </th>
+
+        <th>
+            Nombre
+        </th>
+    </tr>
+    {% for class in classrooms %}
+    <tr>
+        <td>
+            {{ class.id }}
+        </td>
+        <td>
+            {{ class.name }}
+        </td>
+        <td>
+            {{ class.nbe }}
+        </td>
+        <td>
+            <a href="/classroom_update/{{ class.id }}"><button>Update</button></a>
+            <a href="/classroom_delete/{{ class.id }}"><button>Delete</button></a>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,35 @@
+
+{% extends 'baseFront.html.twig' %}
+
+{% block title %}Utilisateur{% endblock %}
+
+{% block body %}
+{% block content %}
+<table border="1">
+    <tr>
+        <th>  ID</th>
+        <th> email   </th>
+        <th>   sujet  </th>
+         <th> description </th>
+            <th>  etat </th>
+                        <th>  Action </th>
+
+    </tr>
+    {% for class in recs %}
+    <tr>
+        <td>  {{ class.id }} </td>
+        <td> {{ class.email }}</td>
+        <td>   {{ class.sujet }} </td>
+        <td>    {{ class.description }}  </td>
+        <td>     {{ class.etat }}   </td>     
+       
+
+    </tr>
+    
+    {% endfor %}
+
+
+  </table>  
+ 
+{% endblock %}
+{% endblock %}
