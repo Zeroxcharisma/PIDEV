@@ -1,0 +1,13 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block title %}Edit Testfitness{% endblock %}
+
+{% block body %}
+    <h1>Edit Testfitness</h1>
+
+    {{ include('testfitness/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('testfitness_index') }}">back to list</a>
+
+    {{ include('testfitness/_delete_form.html.twig') }}
+{% endblock %}

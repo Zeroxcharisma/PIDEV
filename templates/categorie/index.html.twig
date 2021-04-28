@@ -1,0 +1,17 @@
+
+{% block body %}
+<div class="menu-tool" >
+    <ul class="site-nav" >
+{% for categorie in categories %}
+        <li class=" "   style="height: 50px;">
+            <a  href="{{ path('categorie_showC'   , {'id': categorie.id}) }}" class="menu__moblie">
+                <span>{{ categorie.description }}</span>
+            </a>
+        </li>
+
+{% endfor %}
+
+    </ul>
+</div>
+
+{% endblock %}

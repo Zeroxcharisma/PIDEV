@@ -1,0 +1,63 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <h1>Les abonnements</h1>
+    <span aria-hidden="true" class="breadcrumb__sep">/</span>
+    <span>List</span>
+</nav>
+
+
+
+    <div class="products-grid-view">
+
+        <ul> {% for abonnement in abonnements %}
+                <li class="grid__item item-row  wide--one-quarter post-large--one-third large--one-half medium--one-half small-grid__item  medium--one-half small--one-half   on-sale" id="product-1961821405284">
+
+                    <div class="products product-hover-14 wow fadeInUp animated">
+                        <div class="product-container">
+
+
+                            <a href="../products/stereo-headphones-black.html" class="grid-link">
+                                <div class="ImageOverlayCa"></div>
+                                <div class="reveal">
+        <span class="product-additional">
+          <img src="{{ asset('uploads/images/Abonnement.PNG') }}" class="featured-image" alt="Stereo Headphones (Black)">
+        </span>
+                                    <img  src="{{ asset('uploads/images/Abonnement.PNG') }}" class="hidden-feature_img" alt="Stereo Headphones (Black)" />
+                                </div>
+                            </a>
+                            <div class="ImageWrapper">
+                                <div class="product-button">
+                                    <a href="{{ path('abonnement_showFront', {'id': abonnement.id}) }}" >
+
+                                        <i> Détaill</i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+
+                            <a href="../products/stereo-headphones-black.html" class="grid-link__title">Abonnement n°: {{ abonnement.id }}</a>
+                            <div class="grid-link__meta">
+
+
+
+                                <div class="product_price">
+                                    <div class="grid-link__org_price" id="ProductPrice">
+                                        <span> {{ abonnement.prix }} DT</span>
+                                    </div>
+                                </div>
+                                <p class="comments-count"><i class="far fa-comment"></i>0 Comments</p>
+
+
+                                <span class="shopify-product-reviews-badge" data-id="1961821405284"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </li> {% endfor %} </ul>
+    </div>
+{% endblock %}

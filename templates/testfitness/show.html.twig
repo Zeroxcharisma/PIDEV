@@ -1,0 +1,48 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+
+
+    <div class="grid__item wide--four-fifths post-large--three-quarters">
+        <div itemscope itemtype="http://schema.org/Product" class="single-product-layout-type-1">
+
+                <div class="product_single_detail_section grid__item wide--one-half post-large--one-half large--one-half">
+                    <h2 class="product-single__title">Test fitness n°: {{ testfitness.id }}</h2>
+
+                    <div class="product_single_price">
+
+                    </div>
+                    <span class="shopify-product-reviews-badge" data-id="1961823141988"></span>
+                    <div class="grid__item product_desc_section" style="position:relative;border-top:1px solid $colorBorder;">
+
+                    </div>
+
+
+                    <div class="product-infor">
+
+
+                        <p class="product-inventory" id="product-inventory">
+                            <label>Durée :  </label>
+                            <span>
+                        {{ testfitness.duree }}
+
+              </span>
+                        </p>
+                        <p class="product-vendor">
+                            <label>Date du Test :</label>
+                            <span>{{ testfitness.dateTest ? testfitness.dateTest|date('Y-m-d') : '' }}</span>
+                        </p>
+
+
+
+
+
+
+                        <a href="{{ path('testfitness_indexC') }}">back to list</a>
+
+
+
+                    </div></div></div></div></div>
+
+{% endblock %}

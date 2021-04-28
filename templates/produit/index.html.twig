@@ -1,0 +1,64 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <h1>Les produits</h1>
+        <span aria-hidden="true" class="breadcrumb__sep">/</span>
+        <span>produit</span>
+    </nav>
+    {{ include('categorie/index.html.twig') }}
+    <hr>
+    <div class="products-grid-view">
+
+        <ul>  {% for produit in produits %}
+                <li class="grid__item item-row  wide--one-quarter post-large--one-third large--one-half medium--one-half small-grid__item  medium--one-half small--one-half   on-sale" id="product-1961821405284">
+
+                    <div class="products product-hover-14 wow fadeInUp animated">
+                        <div class="product-container">
+
+
+                            <a href="../products/stereo-headphones-black.html" class="grid-link">
+                                <div class="ImageOverlayCa"></div>
+                                <div class="reveal">
+        <span class="product-additional">
+          <img src="{{ asset('uploads/images/' ~ produit.image) }}" class="featured-image" alt="Stereo Headphones (Black)">
+        </span>
+                                    <img  src="{{ asset('uploads/images/' ~ produit.image) }}" class="hidden-feature_img" alt="Stereo Headphones (Black)" />
+                                </div>
+                            </a>
+                            <div class="ImageWrapper">
+                                <div class="product-button">
+                                    <a href="{{ path('produit_showC', {'id': produit.id}) }}" >
+
+                                        <i> Détaill</i>
+                                    </a>
+                                    <form  action="https://mefit-demo.myshopify.com/cart/add" method="post" class="gom variants clearfix" id="cart-form-1961821405284">
+                                        <input type="hidden" name="id" value="18490196263012" />
+                                        <a class="add-cart-btn"  title="Add to Cart" >
+                                            <b class="fas fa-shopping-cart"></b>
+                                            <i>Ajouter au Panier</i>
+                                        </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+
+                            <a href="../products/stereo-headphones-black.html" class="grid-link__title">{{ produit.nom }}</a>
+                            <div class="grid-link__meta">
+
+
+
+                                <div class="product_price">
+                                    <div class="grid-link__org_price" id="ProductPrice">
+                                        <span> {{ produit.prix }} DT</span>
+                                    </div>
+                                </div>
+                                <span class="shopify-product-reviews-badge" data-id="1961821405284"></span>
+                            </div>
+                        </div>
+                    </div>
+                </li> {% endfor %} </ul>
+    </div>
+{% endblock %}

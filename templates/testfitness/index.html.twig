@@ -1,0 +1,59 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+<table>
+<td><div class="product_sidebar" style="width: 200px;">
+            <div id="shopify-section-sidebar-category" class="shopify-section">
+                <div class="widget widget_product_categories">
+                    <h6>Filtrer Par nom du cour</h6>
+                    {{ form_start(formFiltre) }}
+                    <div class="col-md-6">
+                        {{ form_row(formFiltre.courT) }}
+                    </div>
+                    <h6>Filtrer Par durée</h6>
+                    <div class="row" >
+                        <div class="col-md-6">
+                            {{ form_row(formFiltre.min) }}
+
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_row(formFiltre.max) }}
+                        </div>
+                    </div>
+                    {{ form_row(formFiltre.filtrer) }}
+                    {{ form_end(formFiltre) }}
+                </div>
+            </div>
+        </div>
+    </td>
+    <td>
+
+<div class="products-grid-view">
+
+        <ul>  {% for testfitness in testfitnesses %}
+                <li class="grid__item item-row  wide--one-quarter post-large--one-third large--one-half medium--one-half small-grid__item  medium--one-half small--one-half   on-sale" id="product-1961821405284">
+
+                    <div class="products product-hover-14 wow fadeInUp animated">
+
+                        <div class="product-detail">
+
+                            <a href="{{ path('testfitness_showC', {'id': testfitness.id}) }}" class="grid-link__title">Testfitness n°: {{ testfitness.id }}</a>
+                            <div class="grid-link__meta">
+
+
+
+                                <div class="product_price">
+                                    <div class="grid-link__org_price" id="ProductPrice">
+                                        <span> {{ testfitness.dateTest ? testfitness.dateTest|date('Y-m-d') : '' }} </span>
+                                    </div>
+                                </div>
+                                <span class="shopify-product-reviews-badge" data-id="1961821405284"></span>
+                            </div>
+                        </div>
+                    </div>
+                </li> {% endfor %} </ul>
+    </div>
+</td>
+</table>
+{% endblock %}

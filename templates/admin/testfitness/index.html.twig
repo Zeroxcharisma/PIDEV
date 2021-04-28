@@ -1,0 +1,91 @@
+{% extends 'admin/baseBack.html.twig' %}
+
+{% block title %}Testfitness index{% endblock %}
+{% block path %}
+    <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h2 class="content-header-title float-left mb-0">Tests fitness </h2>
+                <div class="breadcrumb-wrapper col-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="{{ path('testfitness_index') }}">Tests Fitness</a>
+                        </li>
+                        <li class="breadcrumb-item active"><a href="{{ path('testfitness_index') }}">Liste des Tests</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+
+                <th>Duree</th>
+                <th>DateTest</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for testfitness in testfitnesses %}
+            <tr>
+                <td>{{ testfitness.id }}</td>
+
+                <td>{{ testfitness.duree }}</td>
+                <td>{{ testfitness.dateTest ? testfitness.dateTest|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('testfitness_show', {'id': testfitness.id}) }}">show</a>
+                    <a href="{{ path('testfitness_edit', {'id': testfitness.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('testfitness_new') }}">Create new</a>
+    <hr>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <h2 class="content-header-title float-left mb-0">Nombre de Test de fitness selon leurs date </h2>
+    <hr>
+    <canvas id="portfolios" width="400" height="100"></canvas>
+        </div></div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <script>
+
+        let annonces = document.querySelector("#portfolios")
+        let annGraph = new Chart(annonces, {
+            type: "line",
+            data: {
+                labels: {{ dates|raw }},
+                datasets: [{
+                    label: "Nombre de Tests",
+                    data: {{ testfCount|raw }},
+
+                    backgroundColor: 'rgba( 98, 34, 246, 0.4)',
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        })
+    </script>
+{% endblock %}

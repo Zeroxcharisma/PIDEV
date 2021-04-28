@@ -1,0 +1,56 @@
+
+{% extends 'admin/baseBack.html.twig' %}
+
+{% block title %}Evenement index{% endblock %}
+{% block path %}
+    <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h2 class="content-header-title float-left mb-0">Evenements </h2>
+                <div class="breadcrumb-wrapper col-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="{{ path('evenement_index') }}">Evenements</a>
+                        </li>
+                        <li class="breadcrumb-item active"><a href="{{ path('evenement_index') }}">Liste des Evenements</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>DateParticipation</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for participant in participants %}
+            <tr>
+                <td>{{ participant.id }}</td>
+                <td>{{ participant.nom }}</td>
+                <td>{{ participant.dateParticipation ? participant.dateParticipation|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('participant_show', {'id': participant.id}) }}">show</a>
+                    <a href="{{ path('participant_edit', {'id': participant.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

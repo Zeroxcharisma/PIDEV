@@ -1,0 +1,124 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <h1>Les Evenements</h1>
+        <span aria-hidden="true" class="breadcrumb__sep">/</span>
+        <span>Products</span>
+        <div class="filter-sortby grid__item ">
+            <label for="sort-by">Sort by</label>
+            <input type="text" id="sort-by">
+            <div class="sorting-section">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <i class="fas fa-exchange-alt"></i>
+
+                </button>
+
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{ path('evenement_Trier')}}">Evenement plus récent</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+<main class="main-menu-content">
+    <div class="products-grid-view">
+
+        <ul> {% for evenement in evenements %}
+                <li class="grid__item item-row  wide--one-quarter post-large--one-third large--one-half medium--one-half small-grid__item  medium--one-half small--one-half   on-sale" id="product-1961821405284">
+                    <div class="products product-hover-14 wow fadeInUp animated">
+                        <div class="product-container">
+                            <a href="../products/stereo-headphones-black.html" class="grid-link">
+                                <div class="ImageOverlayCa"></div>
+                                <div class="reveal">
+                                <span class="product-additional">
+                                  <img src="{{ asset('uploads/images/Evenement.PNG') }}" class="featured-image" alt="Stereo Headphones (Black)">
+                                </span>
+                                    <img  src="{{ asset('uploads/images/Evenement.PNG') }}" class="hidden-feature_img" alt="Stereo Headphones (Black)" />
+                                </div>
+                            </a>
+
+                        <div class="product-detail">
+                            <a href="../products/stereo-headphones-black.html" class="grid-link__title">Evenement n°: {{ evenement.id }}</a>
+                            <div class="grid-link__meta">
+                                <div class="product_price">
+                                    <div class="grid-link__org_price" id="ProductPrice">
+                                        <span> {{ evenement.date ? evenement.date|date('Y-m-d') : '' }}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ImageWrapper">
+                                <div class="product-button">
+                                    <a href="{{ path('evenement_showFront', {'id': evenement.id}) }}" >
+
+                                        <i> Détaill</i>
+                                    </a>
+                                    <a href="{{ path('participant_new', {'id': evenement.id}) }}" >
+
+                                        <i> Participé</i>
+                                    </a>
+                                </div>
+                        </div>
+                        </div>
+                        <div>
+                            <a class=" js-like" href="{{ path('Evenement_like', {'id':evenement.id}) }}">
+                                    <i class="fas fa-heart"></i>
+                                <span class="js-likes">{{ evenement.evenementlikes | length }}</span>
+                                <span class="js-label">like</span>
+                            </a>
+                            <a class=" js-like1" href="{{ path('Evenement_dislike', {'id':evenement.id}) }}">
+                                <i class="far fa-heart"></i>
+
+                                <span class="js-label">dislike</span>
+                            </a>
+                        </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</main>
+    <script src="https://kit.fontawesome.com/280e4c1d6d.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/1509af9ee1.js"></script>
+    <script src="{{ asset('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js') }}"></script>
+    <script>
+        function onClickBtnLike(event){
+            event.preventDefault();
+
+            const url = this.href;
+            const  spanCount = this.querySelector('span.js-likes');
+
+            axios.get(url).then(function (response){
+
+                spanCount.textContent = response.data.likes;
+            })
+
+        }
+        document.querySelectorAll('a.js-like').forEach(function (link){
+            link.addEventListener('click', onClickBtnLike);
+        })
+    </script>
+    {# for the dislike but when we have the user we only need one methode trying to make
+    an if else to change the icon#}
+    <script>
+        function onClickBtnLike(event){
+            event.preventDefault();
+
+            const url = this.href;
+            const  spanCount = this.querySelector('span.js-likes1');
+
+            axios.get(url).then(function (response){
+
+                spanCount.textContent = response.data.likes;
+            })
+
+        }
+        document.querySelectorAll('a.js-like1').forEach(function (link){
+            link.addEventListener('click', onClickBtnLike);
+        })
+    </script>
+{% endblock %}

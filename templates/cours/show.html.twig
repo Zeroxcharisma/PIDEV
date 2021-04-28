@@ -1,0 +1,66 @@
+{% extends 'baseFront.html.twig' %}
+
+
+{% block body %}
+
+
+    <div class="grid__item wide--four-fifths post-large--three-quarters">
+        <div itemscope itemtype="http://schema.org/Product" class="single-product-layout-type-1">
+            <div class="product-single">
+
+                <div class="grid__item wide--one-half post-large--one-half large--one-half product-img-box">
+
+                    <div class="product-photo-container">
+
+                        <a href="../../cdn.shopify.com/s/files/1/0107/4973/9108/products/product160e0f.jpg?v=1545802934" >
+                            <img src="{{ asset('uploads/images/' ~ cour.image) }}" style = "width:200px ; height:200px" class="users-avatar-shadow w-100 rounded mb-2 pr-2 ml-1" alt="avatar">
+                        </a>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div class="product_single_detail_section grid__item wide--one-half post-large--one-half large--one-half">
+                    <h2 class="product-single__title">{{ cour.nom }}</h2>
+
+                    <div class="product_single_price">
+
+                    </div>
+                    <span class="shopify-product-reviews-badge" data-id="1961823141988"></span>
+                    <div class="grid__item product_desc_section" style="position:relative;border-top:1px solid $colorBorder;">
+
+                    </div>
+
+
+                    <div class="product-infor">
+
+
+                        <p class="product-inventory" id="product-inventory">
+                            <label>nombre d'heure :  </label>
+                            <span>
+                        {{ cour.nbHeure }}
+
+              </span>
+                        </p>
+                        <p class="product-vendor">
+                            <label>Nom du Coach :</label>
+                            <span>{{ cour.nomCoach }}</span>
+                        </p>
+
+
+
+
+
+
+                        <a href="{{ path('cours_indexC') }}">back to list</a>
+
+
+
+                    </div></div></div></div></div>
+
+{% endblock %}
