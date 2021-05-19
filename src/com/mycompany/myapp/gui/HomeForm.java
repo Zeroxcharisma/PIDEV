@@ -9,6 +9,8 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.plaf.UIManager;
+import com.codename1.ui.util.Resources;
 
 /**
  *
@@ -17,15 +19,18 @@ import com.codename1.ui.layouts.BoxLayout;
 public class HomeForm extends Form {
 
     Form current;
+    private Resources theme;
+    
     /*Garder traçe de la Form en cours pour la passer en paramètres 
     aux interfaces suivantes pour pouvoir y revenir plus tard en utilisant
     la méthode showBack*/
     
     public HomeForm() {
+        theme =UIManager.initFirstTheme("/theme");
         current = this; //Récupération de l'interface(Form) en cours
         setTitle("Home");
         setLayout(BoxLayout.y());
-
+        
         add(new Label("Choose an option"));
         Button btnAddTask = new Button("Add User");
         Button btnListTasks = new Button("List Users");
@@ -34,8 +39,9 @@ public class HomeForm extends Form {
         
 
         btnAddTask.addActionListener(e -> new AddTaskForm(current).show());
-        btnListTasks.addActionListener(e -> new ListTasksForm(current).show());
+        btnListTasks.addActionListener(e -> new ListTasksForm(theme).show());
         btnUpdateTasks.addActionListener(e -> new UpdateTasksForm(current).show());
+     
        // btnDeleteTasks.addActionListener(e -> new DeleteTasksForm(current).show());
         addAll(btnAddTask, btnListTasks,btnUpdateTasks,btnDeleteTasks);
 

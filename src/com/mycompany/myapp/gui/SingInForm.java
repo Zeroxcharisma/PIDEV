@@ -82,9 +82,9 @@ public class SingInForm extends BaseForm {
             
         } );
         
+       // new HomeForm().show();
         
-        
-        //signIn.addActionListener(e -> new NewsfeedForm(res).show());
+        signIn.addActionListener(e -> new HomeForm().show());
     }
     
 }

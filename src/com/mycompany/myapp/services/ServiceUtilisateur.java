@@ -48,6 +48,16 @@ public class ServiceUtilisateur {
         }
         return instance;
     }
+    
+    
+     //Session  Service
+         /*       float id = Float.parseFloat(Utilisateur.get("id").toString());
+                SessionManager.setId((int)id);//jibt id ta3 user ly3ml login w sajltha fi session ta3i
+                
+                SessionManager.setPassowrd(user.get("password").toString());
+                SessionManager.setUserName(user.get("username").toString());
+                SessionManager.setEmail(user.get("email").toString());*/
+                
 
     public boolean addTask(Utilisateur t) {
         String url = Statics.BASE_URL + "/utilisateur/list/users/new?" +"username="+ t.getUsername() + "&nom=" + t.getNom()+ "&prenom=" + t.getPrenom()+ "&password=" + t.getPassword()+ "&tel=" + t.getTel()+ "&adresse=" + t.getAdresse() + "&idRole=1" + "&etat=0"+ "&email=" + t.getEmail(); //création de l'URL
