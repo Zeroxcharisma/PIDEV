@@ -6,6 +6,7 @@
 package com.mycompany.myapp.gui;
 
 import com.codename1.ui.Button;
+import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
@@ -25,7 +26,7 @@ public class HomeForm extends Form {
     aux interfaces suivantes pour pouvoir y revenir plus tard en utilisant
     la méthode showBack*/
     
-    public HomeForm() {
+    public HomeForm(Form previous) {
         theme =UIManager.initFirstTheme("/theme");
         current = this; //Récupération de l'interface(Form) en cours
         setTitle("Home");
@@ -44,7 +45,8 @@ public class HomeForm extends Form {
      
        // btnDeleteTasks.addActionListener(e -> new DeleteTasksForm(current).show());
         addAll(btnAddTask, btnListTasks,btnUpdateTasks,btnDeleteTasks);
-
+         getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK
+                , e-> new Home2Form().show()); // Revenir vers l'interface précédente
     }
 
 }

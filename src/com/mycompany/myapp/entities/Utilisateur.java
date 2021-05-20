@@ -10,6 +10,8 @@ package com.mycompany.myapp.entities;
  * @author sofie
  */
 public class Utilisateur {
+
+   
   private   int    id_utilisateur ;
   private   String username;
   private   String nom ;

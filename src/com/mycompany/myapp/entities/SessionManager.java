@@ -16,11 +16,11 @@ public static Preferences pref ; // 3ibara memoire sghira nsajlo fiha data
     
     
     // hethom données ta3 user lyt7b tsajlhom fi session  ba3d login 
-    private static int id ; 
-    private static String userName ; 
+    private static int id_utilisateur ; 
+    private static String username ; 
     private static String email; 
     private static String passowrd ;
-    private static String photo;
+
 
     public static Preferences getPref() {
         return pref;
@@ -30,17 +30,23 @@ public static Preferences pref ; // 3ibara memoire sghira nsajlo fiha data
         SessionManager.pref = pref;
     }
 
-    public static int getId() {
-        return pref.get("id",id);// kif nheb njib id user connecté apres njibha men pref 
+    public static int getId_utilisateur() {
+        return id_utilisateur;
     }
 
-    public static void setId(int id) {
-        pref.set("id",id);//nsajl id user connecté  w na3tiha identifiant "id";
+    public static void setId_utilisateur(int id_utilisateur) {
+        SessionManager.id_utilisateur = id_utilisateur;
     }
 
-    public static String getUserName() {
-        return pref.get("username",userName);
+    public static String getUsername() {
+        return username;
     }
+
+    public static void setUsername(String username) {
+        SessionManager.username = username;
+    }
+
+  
 
     public static void setUserName(String userName) {
          pref.set("username",userName);
@@ -62,13 +68,8 @@ public static Preferences pref ; // 3ibara memoire sghira nsajlo fiha data
          pref.set("passowrd",passowrd);
     }
 
-    public static String getPhoto() {
-        return pref.get("photo",photo);
-    }
 
-    public static void setPhoto(String photo) {
-         pref.set("photo",photo);
-    }
+
     
     
     

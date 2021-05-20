@@ -11,6 +11,7 @@ import com.codename1.components.FloatingHint;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
+import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.BorderLayout;
@@ -23,8 +24,10 @@ import com.mycompany.myapp.services.ServiceUtilisateur;
  * @author sofie
  */
 public class SingInForm extends BaseForm {
+    Form current;
 
     public SingInForm(Resources res) {
+         
         super(new BorderLayout());
         
         if(!Display.getInstance().isTablet()) {
@@ -84,7 +87,7 @@ public class SingInForm extends BaseForm {
         
        // new HomeForm().show();
         
-        signIn.addActionListener(e -> new HomeForm().show());
+        signIn.addActionListener(e -> new Home2Form().show());
     }
     
 }

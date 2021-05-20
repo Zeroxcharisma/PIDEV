@@ -8,6 +8,7 @@ package com.mycompany.myapp.services;
 import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
+import com.codename1.io.MultipartRequest;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.ComboBox;
@@ -15,6 +16,7 @@ import com.codename1.ui.Dialog;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.entities.SessionManager;
 
 import com.mycompany.myapp.entities.Utilisateur;
 import com.mycompany.myapp.gui.ListTasksForm;
@@ -50,13 +52,7 @@ public class ServiceUtilisateur {
     }
     
     
-     //Session  Service
-         /*       float id = Float.parseFloat(Utilisateur.get("id").toString());
-                SessionManager.setId((int)id);//jibt id ta3 user ly3ml login w sajltha fi session ta3i
-                
-                SessionManager.setPassowrd(user.get("password").toString());
-                SessionManager.setUserName(user.get("username").toString());
-                SessionManager.setEmail(user.get("email").toString());*/
+    
                 
 
     public boolean addTask(Utilisateur t) {
@@ -139,6 +135,10 @@ public class ServiceUtilisateur {
                 //Ajouter la tâche extraite de la réponse Json à la liste
                 Users.add(t);
                 System.out.println(Users);
+                
+                
+                
+                
             }
             
             
@@ -152,6 +152,8 @@ public class ServiceUtilisateur {
         */
         return Users;
     }
+    
+    
     
     public ArrayList<Utilisateur> getAllUsers(){
         String url = Statics.BASE_URL+"/utilisateur/list/users";
@@ -223,6 +225,16 @@ public class ServiceUtilisateur {
             
             
             
+             //Session  Service
+                float id = Float.parseFloat(user.get("idUtilisateur").toString());
+                SessionManager.setId_utilisateur((int)id);//jibt id ta3 user ly3ml login w sajltha fi session ta3i
+                
+                SessionManager.setPassowrd(user.get("password").toString());
+                SessionManager.setUsername(user.get("username").toString());
+                SessionManager.setEmail(user.get("email").toString());
+            
+              System.out.println("Current user"+SessionManager.getEmail()+SessionManager.getUsername());
+            
         }
         }catch(Exception ex){
             ex.printStackTrace();
@@ -256,8 +268,36 @@ public class ServiceUtilisateur {
           NetworkManager.getInstance().addToQueueAndWait(req);
           return json;
          }
+    
+    
+    
+    
         
+public static void EditUser(String username, String password, String email, String photo){
+        
+    String url = "";
+                MultipartRequest req = new MultipartRequest();
+                
+                req.setUrl(url);
+                req.setPost(true);
+                req.addArgument("id", String.valueOf(SessionManager.getId_utilisateur()));
+                req.addArgument("username", username);
+                req.addArgument("password", password);
+                req.addArgument("email", email);
+                System.out.println(email);
+                req.addResponseListener((response)-> {
+                    
+                    byte[] data = (byte[]) response.getMetaData();
+                    String s = new String(data);
+                    System.out.println(s);
+                    if (s.equals("success")) {
+                    } else {
+                        Dialog.show("Erreur", "Echec de modification", "Ok", null);
+                    }                    
+                });
+                NetworkManager.getInstance().addToQueueAndWait(req);
     }
+        }
     
     
     

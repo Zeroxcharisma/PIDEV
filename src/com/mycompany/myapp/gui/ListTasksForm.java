@@ -71,6 +71,10 @@ Form current;
         getContentPane().setScrollVisible(false);
         
         
+        
+        super.addSideMenu(res);
+        
+        
         tb.addSearchCommand(e -> {
         
         });
@@ -320,7 +324,8 @@ Form current;
         
         add(cnt);
         
-        
+        getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK
+                , e-> new HomeForm(current).show()); // Revenir vers l'interface précédente
             
             
     }
